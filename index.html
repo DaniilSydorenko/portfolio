@@ -1,19 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="secondWebApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
-    <link href="dist/css/build.min.css" rel="stylesheet" type="text/css">
-    <script src="dist/js/build.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="bower_components/flexboxgrid/css/flexboxgrid.css">
+    <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+
+    <script src="assets/libs/modernizr-custom.js"></script> <!-- Modernizr -->
+
 </head>
 <body>
-    <div class="container hero flex-box">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Hello, Flex!</h3>
-            </div>
+
+<header class="header animated sd">
+    <nav class="flex-box">
+        <div class="logo-name">
+            <span><a href="#home">Daniil Sydorenko</a></span>
         </div>
+        <ul class="">
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">Works</a></li>
+            <li><a href="#section3">Skills</a></li>
+            <li><a href="#section4">About</a></li>
+        </ul>
+        <div class="menu-btn-wrapper">
+            <span class="menu-btn-line"></span>
+            <span class="menu-btn-line"></span>
+            <span class="menu-btn-line"></span>
+        </div>
+    </nav>
+</header>
+
+<div class="mobileMenuOverlay">
+    <ul class="mobileMenu">
+        <li class="show">
+            <a class="scroll" href="#portfolio">
+                <h3>Portfolio</h3>
+            </a>
+        </li>
+        <li class="show">
+            <a class="scroll" href="#about">
+                <h3>About</h3>
+            </a>
+        </li>
+        <li class="show">
+            <a class="scroll" href="#contact">
+                <h3>Contact</h3>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<section id="section1" class="hero-section">
+    <div class="flex-box">
+        <div class="one"></div>
+        <div class="two"></div>
+
+        <div class="hero-text">
+            <h2>Daniil Sydorenko</h2>
+            <p>Web Developer Portfolio</p>
+        </div>
+
     </div>
+    <div class="overlay"></div>
+</section>
+
+<section id="cd-timeline" class="cd-container">
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture">
+            <img src="assets/img/timeline/cd-icon-picture.svg" alt="Picture">
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Title of section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+            <a href="#0" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 14</span>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-movie">
+            <img src="assets/img/timeline/cd-icon-movie.svg" alt="Movie">
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Title of section 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+            <a href="#0" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 18</span>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture">
+            <img src="assets/img/timeline/cd-icon-picture.svg" alt="Picture">
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Title of section 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+            <a href="#0" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 24</span>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-location">
+            <img src="assets/img/timeline/cd-icon-location.svg" alt="Location">
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Title of section 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+            <a href="#0" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 14</span>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-location">
+            <img src="assets/img/timeline/cd-icon-location.svg" alt="Location">
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Title of section 5</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+            <a href="#0" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 18</span>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-movie">
+            <img src="assets/img/timeline/cd-icon-movie.svg" alt="Movie">
+        </div> <!-- cd-timeline-img -->
+
+        <div class="cd-timeline-content">
+            <h2>Final Section</h2>
+            <p>This is the content of the last section</p>
+            <span class="cd-date">Feb 26</span>
+        </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+</section> <!-- cd-timeline -->
+
+
+        <ng-view></ng-view>
+
+<section id="section2" class="scrollblock section" id="examples-pin">
+
+    <div class="grid">
+        <div class="grid-item">...</div>
+        <div class="grid-item">...</div>
+        <div class="grid-item">...</div>
+        <div class="grid-item">...</div>
+        <div class="grid-item grid-item--width2">...</div>
+        <div class="grid-item grid-item--width2">...</div>
+        <div class="grid-item grid-item--width2">...</div>
+        <div class="grid-item grid-item--width2">...</div>
+        <div class="grid-item">...</div>
+        <div class="grid-item">...</div>
+        <div class="grid-item">...</div>
+        <div class="grid-item">...</div>
+    </div>
+
+</section>
+
+
+<footer id="section4" class="footer">
+
+</footer>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+<script src="bower_components/wow/dist/wow.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/app.routes.js"></script>
+<script src="app/components/mainPage/mainPage.ctrl.js"></script>
+<script src="app/components/aboutPage/aboutPage.ctrl.js"></script>
+<script src="app/components/worksPage/worksPage.ctrl.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+
+<script>
+//    $(document).ready(function(){
+//        // Add scrollspy to <body>
+//        $('body').scrollspy({target: ".navbar", offset: 50});
+//
+//        // Add smooth scrolling on all links inside the navbar
+//        $(".navbar a").on('click', function(event) {
+//
+//            // Prevent default anchor click behavior
+//            event.preventDefault();
+//
+//            // Store hash
+//            var hash = this.hash;
+//
+//            // Using jQuery's animate() method to add smooth page scroll
+//            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+//            $('html, body').animate({
+//                scrollTop: $(hash).offset().top
+//            }, 800, function(){
+//
+//                // Add hash (#) to URL when done scrolling (default click behavior)
+//                window.location.hash = hash;
+//            });
+//        });
+//    });
+</script>
+
 </body>
 </html>
