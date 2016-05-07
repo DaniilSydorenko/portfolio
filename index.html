@@ -17,11 +17,11 @@
 
 </head>
 <body>
-
-<header class="header animated sd">
+<div class="const"></div>
+<header class="header animated">
     <nav class="flex-box">
         <div class="logo-name">
-            <span><a href="#home">Daniil Sydorenko</a></span>
+            <span><a href="#home">D</a></span>
         </div>
         <ul class="">
             <li><a href="#section1">Home</a></li>
@@ -37,8 +37,8 @@
     </nav>
 </header>
 
-<div class="mobileMenuOverlay">
-    <ul class="mobileMenu">
+<div id="home" class="responsiveMobileMenu">
+    <ul class="mobileMenu flex-box">
         <li class="show">
             <a class="scroll" href="#portfolio">
                 <h3>Portfolio</h3>
@@ -57,29 +57,44 @@
     </ul>
 </div>
 
-<section id="section1" class="hero-section">
+<div class="homepage-hero-module">
     <div class="flex-box">
-        <div class="one"></div>
-        <div class="two"></div>
 
         <div class="hero-text">
-            <h2>Daniil Sydorenko</h2>
-            <p>Web Developer Portfolio</p>
+            <p>Daniil Sydorenko</p>
+            <p>Full Stack Developer | Inspired by Web | Jamaica Lover</p>
         </div>
 
     </div>
+
     <div class="overlay"></div>
-</section>
+
+    <div class="video-container">
+        <!--<div class="filter"></div>-->
+        <video autoplay loop class="fillWidth">
+            <source src="assets/video/MP4/Aloha-Mundo.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="assets/video/WEBM/Aloha-Mundo.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <!--<img src="assets/img/bg/White-Keyboard.jpg" alt="Background">-->
+        </div>
+    </div>
+</div>
 
 <section id="cd-timeline" class="cd-container">
+
+    <div class="section-header">
+        <h2>This is my timeline</h2>
+    </div>
+
     <div class="cd-timeline-block">
         <div class="cd-timeline-img cd-picture">
             <img src="assets/img/timeline/cd-icon-picture.svg" alt="Picture">
         </div> <!-- cd-timeline-img -->
 
         <div class="cd-timeline-content">
-            <h2>Title of section 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+            <h2>Primaris</h2>
+            <p>Web development. Budowa i rozwój aplikacji internetowych przy użyciu firmowego frameworka opartego o PHP 5.6, Doctrine 2, MySQL. Również budowa i rozwój front-endu stron(Twig, HTML5, CSS3, Bootstrap 3). Kompletne projektowanie i realizacja serwisu(back-end i front-end) dla ligi squashowej. Testy jednostkowe PHPUnit;</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Jan 14</span>
         </div> <!-- cd-timeline-content -->
@@ -91,8 +106,8 @@
         </div> <!-- cd-timeline-img -->
 
         <div class="cd-timeline-content">
-            <h2>Title of section 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+            <h2>Unit27</h2>
+            <p>Web development. Budowa i rozwój aplikacji internetowych przy użyciu firmowego frameworka opartego o PHP 5.6, Doctrine 2, MySQL. Również budowa i rozwój front-endu stron(Twig, HTML5, CSS3, Bootstrap 3). Kompletne projektowanie i realizacja serwisu(back-end i front-end) dla ligi squashowej. Testy jednostkowe PHPUnit;</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Jan 18</span>
         </div> <!-- cd-timeline-content -->
@@ -104,7 +119,7 @@
         </div> <!-- cd-timeline-img -->
 
         <div class="cd-timeline-content">
-            <h2>Title of section 3</h2>
+            <h2>Szafa.pl</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Jan 24</span>
@@ -117,7 +132,7 @@
         </div> <!-- cd-timeline-img -->
 
         <div class="cd-timeline-content">
-            <h2>Title of section 4</h2>
+            <h2>Ideo</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Feb 14</span>
@@ -130,7 +145,7 @@
         </div> <!-- cd-timeline-img -->
 
         <div class="cd-timeline-content">
-            <h2>Title of section 5</h2>
+            <h2>WSIZ</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Feb 18</span>
@@ -143,7 +158,7 @@
         </div> <!-- cd-timeline-img -->
 
         <div class="cd-timeline-content">
-            <h2>Final Section</h2>
+            <h2>HIRE</h2>
             <p>This is the content of the last section</p>
             <span class="cd-date">Feb 26</span>
         </div> <!-- cd-timeline-content -->
@@ -151,37 +166,399 @@
 </section> <!-- cd-timeline -->
 
 
-        <ng-view></ng-view>
+        <!--<ng-view></ng-view>-->
 
-<section id="section2" class="scrollblock section" id="examples-pin">
+<section id="section4" class="about-page">
 
-    <div class="grid">
-        <div class="grid-item">...</div>
-        <div class="grid-item">...</div>
-        <div class="grid-item">...</div>
-        <div class="grid-item">...</div>
-        <div class="grid-item grid-item--width2">...</div>
-        <div class="grid-item grid-item--width2">...</div>
-        <div class="grid-item grid-item--width2">...</div>
-        <div class="grid-item grid-item--width2">...</div>
-        <div class="grid-item">...</div>
-        <div class="grid-item">...</div>
-        <div class="grid-item">...</div>
-        <div class="grid-item">...</div>
+    <div class="tiles-section">
+
+        <div class="top-part"></div>
+        <div class="bottom-part"></div>
+
+        <div class="container tiles-container flex-box">
+
+            <div class="section-header">
+                <h2>This is my timeline</h2>
+            </div>
+
+            <div class="row" style="flex-grow: 2">
+
+                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
+
+                    <div class=" text-center wow fadeInUp">
+                        <h2>Main Page</h2>
+                        <i style="font-size: 50px" class="icon icon-desktop"></i>
+                        <h4>Marketing Online</h4>
+                        <p>SEO, SEM, Email Marketing, Google Analytics &amp; Community management.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
+
+                    <div class=" text-center wow fadeInUp">
+                        <h2>Main Page</h2>
+                        <i style="font-size: 50px" class="icon icon-tools"></i>
+                        <h4>Marketing Online</h4>
+                        <p>SEO, SEM, Email Marketing, Google Analytics &amp; Community management.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s" data-wow-delay="0.8s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
+
+                    <div class=" text-center wow fadeInUp">
+                        <h2>Main Page</h2>
+                        <i style="font-size: 50px" class="icon icon-browser"></i>
+                        <h4>Marketing Online</h4>
+                        <p>SEO, SEM, Email Marketing, Google Analytics &amp; Community management.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
+
+                    <div class=" text-center wow fadeInUp">
+                        <h2>Main Page</h2>
+                        <i style="font-size: 50px" class="icon icon-desktop"></i>
+                        <h4>Marketing Online</h4>
+                        <p>SEO, SEM, Email Marketing, Google Analytics &amp; Community management.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
+
+                    <div class=" text-center wow fadeInUp">
+                        <h2>Main Page</h2>
+                        <i style="font-size: 50px" class="icon icon-tools"></i>
+                        <h4>Marketing Online</h4>
+                        <p>SEO, SEM, Email Marketing, Google Analytics &amp; Community management.</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s" data-wow-delay="0.8s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
+
+                    <div class=" text-center wow fadeInUp">
+                        <h2>Main Page</h2>
+                        <i style="font-size: 50px" class="icon icon-browser"></i>
+                        <h4>Marketing Online</h4>
+                        <p>SEO, SEM, Email Marketing, Google Analytics &amp; Community management.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+
+<section id="section5" class="projects-section">
+    <div class="section-header">
+        <h2>This is my timeline</h2>
+    </div>
+
+    <div class="section-content fixed-content dark-content">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix img-fix-2">
+
+                        <figcaption class="portfolio-caption"><div class="portfolio-caption-inner">
+                            <h3 class="portfolio-title">Dreams visualization</h3>
+                            <h4 class="portfolio-cat">Photography</h4>
+                            <div class="btn-group">
+                                <a class="btn-link" target="_blank" href="http://photodune.net/?osr=tn&amp;_ga=1.93421085.1097235765.1428662395">
+                                    <i class="icon icon-link"></i>
+                                </a>
+                                <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline1">
+                                    <i class="icon icon-eye"></i>
+                                </a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline2"></a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline3"></a>
+                            </div>
+                        </div>
+                        </figcaption>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 data-side">
+                    <div class="img-fix img-fix-1 flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+                            <p> This is some textThis is some textThis is some text</p>
+                            <p> This is some textThis is some te</p>
+                            <p> This is some textThis is some teThis is some textThis is some text</p>
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-content fixed-content light-content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 data-side">
+                    <div class="img-fix img-fix-1 flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix img-fix-2">
+
+                        <figcaption class="portfolio-caption"><div class="portfolio-caption-inner">
+                            <h3 class="portfolio-title">Dreams visualization</h3>
+                            <h4 class="portfolio-cat">Photography</h4>
+                            <div class="btn-group">
+                                <a class="btn-link" target="_blank" href="http://photodune.net/?osr=tn&amp;_ga=1.93421085.1097235765.1428662395">
+                                    <i class="icon icon-link"></i>
+                                </a>
+                                <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline1">
+                                    <i class="icon icon-eye"></i>
+                                </a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline2"></a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline3"></a>
+                            </div>
+                        </div>
+                        </figcaption>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-content non-fixed-content dark-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix img-fix-3">
+                        <!--<div class="text-center wow fadeInUp">-->
+                        <!--<h1>Main Page</h1>-->
+
+                        <!--<p>{{ message }}</p>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="col-md-6 data-side wow fadeInUp">
+                    <div class="img-fix img-fix-1 flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-content fixed-content light-content">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 data-side">
+                    <div class="img-fix img-fix-1 flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+                            <p> This is some textThis is some textThis is some text</p>
+                            <p> This is some textThis is some te</p>
+                            <p> This is some textThis is some teThis is some textThis is some text</p>
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix img-fix-2">
+
+                        <figcaption class="portfolio-caption"><div class="portfolio-caption-inner">
+                            <h3 class="portfolio-title">Dreams visualization</h3>
+                            <h4 class="portfolio-cat">Photography</h4>
+                            <div class="btn-group">
+                                <a class="btn-link" target="_blank" href="http://photodune.net/?osr=tn&amp;_ga=1.93421085.1097235765.1428662395">
+                                    <i class="icon icon-link"></i>
+                                </a>
+                                <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline1">
+                                    <i class="icon icon-eye"></i>
+                                </a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline2"></a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline3"></a>
+                            </div>
+                        </div>
+                        </figcaption>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-content non-fixed-content dark-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix img-fix-3">
+                        <!--<div class="text-center wow fadeInUp">-->
+                        <!--<h1>Main Page</h1>-->
+
+                        <!--<p>{{ message }}</p>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="col-md-6 data-side wow fadeInUp">
+                    <div class="img-fix img-fix-1 flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-content fixed-content light-content">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 data-side">
+                    <div class="img-fix img-fix-1 flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+                            <p> This is some textThis is some textThis is some text</p>
+                            <p> This is some textThis is some te</p>
+                            <p> This is some textThis is some teThis is some textThis is some text</p>
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix img-fix-2">
+
+                        <figcaption class="portfolio-caption"><div class="portfolio-caption-inner">
+                            <h3 class="portfolio-title">Dreams visualization</h3>
+                            <h4 class="portfolio-cat">Photography</h4>
+                            <div class="btn-group">
+                                <a class="btn-link" target="_blank" href="http://photodune.net/?osr=tn&amp;_ga=1.93421085.1097235765.1428662395">
+                                    <i class="icon icon-link"></i>
+                                </a>
+                                <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline1">
+                                    <i class="icon icon-eye"></i>
+                                </a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline2"></a>
+                                <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline3"></a>
+                            </div>
+                        </div>
+                        </figcaption>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-content non-fixed-content dark-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix img-fix-3">
+                        <!--<div class="text-center wow fadeInUp">-->
+                        <!--<h1>Main Page</h1>-->
+
+                        <!--<p>{{ message }}</p>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="col-md-6 data-side wow fadeInUp">
+                    <div class="img-fix img-fix-1 flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </section>
 
+<footer class="footer">
+    <form action="./mail" method="POST">
+        <!-- Name field -->
+        <div class="field">
+            <label for="name">Name <span>*</span></label>
+            <input type="text" name="name" id="name" placeholder="What's your name?" required="">
+        </div>
 
-<footer id="section4" class="footer">
+        <!-- Company field -->
+        <div class="field">
+            <label for="company">Company</label>
+            <input type="text" name="company" id="company" placeholder="What's the name of your company?">
+        </div>
 
+        <!-- Email field -->
+        <div class="field">
+            <label for="email">Email <span>*</span></label>
+            <input type="email" name="email" id="email" placeholder="What's your email address?" required="">
+        </div>
+
+        <!-- Subject field -->
+        <div class="field">
+            <label for="subject">Subject <span>*</span></label>
+            <input type="text" name="subject" id="subject" placeholder="What's your email about?" required="">
+        </div>
+
+        <!-- Message field -->
+        <div class="field full">
+            <label for="message">Message <span>*</span></label>
+            <textarea name="message" id="message" placeholder="What's on your mind?" required=""></textarea>
+        </div>
+
+        <div class="field full noPadding">
+            <button type="submit" id="send">Send</button>
+        </div>
+    </form>
 </footer>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
-
+<script src="assets/libs/jquery-scrollspy.js"></script>
 <script src="bower_components/wow/dist/wow.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/vide/dist/jquery.vide.js"></script>
 <script src="app/app.module.js"></script>
 <script src="app/app.routes.js"></script>
 <script src="app/components/mainPage/mainPage.ctrl.js"></script>
