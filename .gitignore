@@ -95,3 +95,5 @@ fabric.properties
 /test/assets/temp-*/
 /test/reports
 /test/tmp/
+
+/assets/img/My_projects_img
