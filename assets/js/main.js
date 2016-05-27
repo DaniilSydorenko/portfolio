@@ -6,12 +6,11 @@
  * ==============================================================
  */
 $(document).ready(function () {
-    App.init();
+    //App.init();
 
-    App.showResponsiveMobileMenu();
-
-    App.body.on("click", function () {
-        App.fadeInMenuElements();
+    App.hamburger.on("click", function () {
+        $(this).toggleClass('open');
+        App.toggleResponsiveMobileMenu();
     });
 
     /**
@@ -33,7 +32,13 @@ $(document).ready(function () {
     /**
      * Timeline
      */
-    App.hideBlocks(App.timelineBlocks, App.timelineOffset);
+    App.hideBlocks(App.timelineBlock, App.timelineOffset);
+
+    var map;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 52.2452118, lng: 20.9881184},
+            zoom: 10
+        });
 });
 
 
@@ -58,10 +63,10 @@ $(window).on("scroll", function () {
      */
     (!window.requestAnimationFrame)
         ? setTimeout(function () {
-        App.showBlocks(App.timelineBlocks, App.timelineOffset);
+        App.showBlocks(App.timelineBlock, App.timelineOffset);
     }, 100)
         : window.requestAnimationFrame(function () {
-        App.showBlocks(App.timelineBlocks, App.timelineOffset);
+        App.showBlocks(App.timelineBlock, App.timelineOffset);
     });
 
 });
@@ -84,6 +89,9 @@ var App = {
     footer: $('.footer'),
     cookies: $('.cookies'),
 
+    /* Components */
+    hamburger: $(".menu-btn-wrapper"),
+
     /* Viewport/Window params */
     ih: window.innerHeight,
     oh: window.outerHeight,
@@ -94,7 +102,9 @@ var App = {
     shrinkHeader: 700,
 
     /* Timeline */
-    timelineBlocks: $('.cd-timeline-block'),
+    timelineBlock: $('.cd-timeline-block'),
+    timelineContent: $('.cd-timeline-content'),
+    timelineImg: $('.cd-timeline-img'),
     timelineOffset: 0.8,
 
     /**
@@ -130,16 +140,37 @@ var App = {
 
         var el = $(".mobileMenu li");
 
-        $(el[0]).removeClass("show");
         setTimeout(function () {
-            $(el[1]).removeClass("show");
+            $(el[2]).removeClass("fade");
             setTimeout(function () {
-                $(el[2]).removeClass("show");
-            }, 75);
-        }, 75);
+                $(el[1]).removeClass("fade");
+                setTimeout(function () {
+                    $(el[0]).removeClass("fade");
+                }, 100);
+            }, 150);
+        }, 200);
+
+
+        setTimeout(function () {
+            $(".responsiveMobileMenu").removeClass("display");
+
+            setTimeout(function () {
+                $(".responsiveMobileMenu").removeClass("flex");
+
+            }, 420);
+        }, 540);
+
     },
 
     fadeInMenuElements: function () {
+        $(".responsiveMobileMenu").addClass("flex");
+
+        setTimeout(function () {
+            $(".responsiveMobileMenu").addClass("display");
+
+            setTimeout(function () {
+            }, 420);
+        }, 20);
 
         var el = $(".mobileMenu li");
 
@@ -154,38 +185,34 @@ var App = {
         }, 200);
     },
 
-    //toggleMobileMenu: function () {
-    //
-    //    if (!animationRunning) {
-    //        toggleMenuButton();
-    //        if (mobileMenuVisible) {
-    //            // Hide menu
-    //            mobileMenuVisible = false;
-    //            animationRunning = true;
-    //            hideMobileMenuItems();
-    //            setTimeout(function () {
-    //                $(".responsiveMobileMenu").removeClass("show");
-    //                setTimeout(function () {
-    //                    $(".responsiveMobileMenu").removeClass("display");
-    //                    animationRunning = false;
-    //                }, 420);
-    //            }, 100);
-    //        } else {
-    //            // Show menu
-    //            mobileMenuVisible = true;
-    //            animationRunning = true;
-    //            $(".responsiveMobileMenu").addClass("display");
-    //            setTimeout(function () {
-    //                showMobileMenuItems();
-    //                $(".responsiveMobileMenu").addClass("show");
-    //                setTimeout(function () {
-    //                    animationRunning = false;
-    //                }, 420);
-    //            }, 20);
-    //
-    //        }
-    //    }
-    //},
+
+    toggleResponsiveMobileMenu: function () {
+
+        if ($("#home").hasClass('display')) {
+            //menu.toggleClass('open');
+
+            setTimeout(function () {
+                //button.toggleClass('open');
+                setTimeout(function () {
+                    //fadeOutMenuElements
+                    App.fadeOutMenuElements();
+                }, 10);
+            }, 10);
+
+
+        } else {
+            //menu.toggleClass('open');
+
+            setTimeout(function () {
+                //button.toggleClass('open');
+                setTimeout(function () {
+                    //fadeInMenuElements
+                    App.fadeInMenuElements();
+                }, 10);
+            }, 10);
+        }
+
+    },
 
     /**
      * Video background

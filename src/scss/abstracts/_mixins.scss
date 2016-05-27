@@ -37,8 +37,7 @@
   $items: center,
   $content: center,
   $direction: row,
-  $wrap: wrap)
-{
+  $wrap: wrap) {
   display: flex;
   flex-direction: $direction;
   flex-wrap: $wrap;
@@ -47,4 +46,9 @@
   align-content: $content;
   height: 100%;
 }
+
+@mixin img-url($img-url, $img-title) {
+  background: url(unquote($img-url + $img-title));
+}
+
 

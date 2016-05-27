@@ -13,6 +13,41 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
         defer.resolve("Some new data");
     }, 3000);
 
+
+    /**
+     * Projects
+     */
+    $scope.projects = {
+        "wikendo": {
+            "title": "Wikendo",
+            "skrot": "wikendo",
+            "url": "http://wikendo.pl/",
+            "description": "Since the class name would have to be toggled via JavaScript and implementation would " +
+            "differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you."
+        },
+        "levelee": {
+            "title": "Levelee",
+            "skrot": "levelee",
+            "url": "http://levelee.com/",
+            "description": "Since the class name would have to be toggled via JavaScript and implementation would " +
+            "differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you."
+        },
+        "tapon_fb_app": {
+            "title": "Tapon - Facebook Application",
+            "skrot": "tapon_fb_app",
+            "url": "http://tapon.pl/",
+            "description": "Since the class name would have to be toggled via JavaScript and implementation would " +
+            "differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you."
+        },
+        "zszywka": {
+            "title": "Zszywka",
+            "skrot": "zszywka",
+            "url": "http://zszywka.pl/",
+            "description": "Since the class name would have to be toggled via JavaScript and implementation would " +
+            "differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you."
+        }
+    };
+
     //var responseData;
     //$http.get('http://www.w3schools.com/angular/customers.php').then(function(response){
     //    responseData = response.data;

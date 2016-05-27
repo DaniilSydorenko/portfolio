@@ -2,16 +2,173 @@
 // This file contains very user custom styles.
 // -----------------------------------------------------------------------------
 
-.hero {
-  height: 100vh !important;
-
-  h3 {
-    font-size: 40px;
-    font-weight: 300;
-  }
-
-}
+/* Common */
 
 .flex-box {
   @include flex-box(center, center, center, row, wrap)
+}
+
+.section-header {
+  position: relative;
+  z-index: 1;
+  background: #383F42;
+  padding: 50px;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #f9f9f9;
+    margin: 0;
+    font-weight: 300;
+  }
+}
+
+/* Video bg. Hero page
+--------------------------------------------------------------------------------*/
+
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative;
+  height: 100vh !important;
+
+  /* Overlay color */
+  .overlay {
+    background-color: #40535D;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  /* Text on the middle of hero page */
+  .hero-text-container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+
+    .hero-text {
+      text-align: center;
+      color: #f5f5f5;
+      z-index: 3;
+
+      * {
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: 3vmax;
+      }
+
+      p {
+        font-size: 1vmax;
+
+        &:first-child {
+          font-size: 2.5vmax;
+        }
+      }
+    }
+  }
+
+  .no-video {
+    .video-container {
+      video {
+        display: none;
+      }
+
+      .poster {
+        display: block !important;
+      }
+    }
+  }
+
+  .touch {
+    .video-container {
+      video {
+        display: none;
+      }
+
+      .poster {
+        display: block !important;
+      }
+    }
+  }
+
+  .video-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+
+    .poster {
+      img {
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+
+    .filter {
+      z-index: 100;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+
+    video {
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+
+      &.fillWidth {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Skills page
+--------------------------------------------------------------------------------*/
+
+.skills-page {
+  .tiles-section {
+    height: 100vh;
+    background: #EFF1F4;
+
+    .tile {
+      padding: 0 25px;
+      height: 350px;
+      border-radius: 0 !important;
+      border: 1px solid #f9f9f9;
+      box-shadow: rgba(0, 0, 0, 0.13) 0 5px 10px;
+      color: #333333;
+      text-align: center;
+
+      h2 {
+        color: #333333;
+      }
+
+      h4 {
+        color: #333333;
+      }
+
+      p {
+        color: #333333;
+      }
+    }
+
+    .section-header {
+      background: transparent;
+    }
+  }
 }

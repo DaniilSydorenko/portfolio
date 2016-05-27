@@ -5,10 +5,12 @@
 /**
  * Set up a decent box model on the root element
  */
-html {
+html, body {
+  height: 100%;
   box-sizing: border-box;
+  font-family: 'Lato', Helvetica, Arial sans-serif !important;
+  background: #383F42;
 }
-
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -30,4 +32,14 @@ a {
     color: $text-color;
     text-decoration: underline;
   }
+}
+
+/**
+ * Basic styles for headers
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #f9f9f9;
 }

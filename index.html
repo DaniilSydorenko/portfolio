@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="bower_components/flexboxgrid/css/flexboxgrid.css">
     <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
     <link rel="stylesheet" href="assets/css/timeline.css">
-    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="dist/css/main.css">
 
     <script src="assets/libs/modernizr-custom.js"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4v_8kzUhXhYR6d7AvqedRKDfUYZkAovM&language=en" async defer></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 500px;
+        }
+    </style>
 </head>
-<body>
+<body ng-controller="MainController">
 <div class="const"></div>
 <header class="header animated">
     <nav class="flex-box">
@@ -29,7 +34,10 @@
             <li><a href="#section3">Skills</a></li>
             <li><a href="#section4">About</a></li>
         </ul>
-        <div class="menu-btn-wrapper">
+        <div id="nav-icon2" class="menu-btn-wrapper">
+            <span class="menu-btn-line"></span>
+            <span class="menu-btn-line"></span>
+            <span class="menu-btn-line"></span>
             <span class="menu-btn-line"></span>
             <span class="menu-btn-line"></span>
             <span class="menu-btn-line"></span>
@@ -58,7 +66,7 @@
 </div>
 
 <div class="homepage-hero-module">
-    <div class="flex-box">
+    <div class="hero-text-container flex-box">
 
         <div class="hero-text">
             <p>Daniil Sydorenko</p>
@@ -168,7 +176,7 @@
 
         <!--<ng-view></ng-view>-->
 
-<section id="section4" class="about-page">
+<section id="section4" class="skills-page">
 
     <div class="tiles-section">
 
@@ -259,16 +267,15 @@
 
 <section id="section5" class="projects-section">
     <div class="section-header">
-        <h2>This is my timeline</h2>
+        <h2>This is my projects</h2>
     </div>
 
-    <div class="section-content fixed-content dark-content">
+    <div class="section-content dark-content">
         <div class="container">
-
             <div class="row">
-
+                <!-- -->
                 <div class="col-md-6 bg-side">
-                    <div class="img-fix img-fix-5">
+                    <div class="img-fix project-5">
                         <div class="project-overlay"></div>
                         <figcaption class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
@@ -278,40 +285,38 @@
                         </figcaption>
                     </div>
                 </div>
+                <!-- -->
+                <div class="col-md-6 data-side">
+                    <div class="img-fix flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>{{ projects.levelee.title }}</h1>
+                            <p>{{ projects.levelee.description }}</p>
+                            <p>{{ projects.levelee.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-content light-content">
+        <div class="container">
+            <div class="row">
 
                 <div class="col-md-6 data-side">
-                    <div class="img-fix img-fix-1 flex-box">
+                    <div class="img-fix flex-box">
                         <div class="text-center wow fadeInUp">
                             <h1>Main Page</h1>
                             <p> This is some textThis is some textThis is some text</p>
                             <p> This is some textThis is some te</p>
                             <p> This is some textThis is some teThis is some textThis is some text</p>
-                            <p>{{ message }}</p>
+                            <p>{{ message }} !!!</p>
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="section-content fixed-content light-content">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-6 data-side">
-                    <div class="img-fix img-fix-1 flex-box">
-                        <div class="text-center wow fadeInUp">
-                            <h1>Main Page</h1>
-
-                            <p>{{ message }}</p>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- -->
                 <div class="col-md-6 bg-side">
-                    <div class="img-fix img-fix-2">
+                    <div class="img-fix project-2">
                         <div class="project-overlay"></div>
                         <figcaption class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
@@ -319,97 +324,37 @@
                                 <h4 class="portfolio-cat">Photography</h4>
                             </div>
                         </figcaption>
-
                     </div>
                 </div>
-
+                <!-- -->
             </div>
-
         </div>
     </div>
 
-    <div class="section-content non-fixed-content dark-content">
+    <div class="section-content dark-content">
         <div class="container">
             <div class="row">
-
+                <!-- -->
                 <div class="col-md-6 bg-side">
-                    <div class="img-fix img-fix-6">
-                        <!--<div class="text-center wow fadeInUp">-->
-                        <!--<h1>Main Page</h1>-->
-
-                        <!--<p>{{ message }}</p>-->
-                        <!--</div>-->
+                    <div class="img-fix project-1">
+                        <div class="project-overlay"></div>
+                        <figcaption class="portfolio-caption flex-box">
+                            <div class="portfolio-caption-inner">
+                                <h3 class="portfolio-title">Dreams visualization</h3>
+                                <h4 class="portfolio-cat">Photography</h4>
+                            </div>
+                        </figcaption>
                     </div>
                 </div>
-
-                <div class="col-md-6 data-side wow fadeInUp">
-                    <div class="img-fix img-fix-1 flex-box">
-                        <div class="text-center wow fadeInUp">
-                            <h1>Main Page</h1>
-
-                            <p>{{ message }}</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="section-content fixed-content light-content">
-        <div class="container">
-
-            <div class="row">
-
+                <!-- -->
                 <div class="col-md-6 data-side">
-                    <div class="img-fix img-fix-1 flex-box">
+                    <div class="img-fix flex-box">
                         <div class="text-center wow fadeInUp">
                             <h1>Main Page</h1>
                             <p> This is some textThis is some textThis is some text</p>
                             <p> This is some textThis is some te</p>
                             <p> This is some textThis is some teThis is some textThis is some text</p>
-                            <p>{{ message }}</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 bg-side">
-                    <div class="img-fix img-fix-4">
-                        <div class="project-overlay"></div>
-                        <figcaption class="portfolio-caption flex-box">
-                            <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <h4 class="portfolio-cat">Photography</h4>
-                            </div>
-                        </figcaption>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="section-content non-fixed-content dark-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 bg-side">
-                    <div class="img-fix img-fix-3">
-                        <!--<div class="text-center wow fadeInUp">-->
-                        <!--<h1>Main Page</h1>-->
-
-                        <!--<p>{{ message }}</p>-->
-                        <!--</div>-->
-                    </div>
-                </div>
-                <div class="col-md-6 data-side wow fadeInUp">
-                    <div class="img-fix img-fix-1 flex-box">
-                        <div class="text-center wow fadeInUp">
-                            <h1>Main Page</h1>
-
-                            <p>{{ message }}</p>
+                            <p>{{ message }} !!!</p>
                         </div>
                     </div>
                 </div>
@@ -417,25 +362,23 @@
         </div>
     </div>
 
-    <div class="section-content fixed-content light-content">
+    <div class="section-content light-content">
         <div class="container">
-
             <div class="row">
-
                 <div class="col-md-6 data-side">
-                    <div class="img-fix img-fix-1 flex-box">
+                    <div class="img-fix flex-box">
                         <div class="text-center wow fadeInUp">
                             <h1>Main Page</h1>
                             <p> This is some textThis is some textThis is some text</p>
                             <p> This is some textThis is some te</p>
                             <p> This is some textThis is some teThis is some textThis is some text</p>
-                            <p>{{ message }}</p>
+                            <p>{{ message }} !!!</p>
                         </div>
                     </div>
                 </div>
-
+                <!-- -->
                 <div class="col-md-6 bg-side">
-                    <div class="img-fix img-fix-2">
+                    <div class="img-fix project-4">
                         <div class="project-overlay"></div>
                         <figcaption class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
@@ -443,33 +386,99 @@
                                 <h4 class="portfolio-cat">Photography</h4>
                             </div>
                         </figcaption>
-
                     </div>
                 </div>
-
+                <!-- -->
             </div>
-
         </div>
     </div>
 
-    <div class="section-content non-fixed-content dark-content">
+    <div class="section-content dark-content">
         <div class="container">
             <div class="row">
+                <!-- -->
                 <div class="col-md-6 bg-side">
-                    <div class="img-fix img-fix-3">
-                        <!--<div class="text-center wow fadeInUp">-->
-                        <!--<h1>Main Page</h1>-->
-
-                        <!--<p>{{ message }}</p>-->
-                        <!--</div>-->
+                    <div class="img-fix project-3">
+                        <div class="project-overlay"></div>
+                        <figcaption class="portfolio-caption flex-box">
+                            <div class="portfolio-caption-inner">
+                                <h3 class="portfolio-title">Dreams visualization</h3>
+                                <h4 class="portfolio-cat">Photography</h4>
+                            </div>
+                        </figcaption>
                     </div>
                 </div>
-                <div class="col-md-6 data-side wow fadeInUp">
-                    <div class="img-fix img-fix-1 flex-box">
+                <!-- -->
+                <div class="col-md-6 data-side">
+                    <div class="img-fix flex-box">
                         <div class="text-center wow fadeInUp">
                             <h1>Main Page</h1>
+                            <p> This is some textThis is some textThis is some text</p>
+                            <p> This is some textThis is some te</p>
+                            <p> This is some textThis is some teThis is some textThis is some text</p>
+                            <p>{{ message }} !!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                            <p>{{ message }}</p>
+    <div class="section-content light-content">
+        <div class="container">
+            <div class="row">
+                <!-- -->
+                <div class="col-md-6 data-side">
+                    <div class="img-fix flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+                            <p> This is some textThis is some textThis is some text</p>
+                            <p> This is some textThis is some te</p>
+                            <p> This is some textThis is some teThis is some textThis is some text</p>
+                            <p>{{ message }} !!!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix project-2">
+                        <div class="project-overlay"></div>
+                        <figcaption class="portfolio-caption flex-box">
+                            <div class="portfolio-caption-inner">
+                                <h3 class="portfolio-title">Dreams visualization</h3>
+                                <h4 class="portfolio-cat">Photography</h4>
+                            </div>
+                        </figcaption>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-content dark-content">
+        <div class="container">
+            <div class="row">
+                <!-- -->
+                <div class="col-md-6 bg-side">
+                    <div class="img-fix project-3">
+                        <div class="project-overlay"></div>
+                        <figcaption class="portfolio-caption flex-box">
+                            <div class="portfolio-caption-inner">
+                                <h3 class="portfolio-title">Dreams visualization</h3>
+                                <h4 class="portfolio-cat">Photography</h4>
+                            </div>
+                        </figcaption>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="col-md-6 data-side">
+                    <div class="img-fix flex-box">
+                        <div class="text-center wow fadeInUp">
+                            <h1>Main Page</h1>
+                            <p> This is some textThis is some textThis is some text</p>
+                            <p> This is some textThis is some te</p>
+                            <p> This is some textThis is some teThis is some textThis is some text</p>
+                            <p>{{ message }} !!!</p>
                         </div>
                     </div>
                 </div>
@@ -480,33 +489,56 @@
 </section>
 
 <footer class="footer">
-    <form action="#" method="POST">
-        <!-- Name -->
-        <div class="col-md-12">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" placeholder="Name: " maxlength="50" required="">
-        </div>
 
-        <!-- Email -->
-        <div class="col-md-12">
-            <label for="email">Email <span>*</span></label>
-            <input type="email" name="email" id="email" placeholder="E-mail: " maxlength="50" required="">
-        </div>
+    <section class="contact-content">
+        <div class="container">
+            <div class="row">
+                <form action="#" method="POST" class="contact-form col-md-6">
+                    <!-- Name -->
+                    <div class="col-md-12">
+                        <label for="name">Name <span>*</span></label>
+                        <input type="text" name="name" id="name" class="input-field" placeholder="Name: " maxlength="50" required="">
+                    </div>
 
-        <!-- Message -->
-        <div class="col-md-12">
-            <label for="message">Message <span>*</span></label>
-            <textarea rows="7" name="message" id="message" placeholder="Message: " required=""></textarea>
-        </div>
+                    <!-- Email -->
+                    <div class="col-md-12">
+                        <label for="email">Email <span>*</span></label>
+                        <input type="email" name="email" id="email" class="input-field" placeholder="E-mail: " maxlength="50" required="">
+                    </div>
 
-        <div class="col-md-12">
-            <button>Send</button>
+                    <!-- Message -->
+                    <div class="col-md-12">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea rows="7" name="message" id="message" class="input-field" placeholder="Message: " required=""></textarea>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button>Send</button>
+                    </div>
+                </form>
+
+                <figure class="col-md-6">
+
+                </figure>
+            </div>
         </div>
-    </form>
+    </section>
+
+    <section>
+        <div id="map"></div>
+    </section>
+
+    <section class="social-content">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+
 </footer>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="assets/libs/jquery-scrollspy.js"></script>
 <script src="bower_components/wow/dist/wow.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
