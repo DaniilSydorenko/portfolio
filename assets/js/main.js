@@ -190,7 +190,6 @@ var App = {
 
         if ($("#home").hasClass('display')) {
             //menu.toggleClass('open');
-
             setTimeout(function () {
                 //button.toggleClass('open');
                 setTimeout(function () {
@@ -202,7 +201,6 @@ var App = {
 
         } else {
             //menu.toggleClass('open');
-
             setTimeout(function () {
                 //button.toggleClass('open');
                 setTimeout(function () {

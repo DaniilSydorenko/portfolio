@@ -102,6 +102,21 @@ body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","H
 .responsiveMobileMenu ul{flex-direction:column;justify-content:space-around;padding:0}
 .responsiveMobileMenu ul li{opacity:0;list-style-type:none;color:#3b5a82;font-weight:100;font-size:1.5em;font-family:Helvetica,Arial,sans-serif;text-transform:uppercase;transition:transform .3s ease,opacity .3s ease,-webkit-transform .3s ease;transform:scale(.5)}
 .responsiveMobileMenu ul li.fade{transform:scale(1);opacity:1}
+#nav-icon2{width:60px;height:45px;position:relative;transform:rotate(0);transition:.5s ease-in-out;cursor:pointer}
+#nav-icon2 span{display:block;position:absolute;height:3px;width:50%;opacity:1;transform:rotate(0);transition:.25s ease-in-out}
+#nav-icon2 span:nth-child(even){left:50%;border-radius:0 9px 9px 0}
+#nav-icon2 span:nth-child(odd){left:0;border-radius:9px 0 0 9px}
+#nav-icon2 span:nth-child(1),#nav-icon2 span:nth-child(2){top:0}
+#nav-icon2 span:nth-child(3),#nav-icon2 span:nth-child(4){top:18px}
+#nav-icon2 span:nth-child(5),#nav-icon2 span:nth-child(6){top:36px}
+#nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6){transform:rotate(45deg)}
+#nav-icon2.open span:nth-child(2),#nav-icon2.open span:nth-child(5){transform:rotate(-45deg)}
+#nav-icon2.open span:nth-child(1){left:5px;top:7px}
+#nav-icon2.open span:nth-child(2){left:calc(50% - 5px);top:7px}
+#nav-icon2.open span:nth-child(3){left:-50%;opacity:0}
+#nav-icon2.open span:nth-child(4){left:100%;opacity:0}
+#nav-icon2.open span:nth-child(5){left:5px;top:29px}
+#nav-icon2.open span:nth-child(6){left:calc(50% - 5px);top:29px}
 .projects-section .section-content.light-content{background-color:#fcfcfc!important}
 .projects-section .section-content.light-content .data-side .text-center *{color:#333}
 .projects-section .section-content.dark-content{background-color:transparent!important}
