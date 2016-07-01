@@ -1,13 +1,14 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 legend,td,th{padding:0}
+a,a:active,a:focus,a:hover{text-decoration:none!important}
 .row,.row.reverse{-webkit-box-orient:horizontal}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
-a{background-color:transparent;color:#e50050;text-decoration:none}
+a{background-color:transparent;color:#e50050}
 a:active,a:hover{outline:0}
 abbr[title]{border-bottom:1px dotted}
 b,optgroup,strong{font-weight:700}
@@ -38,9 +39,9 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
 legend{border:0}
 table{border-collapse:collapse;border-spacing:0}
-body,html{height:100%;box-sizing:border-box;font-family:Lato,Helvetica,Arial sans-serif!important;background:#383F42}
+body,html{height:100%;box-sizing:border-box;font-family:Lato,Helvetica,Arial sans-serif!important;font-weight:100!important;background:#383F42}
 *,::after,::before{box-sizing:inherit}
-a:active,a:focus,a:hover{color:#222;text-decoration:underline}
+a:active,a:focus,a:hover{color:#222}
 h1,h2,h3,h4,h5,h6{font-weight:300;text-transform:uppercase;color:#f9f9f9}
 body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif}
 .homepage-hero-module .hero-text-container .hero-text *,.section-header h2{font-weight:300;text-transform:uppercase}
@@ -89,13 +90,14 @@ body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","H
 .header .menu-btn-wrapper span:first-child{width:100%;top:12px}
 .header .menu-btn-wrapper span:nth-child(2){width:100%;top:21px}
 .header .menu-btn-wrapper span:last-child{width:100%;top:30px}
-.footer{height:30vh;background:0 0}
+.footer{background:0 0}
 .footer .contact-content.light-content{background:#fcfcfc}
 .footer .contact-content.dark-content{background:0 0}
 .footer .contact-content .contact-form .input-field{border-top:0;border-right:0;border-left:0;border-bottom:1px solid #f0f0f0;background:0 0;color:#555;transition:border-color .2s ease;outline:0}
-.footer .social-content{height:100px}
-.footer .social-content.light-content{background:#fcfcfc}
-.footer .social-content.dark-content{background:0 0}
+.footer .social-content .social-links a{width:40px;height:40px;line-height:25px!important;position:relative;margin:0 6px;text-align:center;display:inline-flex;align-items:center;align-content:center;justify-content:center;color:#d0cccc;border:1px solid #bbb;border-radius:50%;transition:all .5s cubic-bezier(.165,.84,.44,1)}
+.footer .social-content .social-links a:hover{background:#d7dde2;color:#3f4246;border-color:#cfd1d4;transition:all .5s cubic-bezier(.165,.84,.44,1);transform:scale(1.2) rotate(360deg)}
+.footer .social-content .footer-text p{color:#fefefe;font-weight:100}
+.footer .social-content .footer-text .footer-made span{color:#ff6b6a}
 .responsiveMobileMenu{width:100%;height:100%;position:fixed;z-index:100;top:0;left:0;background:rgba(51,51,51,.95);opacity:0;display:none;justify-content:center;align-items:center;transition:opacity .4s ease}
 .responsiveMobileMenu.flex{display:flex;transition:all .4s ease}
 .responsiveMobileMenu.display{transition:all .4s ease;opacity:1}
@@ -129,7 +131,7 @@ body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","H
 .projects-section .section-content .bg-side .img-fix h4{color:#fff!important;transition:all,.5s;transform:translate3d(0,200%,0)}
 .projects-section .section-content .bg-side .img-fix:hover{transform:scale3d(1.1,1.1,1)}
 .projects-section .section-content .bg-side .img-fix:hover h3,.projects-section .section-content .bg-side .img-fix:hover h4{opacity:1;transform:translate3d(0,0,0)}
-.projects-section .section-content .bg-side .img-fix:hover figcaption{opacity:.85}
+.projects-section .section-content .bg-side .img-fix:hover .portfolio-caption{opacity:.85}
 .projects-section .section-content .bg-side .project-overlay{top:-2px;left:-2px;right:-2px;bottom:-2px;position:absolute;background-color:rgba(123,142,156,.28);transition:opacity .35s linear 0s;backface-visibility:hidden}
 .projects-section .section-content .data-side{padding:0!important}
 .projects-section .section-content .data-side .img-fix{background:0 0!important;visibility:visible;animation-name:fadeInUp;margin:0 auto;border-radius:0;text-align:left;justify-content:flex-start;padding:0 50px}

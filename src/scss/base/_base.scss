@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   box-sizing: border-box;
   font-family: 'Lato', Helvetica, Arial sans-serif !important;
+  font-weight: 100 !important;
   background: #383F42;
 }
 /**
@@ -26,7 +27,10 @@ html, body {
  */
 a {
   color: $brand-color;
-  text-decoration: none;
+  text-decoration: none !important;
+  &:hover, &:active, &:focus {
+    text-decoration: none !important;
+  }
 
   @include on-event {
     color: $text-color;

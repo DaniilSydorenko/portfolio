@@ -1,6 +1,7 @@
 app.controller('MainController', function ($scope, $timeout, $q, $http, $rootScope) {
     $scope.message = "MAIN PAGE";
     $scope.data = "Some data";
+    $scope.copyYear = new Date().getFullYear();
 
     var defer = $q.defer();
 
@@ -12,7 +13,6 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
     $timeout(function () {
         defer.resolve("Some new data");
     }, 3000);
-
 
     /**
      * Projects
@@ -43,6 +43,20 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
             "title": "Zszywka",
             "skrot": "zszywka",
             "url": "http://zszywka.pl/",
+            "description": "Since the class name would have to be toggled via JavaScript and implementation would " +
+            "differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you."
+        },
+        "i_sport": {
+            "title": "I-sport",
+            "skrot": "i_sport",
+            "url": "https://i-sport.pl/",
+            "description": "Since the class name would have to be toggled via JavaScript and implementation would " +
+            "differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you."
+        },
+        "folklor": {
+            "title": "Zajazd Folklor",
+            "skrot": "folklor",
+            "url": "https://i-sport.pl/",
             "description": "Since the class name would have to be toggled via JavaScript and implementation would " +
             "differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you."
         }
