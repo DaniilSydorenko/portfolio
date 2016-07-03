@@ -149,8 +149,6 @@
       padding: 0 25px;
       height: 350px;
       border-radius: 0 !important;
-      border: 1px solid #f9f9f9;
-      box-shadow: rgba(0, 0, 0, 0.13) 0 5px 10px;
       color: #333333;
       text-align: center;
 
@@ -169,6 +167,21 @@
 
     .section-header {
       background: transparent;
+    }
+
+    .skills-wrap {
+      visibility: visible;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+
+      .skills-content {
+        border: 1px solid #f9f9f9;
+        box-shadow: rgba(0, 0, 0, 0.13) 0 5px 10px;
+
+        > i {
+          font-size: 50px;
+        }
+      }
     }
   }
 }

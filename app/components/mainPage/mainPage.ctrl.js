@@ -62,6 +62,48 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
         }
     };
 
+    /**
+     * Skills
+     */
+    $scope.skills = {
+        "backend": {
+            "skillHeader": 'Backend',
+            "skillIcon": 'icon icon-tools-2',
+            "skillSubHeader": 'PHP7, MySQL, Node.js',
+            "skillText": 'OOP, ORM, Laravel, Symfony, Composer'
+        },
+        "frontend": {
+            "skillHeader": 'Frontend',
+            "skillIcon": 'icon icon-mobile',
+            "skillSubHeader": 'ES6, HTML5, CSS3',
+            "skillText": 'Javascript, JQuery, Angular, Bootstrap, Flex-box, Media Queries, SASS, LESS'
+        },
+        "aut_tools": {
+            "skillHeader": 'Automation tools',
+            "skillIcon": 'icon icon-gears',
+            "skillSubHeader": 'GULP, Bower, NPM',
+            "skillText": 'Automation tasks, CSS Preprocessors, Files minification, BrowserSync'
+        },
+        "usability": {
+            "skillHeader": 'Usability',
+            "skillIcon": 'icon icon-tools',
+            "skillSubHeader": 'Cross-Browser, Mobile',
+            "skillText": 'Responsive Web Design, User Experience, Mobile first approach'
+        },
+        "browser_tools": {
+            "skillHeader": 'Browser tools',
+            "skillIcon": 'icon icon-browser',
+            "skillSubHeader": 'Firefox, Chrome, Safari',
+            "skillText": 'Element inspecting, Network, Resources'
+        },
+        "version_control": {
+            "skillHeader": 'Version  Control',
+            "skillIcon": 'icon icon-linegraph',
+            "skillSubHeader": 'GIT, SVN',
+            "skillText": 'GitHub, features and branches, Tortoise SVN, Gerrit'
+        }
+    };
+
     //var responseData;
     //$http.get('http://www.w3schools.com/angular/customers.php').then(function(response){
     //    responseData = response.data;

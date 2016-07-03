@@ -197,9 +197,6 @@
 
     <div class="tiles-section">
 
-        <div class="top-part"></div>
-        <div class="bottom-part"></div>
-
         <div class="container tiles-container flex-box">
 
             <div class="section-header">
@@ -207,79 +204,71 @@
             </div>
 
             <div class="row" style="flex-grow: 2">
-
-                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s"
-                     data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
-
-                    <div class=" text-center wow fadeInUp">
-                        <h2>Backend</h2>
-                        <i style="font-size: 50px" class="icon icon-tools-2"></i>
-                        <h4>PHP7, MySQL, Node.js</h4>
-                        <p>OOP, ORM, Laravel, Symfony, Composer</p>
-                    </div>
-
+                <!-- Backend -->
+                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                     data-wow-duration="0.5s" data-wow-delay="0.4s">
+                    <skill-directive rwd-class="col-md-4 col-sm-6"
+                                     skill-header="{{ skills.backend.skillHeader }}"
+                                     skill-icon="{{ skills.backend.skillIcon }}"
+                                     skill-sub-header="{{ skills.backend.skillSubHeader }}"
+                                     skill-text="{{ skills.backend.skillText }}">
+                    </skill-directive>
                 </div>
 
-                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s"
-                     data-wow-delay="0.6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
-
-                    <div class=" text-center wow fadeInUp">
-                        <h2>Frontend</h2>
-                        <i style="font-size: 50px" class="icon icon-mobile"></i>
-                        <h4>EcmaScript6, HTML5, CSS3</h4>
-                        <p>Javascript, JQuery, Angular, Bootstrap, Flex-box, RWD, SASS, LESS</p>
-                    </div>
-
+                <!-- Frontend -->
+                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                     data-wow-duration="0.6s" data-wow-delay="0.5s">
+                    <skill-directive rwd-class="col-md-4 col-sm-6"
+                                     skill-header="{{ skills.frontend.skillHeader }}"
+                                     skill-icon="{{ skills.frontend.skillIcon }}"
+                                     skill-sub-header="{{ skills.frontend.skillSubHeader }}"
+                                     skill-text="{{ skills.frontend.skillText }}">
+                    </skill-directive>
                 </div>
 
-                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s"
-                     data-wow-delay="0.8s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
-
-                    <div class=" text-center wow fadeInUp">
-                        <h2>Automation tools</h2>
-                        <i style="font-size: 50px" class="icon icon-gears"></i>
-                        <h4>GULP, Bower, NPM</h4>
-                        <p>Automation tasks, CSS Preprocessors, Files minification, BrowserSync</p>
-                    </div>
-
+                <!-- Automation tools -->
+                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                     data-wow-duration="0.7s" data-wow-delay="0.6s">
+                    <skill-directive rwd-class="col-md-4 col-sm-6"
+                                     skill-header="{{ skills.aut_tools.skillHeader }}"
+                                     skill-icon="{{ skills.aut_tools.skillIcon }}"
+                                     skill-sub-header="{{ skills.aut_tools.skillSubHeader }}"
+                                     skill-text="{{ skills.aut_tools.skillText }}">
+                    </skill-directive>
                 </div>
 
-                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s"
-                     data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
-
-                    <div class=" text-center wow fadeInUp">
-                        <h2>Usability</h2>
-                        <i style="font-size: 50px" class="icon icon-tools"></i>
-                        <h4>Mobile first approach</h4>
-                        <p>Responsive Web Design, User Experience</p>
-                    </div>
-
+                <!-- Usability -->
+                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                     data-wow-duration="0.8s" data-wow-delay="0.7s">
+                    <skill-directive rwd-class="col-md-4 col-sm-6"
+                                     skill-header="{{ skills.usability.skillHeader }}"
+                                     skill-icon="{{ skills.usability.skillIcon }}"
+                                     skill-sub-header="{{ skills.usability.skillSubHeader }}"
+                                     skill-text="{{ skills.usability.skillText }}">
+                    </skill-directive>
                 </div>
 
-                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s"
-                     data-wow-delay="0.6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
-
-                    <div class=" text-center wow fadeInUp">
-                        <h2>Browser Tools</h2>
-                        <i style="font-size: 50px" class="icon icon-browser"></i>
-                        <h4>Firefox, Chrome, Safari</h4>
-                        <p>Element inspecting, Network, Resources</p>
-                    </div>
-
+                <!-- Browser tools -->
+                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                     data-wow-duration="0.9s" data-wow-delay="0.8s">
+                    <skill-directive rwd-class="col-md-4 col-sm-6"
+                                     skill-header="{{ skills.browser_tools.skillHeader }}"
+                                     skill-icon="{{ skills.browser_tools.skillIcon }}"
+                                     skill-sub-header="{{ skills.browser_tools.skillSubHeader }}"
+                                     skill-text="{{ skills.browser_tools.skillText }}">
+                    </skill-directive>
                 </div>
 
-                <div class="col-md-4 col-sm-6 service wow fadeInUp animated tile" data-wow-duration="0.5s"
-                     data-wow-delay="0.8s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s;">
-
-                    <div class=" text-center wow fadeInUp">
-                        <h2>Version Control</h2>
-                        <i style="font-size: 50px" class="icon icon-linegraph"></i>
-                        <h4>GIT, SVN</h4>
-                        <p>GitHub, Tortoise SVN, Gerrit</p>
-                    </div>
-
+                <!-- Version control -->
+                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                     data-wow-duration="0.9s" data-wow-delay="0.8s">
+                    <skill-directive rwd-class="col-md-4 col-sm-6"
+                                     skill-header="{{ skills.version_control.skillHeader }}"
+                                     skill-icon="{{ skills.version_control.skillIcon }}"
+                                     skill-sub-header="{{ skills.version_control.skillSubHeader }}"
+                                     skill-text="{{ skills.version_control.skillText }}">
+                    </skill-directive>
                 </div>
-
             </div>
 
         </div>
@@ -501,7 +490,7 @@
 
 <footer class="footer">
 
-    <section class="contact-content">
+    <section class="contact-content light-content">
         <div class="container">
             <div class="row">
 
@@ -546,26 +535,28 @@
             <div class="row center-xs">
 
                 <div class="fadeInUp wow animated">
-                    <span class="social-links">
-                        <a href="https://www.facebook.com/daniil.sydorenko" title="I am on Facebook" target="_blank">
-                            <i class=" fa fa-facebook"></i>
-                        </a>
-                    </span>
-                    <span class="social-links">
-                        <a href="https://twitter.com/dansydorenko" title="I am on Twitter" target="_blank">
-                            <i class=" fa fa-twitter"></i>
-                        </a>
-                    </span>
-                    <span class="social-links">
-                        <a href="https://www.linkedin.com/in/dsydorenko" title="I am on Linkedin" target="_blank">
-                            <i class=" fa fa-linkedin"></i>
-                        </a>
-                    </span>
-                    <span class="social-links">
-                        <a href="https://github.com/DaniilSydorenko" title="I am on Github" target="_blank">
-                            <i class=" fa fa-github"></i>
-                        </a>
-                    </span>
+                    <div class="social-links-content">
+                        <span class="social-links">
+                            <a href="https://www.facebook.com/daniil.sydorenko" title="I am on Facebook" target="_blank">
+                                <i class=" fa fa-facebook"></i>
+                            </a>
+                        </span>
+                        <span class="social-links">
+                            <a href="https://twitter.com/dansydorenko" title="I am on Twitter" target="_blank">
+                                <i class=" fa fa-twitter"></i>
+                            </a>
+                        </span>
+                        <span class="social-links">
+                            <a href="https://www.linkedin.com/in/dsydorenko" title="I am on Linkedin" target="_blank">
+                                <i class=" fa fa-linkedin"></i>
+                            </a>
+                        </span>
+                        <span class="social-links">
+                            <a href="https://github.com/DaniilSydorenko" title="I am on Github" target="_blank">
+                                <i class=" fa fa-github"></i>
+                            </a>
+                        </span>
+                    </div>
                     <div class="footer-text">
                         <!-- Copyright -->
                         <div class="footer-copyright">
@@ -585,17 +576,24 @@
 
 </footer>
 
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/wow/dist/wow.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/vide/dist/jquery.vide.js"></script>
-<script src="app/app.module.js"></script>
-<script src="app/app.routes.js"></script>
-<script src="app/components/mainPage/mainPage.ctrl.js"></script>
-<script src="app/components/aboutPage/aboutPage.ctrl.js"></script>
-<script src="app/components/worksPage/worksPage.ctrl.js"></script>
-<script src="assets/js/main.js"></script>
+<!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
+<!--<script src="bower_components/wow/dist/wow.js"></script>-->
+<!--<script src="bower_components/angular/angular.js"></script>-->
+<!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+<!--<script src="bower_components/vide/dist/jquery.vide.js"></script>-->
+
+<!--<script src="app/app.module.js"></script>-->
+<!--<script src="app/app.routes.js"></script>-->
+<!--<script src="app/components/mainPage/mainPage.ctrl.js"></script>-->
+<!--<script src="app/components/aboutPage/aboutPage.ctrl.js"></script>-->
+<!--<script src="app/components/worksPage/worksPage.ctrl.js"></script>-->
+<!--<script src="app/shared/skill/skillDirective.js"></script>-->
+
+<!--<script src="assets/js/main.js"></script>-->
+
+
+<script src="dist/js/build.js"></script>
+
 
 <script>
     new WOW().init();

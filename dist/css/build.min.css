@@ -70,8 +70,11 @@ body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","H
 .homepage-hero-module .video-container video.fillWidth{width:100%}
 .skills-page .tiles-section{height:100vh;background:#EFF1F4}
 .header,.skills-page .tiles-section .section-header{background:0 0}
-.skills-page .tiles-section .tile{padding:0 25px;height:350px;border-radius:0!important;border:1px solid #f9f9f9;box-shadow:rgba(0,0,0,.13) 0 5px 10px;color:#333;text-align:center}
+.skills-page .tiles-section .tile{padding:0 25px;height:350px;border-radius:0!important;color:#333;text-align:center}
 .skills-page .tiles-section .tile h2,.skills-page .tiles-section .tile h4,.skills-page .tiles-section .tile p{color:#333}
+.skills-page .tiles-section .skills-wrap{visibility:visible;animation-duration:1s;animation-delay:.5s}
+.skills-page .tiles-section .skills-wrap .skills-content{border:1px solid #f9f9f9;box-shadow:rgba(0,0,0,.13) 0 5px 10px}
+.skills-page .tiles-section .skills-wrap .skills-content>i{font-size:50px}
 .header{position:absolute;top:0;left:0;width:100%;z-index:101;overflow:hidden;transition:height .3s;text-align:center;line-height:70px;color:#f5f5f5}
 .header.fixed{position:fixed!important;transition:.5s ease-in-out}
 .header.shrink h1{font-size:24px;transition:all .3s}
@@ -82,6 +85,7 @@ body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","H
 .header nav ul li a{text-decoration:none;color:#f9f9f9}
 .header .logo-name span{color:#f9f9f9!important}
 .header .logo-name span a{color:#f9f9f9!important;border:1px solid #f9f9f9;padding:10px 15px;font-size:22px}
+.footer .contact-content,.footer .social-content{padding:30px 0}
 .header .menu-btn-wrapper{width:35px;height:44px;position:relative;cursor:pointer;margin:0 20px}
 .header .menu-btn-wrapper:hover .menu-btn-line:first-child{transition:width .35s ease;width:50%}
 .header .menu-btn-wrapper:hover .menu-btn-line:nth-child(2){transition:width .45s ease-in-out;width:50%}
@@ -94,9 +98,10 @@ body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","H
 .footer .contact-content.light-content{background:#fcfcfc}
 .footer .contact-content.dark-content{background:0 0}
 .footer .contact-content .contact-form .input-field{border-top:0;border-right:0;border-left:0;border-bottom:1px solid #f0f0f0;background:0 0;color:#555;transition:border-color .2s ease;outline:0}
-.footer .social-content .social-links a{width:40px;height:40px;line-height:25px!important;position:relative;margin:0 6px;text-align:center;display:inline-flex;align-items:center;align-content:center;justify-content:center;color:#d0cccc;border:1px solid #bbb;border-radius:50%;transition:all .5s cubic-bezier(.165,.84,.44,1)}
-.footer .social-content .social-links a:hover{background:#d7dde2;color:#3f4246;border-color:#cfd1d4;transition:all .5s cubic-bezier(.165,.84,.44,1);transform:scale(1.2) rotate(360deg)}
-.footer .social-content .footer-text p{color:#fefefe;font-weight:100}
+.footer .social-content .social-links-content{padding-bottom:30px}
+.footer .social-content .social-links-content .social-links a{width:40px;height:40px;line-height:25px!important;position:relative;margin:0 6px;text-align:center;display:inline-flex;align-items:center;align-content:center;justify-content:center;color:#d0cccc;border:1px solid #bbb;border-radius:50%;transition:all .5s cubic-bezier(.165,.84,.44,1)}
+.footer .social-content .social-links-content .social-links a:hover{background:#d7dde2;color:#3f4246;border-color:#cfd1d4;transition:all .5s cubic-bezier(.165,.84,.44,1);transform:scale(1.2) rotate(360deg)}
+.footer .social-content .footer-text p{color:#fefefe;font-weight:100;margin:5px 0;font-size:.8em}
 .footer .social-content .footer-text .footer-made span{color:#ff6b6a}
 .responsiveMobileMenu{width:100%;height:100%;position:fixed;z-index:100;top:0;left:0;background:rgba(51,51,51,.95);opacity:0;display:none;justify-content:center;align-items:center;transition:opacity .4s ease}
 .responsiveMobileMenu.flex{display:flex;transition:all .4s ease}

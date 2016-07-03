@@ -18,7 +18,12 @@ gulp.task('concatScripts', function() {
     return gulp.src([
             "assets/libs/jquery-2.2.3.js",
             "assets/libs/modernizr-custom.js",
+            "bower_components/jquery/dist/jquery.js",
+            "bower_components/angular/angular.js",
+            "bower_components/angular-route/angular-route.js",
             "bower_components/wow/dist/wow.js",
+            "bower_components/vide/dist/jquery.vide.js",
+            "app/**/*.js",
             "assets/js/main.js"
         ])
         .pipe(concat("build.js"))

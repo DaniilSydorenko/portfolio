@@ -5,9 +5,9 @@
   background: transparent;
 
   .contact-content {
+    padding: 30px 0;
 
     &.light-content {
-
       background: #fcfcfc;
     }
 
@@ -32,9 +32,13 @@
   }
 
   .social-content {
+    padding: 30px 0;
 
-    .social-links {
-      a {
+    .social-links-content {
+      padding-bottom: 30px;
+
+      .social-links {
+        a {
           width: 40px;
           height: 40px;
           line-height: 25px !important;
@@ -50,12 +54,14 @@
           border-radius: 50%;
           transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-        &:hover {
-          background: #d7dde2;
-          color: #3f4246;
-          border-color: #cfd1d4;
-          transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-          transform: scale(1.2) rotate(360deg);
+          &:hover {
+            background: #d7dde2;
+            color: #3f4246;
+            //color: #1da1f2; // Twitter
+            border-color: #cfd1d4;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transform: scale(1.2) rotate(360deg);
+          }
         }
       }
     }
@@ -64,6 +70,8 @@
       p {
         color: #fefefe;
         font-weight: 100;
+        margin: 5px 0;
+        font-size: 0.8em;
       }
 
       .footer-copyright {

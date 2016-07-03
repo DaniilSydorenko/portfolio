@@ -556,8 +556,6 @@ body {
     padding: 0 25px;
     height: 350px;
     border-radius: 0 !important;
-    border: 1px solid #f9f9f9;
-    box-shadow: rgba(0, 0, 0, 0.13) 0 5px 10px;
     color: #333333;
     text-align: center; }
     .skills-page .tiles-section .tile h2 {
@@ -568,6 +566,15 @@ body {
       color: #333333; }
   .skills-page .tiles-section .section-header {
     background: transparent; }
+  .skills-page .tiles-section .skills-wrap {
+    visibility: visible;
+    animation-duration: 1s;
+    animation-delay: 0.5s; }
+    .skills-page .tiles-section .skills-wrap .skills-content {
+      border: 1px solid #f9f9f9;
+      box-shadow: rgba(0, 0, 0, 0.13) 0 5px 10px; }
+      .skills-page .tiles-section .skills-wrap .skills-content > i {
+        font-size: 50px; }
 
 .header {
   position: absolute;
@@ -652,45 +659,53 @@ body {
 
 .footer {
   background: transparent; }
-  .footer .contact-content.light-content {
-    background: #fcfcfc; }
-  .footer .contact-content.dark-content {
-    background: transparent; }
-  .footer .contact-content .contact-form .input-field {
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-bottom: 1px solid #f0f0f0;
-    background: transparent;
-    color: #555;
-    transition: border-color .2s ease;
-    outline: none; }
-  .footer .social-content .social-links a {
-    width: 40px;
-    height: 40px;
-    line-height: 25px !important;
-    position: relative;
-    margin: 0 6px;
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    color: #d0cccc;
-    border: 1px solid #bbbbbb;
-    border-radius: 50%;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
-    .footer .social-content .social-links a:hover {
-      background: #d7dde2;
-      color: #3f4246;
-      border-color: #cfd1d4;
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transform: scale(1.2) rotate(360deg); }
-  .footer .social-content .footer-text p {
-    color: #fefefe;
-    font-weight: 100; }
-  .footer .social-content .footer-text .footer-made span {
-    color: #ff6b6a; }
+  .footer .contact-content {
+    padding: 30px 0; }
+    .footer .contact-content.light-content {
+      background: #fcfcfc; }
+    .footer .contact-content.dark-content {
+      background: transparent; }
+    .footer .contact-content .contact-form .input-field {
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-bottom: 1px solid #f0f0f0;
+      background: transparent;
+      color: #555;
+      transition: border-color .2s ease;
+      outline: none; }
+  .footer .social-content {
+    padding: 30px 0; }
+    .footer .social-content .social-links-content {
+      padding-bottom: 30px; }
+      .footer .social-content .social-links-content .social-links a {
+        width: 40px;
+        height: 40px;
+        line-height: 25px !important;
+        position: relative;
+        margin: 0 6px;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        color: #d0cccc;
+        border: 1px solid #bbbbbb;
+        border-radius: 50%;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .footer .social-content .social-links-content .social-links a:hover {
+          background: #d7dde2;
+          color: #3f4246;
+          border-color: #cfd1d4;
+          transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transform: scale(1.2) rotate(360deg); }
+    .footer .social-content .footer-text p {
+      color: #fefefe;
+      font-weight: 100;
+      margin: 5px 0;
+      font-size: 0.8em; }
+    .footer .social-content .footer-text .footer-made span {
+      color: #ff6b6a; }
 
 /* Responsive mobile menu */
 .responsiveMobileMenu {
