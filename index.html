@@ -23,8 +23,9 @@
         }
     </style>
 </head>
+
 <body ng-controller="MainController">
-<div class="const"></div>
+
 <header class="header animated">
     <nav class="flex-box">
         <div class="logo-name">
@@ -96,7 +97,7 @@
 <section id="cd-timeline" class="cd-container">
 
     <div class="section-header">
-        <h2>This is my timeline</h2>
+        <h2>professional life</h2>
     </div>
 
     <div class="cd-timeline-block">
@@ -118,7 +119,7 @@
     <div class="cd-timeline-block">
         <div class="cd-timeline-img cd-movie">
             <img src="assets/img/timeline/cd-icon-movie.svg" alt="Movie">
-        </div> <!-- cd-timeline-img -->
+        </div>
 
         <div class="cd-timeline-content">
             <h2>Unit27</h2>
@@ -128,13 +129,13 @@
                 jednostkowe PHPUnit;</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Jan 18</span>
-        </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+        </div>
+    </div>
 
     <div class="cd-timeline-block">
         <div class="cd-timeline-img cd-picture">
             <img src="assets/img/timeline/cd-icon-picture.svg" alt="Picture">
-        </div> <!-- cd-timeline-img -->
+        </div>
 
         <div class="cd-timeline-content">
             <h2>Szafa.pl</h2>
@@ -146,13 +147,13 @@
                 sunt similique aut adipisci.</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Jan 24</span>
-        </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+        </div>
+    </div>
 
     <div class="cd-timeline-block">
         <div class="cd-timeline-img cd-location">
             <img src="assets/img/timeline/cd-icon-location.svg" alt="Location">
-        </div> <!-- cd-timeline-img -->
+        </div>
 
         <div class="cd-timeline-content">
             <h2>Ideo</h2>
@@ -161,37 +162,34 @@
                 ut.</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Feb 14</span>
-        </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+        </div>
+    </div>
 
     <div class="cd-timeline-block">
         <div class="cd-timeline-img cd-location">
             <img src="assets/img/timeline/cd-icon-location.svg" alt="Location">
-        </div> <!-- cd-timeline-img -->
+        </div>
 
         <div class="cd-timeline-content">
             <h2>WSIZ</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
             <a href="#0" class="cd-read-more">Read more</a>
             <span class="cd-date">Feb 18</span>
-        </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+        </div>
+    </div>
 
     <div class="cd-timeline-block">
         <div class="cd-timeline-img cd-movie">
             <img src="assets/img/timeline/cd-icon-movie.svg" alt="Movie">
-        </div> <!-- cd-timeline-img -->
+        </div>
 
         <div class="cd-timeline-content">
             <h2>HIRE</h2>
             <p>This is the content of the last section</p>
             <span class="cd-date">Feb 26</span>
-        </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
-</section> <!-- cd-timeline -->
-
-
-<!--<ng-view></ng-view>-->
+        </div>
+    </div>
+</section>
 
 <section id="section4" class="skills-page">
 
@@ -200,7 +198,7 @@
         <div class="container tiles-container flex-box">
 
             <div class="section-header">
-                <h2>This is my timeline</h2>
+                <h2>skills</h2>
             </div>
 
             <div class="row" style="flex-grow: 2">
@@ -274,12 +272,11 @@
         </div>
     </div>
 
-
 </section>
 
 <section id="section5" class="projects-section">
     <div class="section-header">
-        <h2>This is my projects</h2>
+        <h2>projects</h2>
     </div>
 
     <div class="section-content dark-content">
@@ -462,20 +459,21 @@
             <div class="row">
                 <!-- -->
                 <div class="col-md-6 bg-side">
-                    <div class="img-fix project-3">
-                        <div class="project-overlay"></div>
-                        <div class="portfolio-caption flex-box">
-                            <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <h4 class="portfolio-cat">Photography</h4>
-                            </div>
-                        </div>
+                    <div class="grid">
+                        <figure class="effect-jazz">
+                            <img src="assets/img/My_projects_img/Wikendo1.png" alt="img25"/>
+                            <figcaption>
+                                <h2><span>Wikendo</span></h2>
+                                <p>When Jazz starts to chase cars, the whole world stands still.</p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
                 <!-- -->
                 <div class="col-md-6 data-side">
                     <div class="img-fix flex-box">
-                        <div class="text-center wow fadeInUp">
+                        <div class="ng-cloak text-center wow fadeInUp">
                             <h1>{{ projects.wikendo.title }}</h1>
                             <p>{{ projects.wikendo.description }}</p>
                             <p>{{ projects.wikendo.description }}</p>
@@ -491,6 +489,11 @@
 <footer class="footer">
 
     <section class="contact-content light-content">
+
+        <div class="section-header">
+            <h2>Contact</h2>
+        </div>
+
         <div class="container">
             <div class="row">
 
@@ -562,6 +565,7 @@
                         <div class="footer-copyright">
                             <p>&copy; Daniil Sydorenko {{copyYear}}</p>
                         </div>
+
                         <!-- Made with -->
                         <div class="footer-made">
                             <p>Made with <span><i class="fa fa-heart"></i></span>
@@ -576,28 +580,8 @@
 
 </footer>
 
-<!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
-<!--<script src="bower_components/wow/dist/wow.js"></script>-->
-<!--<script src="bower_components/angular/angular.js"></script>-->
-<!--<script src="bower_components/angular-route/angular-route.js"></script>-->
-<!--<script src="bower_components/vide/dist/jquery.vide.js"></script>-->
-
-<!--<script src="app/app.module.js"></script>-->
-<!--<script src="app/app.routes.js"></script>-->
-<!--<script src="app/components/mainPage/mainPage.ctrl.js"></script>-->
-<!--<script src="app/components/aboutPage/aboutPage.ctrl.js"></script>-->
-<!--<script src="app/components/worksPage/worksPage.ctrl.js"></script>-->
-<!--<script src="app/shared/skill/skillDirective.js"></script>-->
-
-<!--<script src="assets/js/main.js"></script>-->
-
-
+<!-- Scripts build -->
 <script src="dist/js/build.js"></script>
-
-
-<script>
-    new WOW().init();
-</script>
 
 </body>
 </html>

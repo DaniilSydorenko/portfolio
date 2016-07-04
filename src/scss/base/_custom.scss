@@ -11,7 +11,7 @@
 .section-header {
   position: relative;
   z-index: 1;
-  background: #383F42;
+  background: inherit;
   padding: 50px;
 
   h2 {
@@ -137,12 +137,17 @@
   }
 }
 
+#cd-timeline {
+  background: #383F42;
+  padding-top: 0;
+}
+
 /* Skills page
 --------------------------------------------------------------------------------*/
 
 .skills-page {
   .tiles-section {
-    height: 100vh;
+    //height: 100vh;
     background: #EFF1F4;
 
     .tile {

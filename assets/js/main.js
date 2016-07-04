@@ -14,6 +14,11 @@ $(document).ready(function () {
     });
 
     /**
+     * Wow init
+     */
+    new WOW().init();
+
+    /**
      * Video background
      */
     App.scaleVideoContainer();
@@ -40,7 +45,6 @@ $(document).ready(function () {
             zoom: 10
         });
 });
-
 
 /**
  * ==============================================================
