@@ -5,6 +5,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  padding: 10px;
   width: 100%;
   z-index: 101;
   overflow: hidden;
@@ -55,18 +56,36 @@
   }
 
   .logo-name {
-    span {
-      font-size: 1vmax;
-      color: #f9f9f9 !important;
-      padding: 0 20px;
+    overflow: hidden;
+    p {
+      padding: 15px 20px;
       text-transform: uppercase;
+      color: #f9f9f9 !important;
+      border: 1px solid #f9f9f9;
+      font-size: 22px;
+      transition: all .3s;
+      background: rgba(204,204,204,.5);
+      margin: 0;
+      line-height: normal;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
 
-      a {
-        color: #f9f9f9 !important;
-        border: 1px solid #f9f9f9;
-        padding: 10px 15px;
-        font-size: 22px;
+      span {
+        transition: all .3s;
+        position: absolute;
+        left: -200px;
       }
+
+      &:hover {
+        transition: padding-right ease-in-out .3s;
+        padding-right: 212px;
+        > span {
+          transition: left ease-in-out .3s;
+          left: 38px;
+        }
+      }
+
     }
   }
 

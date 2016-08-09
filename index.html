@@ -2,7 +2,7 @@
 <html lang="en" ng-app="secondWebApp">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Daniil Sydorenko | Portfolio | Web Developer</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
@@ -29,7 +29,7 @@
 <header class="header animated">
     <nav class="flex-box">
         <div class="logo-name">
-            <span><a href="#home">D</a></span>
+            <p>D<span>aniil Sydorenko</span></p>
         </div>
         <ul class="">
             <li><a href="#section1">Home</a></li>
@@ -72,7 +72,7 @@
     <div class="hero-text-container flex-box">
 
         <div class="hero-text">
-            <p>Daniil Sydorenko</p>
+            <p>Hi, I`m glad to see you!</p>
             <p>Full Stack Developer | Inspired by Web | Jamaica Lover</p>
         </div>
 
@@ -203,7 +203,7 @@
 
             <div class="row" style="flex-grow: 2">
                 <!-- Backend -->
-                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                <div class="col-md-4 col-sm-6 col-xs-12 skills-wrap service wow fadeInUp animated tile"
                      data-wow-duration="0.5s" data-wow-delay="0.4s">
                     <skill-directive rwd-class="col-md-4 col-sm-6"
                                      skill-header="{{ skills.backend.skillHeader }}"
@@ -214,7 +214,7 @@
                 </div>
 
                 <!-- Frontend -->
-                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                <div class="col-md-4 col-sm-6 col-xs-12 skills-wrap service wow fadeInUp animated tile"
                      data-wow-duration="0.6s" data-wow-delay="0.5s">
                     <skill-directive rwd-class="col-md-4 col-sm-6"
                                      skill-header="{{ skills.frontend.skillHeader }}"
@@ -225,7 +225,7 @@
                 </div>
 
                 <!-- Automation tools -->
-                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                <div class="col-md-4 col-sm-6 col-xs-12 skills-wrap service wow fadeInUp animated tile"
                      data-wow-duration="0.7s" data-wow-delay="0.6s">
                     <skill-directive rwd-class="col-md-4 col-sm-6"
                                      skill-header="{{ skills.aut_tools.skillHeader }}"
@@ -236,7 +236,7 @@
                 </div>
 
                 <!-- Usability -->
-                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                <div class="col-md-4 col-sm-6 col-xs-12 skills-wrap service wow fadeInUp animated tile"
                      data-wow-duration="0.8s" data-wow-delay="0.7s">
                     <skill-directive rwd-class="col-md-4 col-sm-6"
                                      skill-header="{{ skills.usability.skillHeader }}"
@@ -247,7 +247,7 @@
                 </div>
 
                 <!-- Browser tools -->
-                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                <div class="col-md-4 col-sm-6 col-xs-12 skills-wrap service wow fadeInUp animated tile"
                      data-wow-duration="0.9s" data-wow-delay="0.8s">
                     <skill-directive rwd-class="col-md-4 col-sm-6"
                                      skill-header="{{ skills.browser_tools.skillHeader }}"
@@ -258,7 +258,7 @@
                 </div>
 
                 <!-- Version control -->
-                <div class="col-md-4 col-sm-6 skills-wrap service wow fadeInUp animated tile"
+                <div class="col-md-4 col-sm-6 col-xs-12 skills-wrap service wow fadeInUp animated tile"
                      data-wow-duration="0.9s" data-wow-delay="0.8s">
                     <skill-directive rwd-class="col-md-4 col-sm-6"
                                      skill-header="{{ skills.version_control.skillHeader }}"
@@ -296,13 +296,10 @@
                 </div>
                 <!-- -->
                 <div class="col-md-6 data-side">
-                    <div class="img-fix flex-box">
-                        <div class="text-center wow fadeInUp">
-                            <h1>{{ projects.levelee.title }}</h1>
-                            <p>{{ projects.levelee.description }}</p>
-                            <p>{{ projects.levelee.description }}</p>
-                        </div>
-                    </div>
+                    <project-directive
+                            project-title="{{projects.levelee.title}}"
+                            project-description="{{projects.levelee.description}}">
+                    </project-directive>
                 </div>
             </div>
         </div>
@@ -497,25 +494,34 @@
         <div class="container">
             <div class="row">
 
+                <div class="contact-data col-md-12">
+                    <p>tel: +48-537-579-280</p>
+                    <p>mail: daniildeveloper@gmail.com</p>
+                </div>
+
+                <!--<div class="contact-devider">-->
+                    <!--<span>OR</span>-->
+                <!--</div>-->
+
                 <form action="#" method="POST" class="contact-form col-md-6">
                     <!-- Name -->
                     <div class="col-md-12">
-                        <label for="name">Name <span>*</span></label>
-                        <input type="text" name="name" id="name" class="input-field" placeholder="Name: " maxlength="50"
+                        <input type="text" name="name" id="name" class="input-field" maxlength="50"
                                required="">
+                        <label for="name">Name</label>
                     </div>
 
                     <!-- Email -->
                     <div class="col-md-12">
                         <label for="email">Email <span>*</span></label>
-                        <input type="email" name="email" id="email" class="input-field" placeholder="E-mail: "
+                        <input type="email" name="email" id="email" class="input-field"
                                maxlength="50" required="">
                     </div>
 
                     <!-- Message -->
                     <div class="col-md-12">
                         <label for="message">Message <span>*</span></label>
-                        <textarea rows="7" name="message" id="message" class="input-field" placeholder="Message: "
+                        <textarea rows="7" name="message" id="message" class="input-field"
                                   required=""></textarea>
                     </div>
 

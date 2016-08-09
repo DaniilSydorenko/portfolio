@@ -27,13 +27,10 @@
 // 5. Components
 @import
   'components/button',
-  'components/hamburger';
+  'components/hamburger',
+  'components/contact_form';
 
 // 6. Page-specific styles
 @import
   'pages/home',
   'pages/projects';
-
-// 7. Themes
-@import
-  'themes/default';

@@ -8,9 +8,12 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
     clean = require('gulp-clean'),
-    minify = require('gulp-minify-css');
+    minify = require('gulp-minify-css'),
+    imagemin = require('gulp-imagemin');
+
 
 // Run all of our tasks
+//gulp.task('default', ['cleanJs', 'concatScripts', 'minifyScripts', 'cleanCss', 'compileSass', 'makeCss', 'minifyImages', 'watch']); //prod ---> images
 gulp.task('default', ['cleanJs', 'concatScripts', 'minifyScripts', 'cleanCss', 'compileSass', 'makeCss', 'watch']);
 
 /* Scripts */
@@ -71,15 +74,19 @@ gulp.task('cleanCss', function () {
         .pipe(clean());
 });
 
+/* Images */
+//gulp.task('minifyImages', () =>
+//    gulp.src('assets/img/**/*')
+//        .pipe(imagemin())
+//        .pipe(gulp.dest('dist/images'))
+//);
+
 // Check for modifications
 gulp.task('watch', function() {
-
     // Styles
     gulp.watch('./src/scss/**/*.scss', ['compileSass']);
     gulp.watch('./dist/css/*.css', ['cleanCss', 'makeCss']);
-
     // Scripts
     gulp.watch('./assets/js/*.js', ['cleanJs', 'concatScripts']);
     gulp.watch('./dist/js/build.js', ['minifyScripts']);
-
 });

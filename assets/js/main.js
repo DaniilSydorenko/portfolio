@@ -44,6 +44,14 @@ $(document).ready(function () {
             center: {lat: 52.2452118, lng: 20.9881184},
             zoom: 10
         });
+
+});
+
+$(window).on('resize', function() {
+    var height = Math.max($(".skills-content").height());
+    console.log(height);
+    //$("#left").height(height);
+    //$("#right").height(height);
 });
 
 /**
@@ -141,9 +149,7 @@ var App = {
     },
 
     fadeOutMenuElements: function () {
-
         var el = $(".mobileMenu li");
-
         setTimeout(function () {
             $(el[2]).removeClass("fade");
             setTimeout(function () {
@@ -153,8 +159,6 @@ var App = {
                 }, 100);
             }, 150);
         }, 200);
-
-
         setTimeout(function () {
             $(".responsiveMobileMenu").removeClass("display");
 
@@ -163,7 +167,6 @@ var App = {
 
             }, 420);
         }, 540);
-
     },
 
     fadeInMenuElements: function () {
@@ -178,7 +181,7 @@ var App = {
 
         var el = $(".mobileMenu li");
 
-        setTimeout(function () {
+            setTimeout(function () {
             $(el[0]).addClass("fade");
             setTimeout(function () {
                 $(el[1]).addClass("fade");
