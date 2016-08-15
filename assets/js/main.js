@@ -6,12 +6,10 @@
  * ==============================================================
  */
 $(document).ready(function () {
-    //App.init();
-
-    App.hamburger.on("click", function () {
-        $(this).toggleClass('open');
-        App.toggleResponsiveMobileMenu();
-    });
+    /**
+     * Init all functions
+     */
+    App.init();
 
     /**
      * Wow init
@@ -64,11 +62,11 @@ $(window).on("scroll", function () {
     /**
      * Header animation
      */
-    if (App.getCurrentScroll() >= App.shrinkHeader) {
-        $('.header').addClass('fixed fadeInDown');
-    } else {
-        $('.header').removeClass('fixed fadeInDown');
-    }
+    //if (App.getCurrentScroll() >= App.shrinkHeader) {
+    //    $('.header').addClass('fixed fadeInDown');
+    //} else {
+    //    $('.header').removeClass('fixed fadeInDown');
+    //}
 
     /**
      * Timeline
@@ -118,6 +116,9 @@ var App = {
     timelineContent: $('.cd-timeline-content'),
     timelineImg: $('.cd-timeline-img'),
     timelineOffset: 0.8,
+
+    /* Contact form */
+    inputField: $(".input-field"),
 
     /**
      * Custom functions
@@ -286,7 +287,21 @@ var App = {
      * Initialization
      */
     init: function () {
-        // Add logic ...
+        App.hamburger.on("click", function () {
+            $(this).toggleClass('open');
+            App.toggleResponsiveMobileMenu();
+        });
+
+        App.inputField.on('focus', function() {
+            $(this).addClass("active");
+        });
+
+        App.inputField.on('focusout', function() {
+            var inputVal = $(this).val();
+            if (inputVal.length <= 0) {
+                $(this).removeClass("active");
+            }
+        });
     }
 
 };

@@ -96,4 +96,9 @@ fabric.properties
 /test/reports
 /test/tmp/
 
+### Assets ###
+
 /assets/img/My_projects_img
+
+### Compiled files ###
+/dist

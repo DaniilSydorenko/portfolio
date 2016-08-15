@@ -56476,6 +56476,21 @@ app.controller('WorksController', function ($scope, $routeParams) {
     $scope.message = "WORKS PAGE";
     $scope.workId = $routeParams.id;
 });
+app.directive('projectDirective', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '/portfolio/app/shared/project/projectDatasideDirective.html',
+        replace: true,
+        link: function(element) {
+            //console.log(element);
+        },
+        scope : {
+            projectTitle: '@',
+            projectDescription: '@'
+        }
+    }
+});
+
 app.directive('skillDirective', function () {
     return {
         restrict: 'E',
@@ -56493,21 +56508,6 @@ app.directive('skillDirective', function () {
     }
 });
 
-app.directive('projectDirective', function () {
-    return {
-        restrict: 'E',
-        templateUrl: '/portfolio/app/shared/project/projectDatasideDirective.html',
-        replace: true,
-        link: function(element) {
-            //console.log(element);
-        },
-        scope : {
-            projectTitle: '@',
-            projectDescription: '@'
-        }
-    }
-});
-
 'use strict';
 
 /**
@@ -56516,12 +56516,10 @@ app.directive('projectDirective', function () {
  * ==============================================================
  */
 $(document).ready(function () {
-    //App.init();
-
-    App.hamburger.on("click", function () {
-        $(this).toggleClass('open');
-        App.toggleResponsiveMobileMenu();
-    });
+    /**
+     * Init all functions
+     */
+    App.init();
 
     /**
      * Wow init
@@ -56574,11 +56572,11 @@ $(window).on("scroll", function () {
     /**
      * Header animation
      */
-    if (App.getCurrentScroll() >= App.shrinkHeader) {
-        $('.header').addClass('fixed fadeInDown');
-    } else {
-        $('.header').removeClass('fixed fadeInDown');
-    }
+    //if (App.getCurrentScroll() >= App.shrinkHeader) {
+    //    $('.header').addClass('fixed fadeInDown');
+    //} else {
+    //    $('.header').removeClass('fixed fadeInDown');
+    //}
 
     /**
      * Timeline
@@ -56628,6 +56626,9 @@ var App = {
     timelineContent: $('.cd-timeline-content'),
     timelineImg: $('.cd-timeline-img'),
     timelineOffset: 0.8,
+
+    /* Contact form */
+    inputField: $(".input-field"),
 
     /**
      * Custom functions
@@ -56796,7 +56797,21 @@ var App = {
      * Initialization
      */
     init: function () {
-        // Add logic ...
+        App.hamburger.on("click", function () {
+            $(this).toggleClass('open');
+            App.toggleResponsiveMobileMenu();
+        });
+
+        App.inputField.on('focus', function() {
+            $(this).addClass("active");
+        });
+
+        App.inputField.on('focusout', function() {
+            var inputVal = $(this).val();
+            if (inputVal.length <= 0) {
+                $(this).removeClass("active");
+            }
+        });
     }
 
 };
