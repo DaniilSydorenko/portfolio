@@ -56540,6 +56540,10 @@ $(document).ready(function () {
         App.scaleBannerVideoSize('.video-container .poster img');
         App.scaleBannerVideoSize('.video-container .filter');
         App.scaleBannerVideoSize('.video-container video');
+
+        // test
+        var height = Math.max($(".skills-content").height());
+        console.log(height);
     });
 
     /**
@@ -56553,13 +56557,6 @@ $(document).ready(function () {
             zoom: 10
         });
 
-});
-
-$(window).on('resize', function() {
-    var height = Math.max($(".skills-content").height());
-    console.log(height);
-    //$("#left").height(height);
-    //$("#right").height(height);
 });
 
 /**
@@ -56794,14 +56791,16 @@ var App = {
     },
 
     /**
-     * Initialization
+     * On Action Initialization
      */
     init: function () {
+        // Hamburger button
         App.hamburger.on("click", function () {
             $(this).toggleClass('open');
             App.toggleResponsiveMobileMenu();
         });
 
+        // Contact form input focus
         App.inputField.on('focus', function() {
             $(this).addClass("active");
         });

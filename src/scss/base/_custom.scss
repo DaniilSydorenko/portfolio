@@ -14,10 +14,21 @@
   background: inherit;
   padding: 50px;
 
+  &.d-header {
+    > h2 {
+      color: #414141;
+    }
+  }
+
+  &.l-header {
+    > h2 {
+      color: #f9f9f9;
+    }
+  }
+
   h2 {
     text-align: center;
     text-transform: uppercase;
-    color: #f9f9f9;
     margin: 0;
     font-weight: 300;
   }
@@ -190,3 +201,25 @@
     }
   }
 }
+
+//@custom-media --sm-viewport only screen and (min-width: 48em);
+//@custom-media --md-viewport only screen and (min-width: 64em);
+//@custom-media --lg-viewport only screen and (min-width: 75em);
+
+//@media only screen and (min-width: 48em) {
+//  .skills-content {
+//    height: 107px;
+//  }
+//}
+//
+//@media only screen and (min-width: 64em) {
+//  .skills-content {
+//    height: 207px;
+//  }
+//}
+//
+//@media only screen and (min-width: 75em) {
+//  .skills-content {
+//    height: 307px;
+//  }
+//}
