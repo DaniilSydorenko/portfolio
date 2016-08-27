@@ -56550,13 +56550,6 @@ $(document).ready(function () {
      * Timeline
      */
     App.hideBlocks(App.timelineBlock, App.timelineOffset);
-
-    var map;
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 52.2452118, lng: 20.9881184},
-            zoom: 10
-        });
-
 });
 
 /**
