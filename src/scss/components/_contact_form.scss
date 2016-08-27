@@ -1,10 +1,25 @@
 .contact-form {
+
+  .contact-data {
+    p {
+      i {
+        font-size: 1em;
+        line-height: normal;
+        vertical-align: middle;
+        padding-right: 10px;
+        color: #414141;
+      }
+    }
+  }
+
   .col-md-12 {
     position: relative;
-    margin-top: 10px;
+    margin: 10px;
+    padding: 0;
 
     .input-field {
-      height: 40px;
+      height: 2.5em;
+      width: 100%;
       margin-left: -15px;
       border-top: 0;
       border-right: 0;
@@ -33,7 +48,5 @@
       cursor: text;
       transition: .2s ease-out;
     }
-
   }
-
 }

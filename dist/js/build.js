@@ -56586,6 +56586,36 @@ $(window).on("scroll", function () {
         App.showBlocks(App.timelineBlock, App.timelineOffset);
     });
 
+    let projectSections = App.getProjectSections(),
+        firstOffset = projectSections[0].offset;
+
+    var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
+    let stopValue = startValue + ($('.section-content').height() - 300);
+
+    if ($(window).scrollTop() < firstOffset) {
+        $(".section-content").removeClass('active');
+    }
+
+    if ($(window).scrollTop() >= startValue) {
+        $('[data-offset=' + startValue + ']').find('.flex-box').css('align-items', 'flex-start');
+
+        if (!$(".section-content").hasClass('active')) {
+            $('[data-offset=' + startValue + ']').addClass('active');
+        } else {
+            if (!$('[data-offset=' + startValue + ']').hasClass('active')) {
+                $(".section-content").removeClass('active');
+                $('[data-offset=' + startValue + ']').addClass('active');
+            }
+        }
+    }
+
+    if ($(window).scrollTop() >= stopValue) {
+        if ($('[data-offset=' + startValue + ']').hasClass('active')) {
+            $('[data-offset=' + startValue + ']').removeClass('active');
+            $('[data-offset=' + startValue + ']').find('.flex-box').css('align-items', 'flex-end');
+        }
+    }
+
 });
 
 /**
@@ -56605,6 +56635,7 @@ var App = {
     header: $('.header'),
     footer: $('.footer'),
     cookies: $('.cookies'),
+    projectSections: $('.section-content'),
 
     /* Components */
     hamburger: $(".menu-btn-wrapper"),
@@ -56790,7 +56821,43 @@ var App = {
         });
     },
 
-    /**
+    getProjectSections: () => {
+        let projectSet = [];
+        for (let section of App.projectSections) {
+            $(section).attr('data-offset', section.offsetTop);
+            projectSet.push({
+                offset: section.offsetTop,
+                isActive: false
+            });
+        }
+        return projectSet;
+    },
+
+    getProjectSectionOffsets: () => {
+        let offsets = [];
+        for (let ofs of App.getProjectSections()) {
+            offsets.push(ofs.offset);
+        }
+        return offsets;
+    },
+
+    getClosestValue: function (offsets, currentScroll) {
+        let minVal = Math.min.apply(null, offsets);
+
+        if (currentScroll >= offsets[0] && currentScroll < offsets[1]) {
+            return offsets[0];
+        } else if (currentScroll >= offsets[offsets.length - 1]) {
+            return offsets[offsets.length - 1];
+        } else {
+            for (let i = 0; i <= offsets.length - 1; i++) {
+                if (offsets[i] >= currentScroll) {
+                    return offsets[i-1];
+                }
+            }
+        }
+    },
+
+     /**
      * On Action Initialization
      */
     init: function () {

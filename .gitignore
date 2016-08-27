@@ -98,7 +98,7 @@ fabric.properties
 
 ### Assets ###
 
-/assets/img/My_projects_img
+/assets/img/projects_img
 
 ### Compiled files ###
 /dist
