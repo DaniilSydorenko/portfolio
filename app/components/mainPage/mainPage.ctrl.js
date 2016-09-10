@@ -104,6 +104,14 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
         }
     };
 
+    $scope.submitForm = function(isValid) {
+        // check to make sure the form is completely valid
+        if (isValid) {
+            console.log('our form is amazing');
+        }
+
+    };
+
     //var responseData;
     //$http.get('http://www.w3schools.com/angular/customers.php').then(function(response){
     //    responseData = response.data;

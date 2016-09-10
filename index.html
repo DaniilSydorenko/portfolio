@@ -27,16 +27,10 @@
 <body ng-controller="MainController">
 
 <header class="header animated">
-    <nav class="flex-box">
+    <nav class="nav-transparent flex-box">
         <div class="logo-name">
             <p>D<span>aniil Sydorenko</span></p>
         </div>
-        <ul class="">
-            <li><a href="#section1">Home</a></li>
-            <li><a href="#section2">Works</a></li>
-            <li><a href="#section3">Skills</a></li>
-            <li><a href="#section4">About</a></li>
-        </ul>
         <div id="nav-icon2" class="menu-btn-wrapper">
             <span class="menu-btn-line"></span>
             <span class="menu-btn-line"></span>
@@ -51,35 +45,42 @@
 <div id="home" class="responsiveMobileMenu">
     <ul class="mobileMenu flex-box">
         <li class="show">
-            <a class="scroll" href="#portfolio">
-                <h3>Portfolio</h3>
+            <a class="scroll" href="#section-home" role="menuitem">
+                <h3>Home</h3>
             </a>
         </li>
         <li class="show">
-            <a class="scroll" href="#about">
-                <h3>About</h3>
+            <a class="scroll" href="#section5" role="menuitem">
+                <h3>About me</h3>
             </a>
         </li>
         <li class="show">
-            <a class="scroll" href="#contact">
+            <a class="scroll" href="#section5" role="menuitem">
+                <h3>Skills</h3>
+            </a>
+        </li>
+        <li class="show">
+            <a class="scroll" href="#section5" role="menuitem">
+                <h3>Projects</h3>
+            </a>
+        </li>
+        <li class="show">
+            <a class="scroll" href="#section5" role="menuitem">
                 <h3>Contact</h3>
             </a>
         </li>
     </ul>
 </div>
 
-<div class="homepage-hero-module">
+<!-- Section Home -->
+<section id="section-home" class="homepage-hero-module">
     <div class="hero-text-container flex-box">
-
         <div class="hero-text">
             <p>Hi, I`m glad to see you!</p>
             <p>Full Stack Developer | Inspired by Web</p>
         </div>
-
     </div>
-
     <div class="overlay"></div>
-
     <div class="video-container">
         <!--<div class="filter"></div>-->
         <video autoplay loop class="fillWidth">
@@ -92,7 +93,8 @@
             <!--<img src="assets/img/bg/White-Keyboard.jpg" alt="Background">-->
         </div>
     </div>
-</div>
+</section>
+<!-- End Section Home -->
 
 <section id="cd-timeline" class="cd-container">
 
@@ -193,7 +195,7 @@
 
 <section id="section4" class="skills-page">
 
-    <div class="tiles-section">
+
 
         <div class="container tiles-container flex-box">
 
@@ -270,7 +272,6 @@
             </div>
 
         </div>
-    </div>
 
 </section>
 
@@ -459,15 +460,14 @@
             <div class="row">
                 <!-- -->
                 <div class="col-md-6 bg-side">
-                    <div class="grid">
-                        <figure class="effect-jazz">
-                            <img src="assets/img/projects_img/zszywka_03.png" alt="img25"/>
-                            <figcaption>
-                                <h2><span>Wikendo</span></h2>
-                                <p>When Jazz starts to chase cars, the whole world stands still.</p>
-                                <a href="#">View more</a>
-                            </figcaption>
-                        </figure>
+                    <div class="img-fix project-3">
+                        <div class="project-overlay"></div>
+                        <div class="portfolio-caption flex-box">
+                            <div class="portfolio-caption-inner">
+                                <h3 class="portfolio-title">Dreams visualization</h3>
+                                <h4 class="portfolio-cat">Photography</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- -->
@@ -497,7 +497,8 @@
         <div class="container">
             <div class="row">
 
-                <form action="#" method="POST" class="contact-form col-md-6" novalidate>
+                <form name="userForm" ng-submit="submitForm(userForm.$valid)"
+                      class="contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12" novalidate>
 
                     <div class="contact-data col-md-12">
                         <p><i class="fa fa-phone"></i>+48-537-579-280</p>
@@ -534,10 +535,9 @@
                     </div>
                 </form>
 
-                <div class="col-md-6">
-
+                <!-- Google Map -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div id="map"></div>
-
                 </div>
             </div>
         </div>

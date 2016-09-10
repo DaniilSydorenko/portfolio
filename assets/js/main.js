@@ -7,39 +7,9 @@
  */
 $(document).ready(function () {
     /**
-     * Init all functions
+     * Init application
      */
     App.init();
-
-    /**
-     * Wow init
-     */
-    new WOW().init();
-
-    /**
-     * Video background
-     */
-    App.scaleVideoContainer();
-
-    App.initBannerVideoSize('.video-container .poster img');
-    App.initBannerVideoSize('.video-container .filter');
-    App.initBannerVideoSize('.video-container video');
-
-    $(window).on('resize', function () {
-        App.scaleVideoContainer();
-        App.scaleBannerVideoSize('.video-container .poster img');
-        App.scaleBannerVideoSize('.video-container .filter');
-        App.scaleBannerVideoSize('.video-container video');
-
-        // test
-        var height = Math.max($(".skills-content").height());
-        console.log(height);
-    });
-
-    /**
-     * Timeline
-     */
-    App.hideBlocks(App.timelineBlock, App.timelineOffset);
 });
 
 /**
@@ -48,16 +18,6 @@ $(document).ready(function () {
  * ==============================================================
  */
 $(window).on("scroll", function () {
-
-    /**
-     * Header animation
-     */
-    //if (App.getCurrentScroll() >= App.shrinkHeader) {
-    //    $('.header').addClass('fixed fadeInDown');
-    //} else {
-    //    $('.header').removeClass('fixed fadeInDown');
-    //}
-
     /**
      * Timeline
      */
@@ -102,8 +62,8 @@ $(window).on("scroll", function () {
 });
 
 /**
- * Base application object
- * Consists all needed functionality:
+ * Basic application object
+ * Has all needed functionality:
  *  - Video bg
  *  - Header
  *  - Timeline
@@ -154,115 +114,86 @@ var App = {
         return window.pageYOffset || document.documentElement.scrollTop;
     },
 
-    /**
-     * Responsive mobile menu
-     */
-    showResponsiveMobileMenu: function () {
-        $(".menu-btn-wrapper").on("click", function () {
-            $(".responsiveMobileMenu").addClass("flex");
-
-            setTimeout(function () {
-                $(".responsiveMobileMenu").addClass("display");
-
-                setTimeout(function () {
-                }, 420);
-            }, 20);
-        })
-    },
-
     fadeOutMenuElements: function () {
         var el = $(".mobileMenu li");
         setTimeout(function () {
-            $(el[2]).removeClass("fade");
+            $(el[4]).removeClass("fade");
             setTimeout(function () {
-                $(el[1]).removeClass("fade");
+                $(el[3]).removeClass("fade");
                 setTimeout(function () {
-                    $(el[0]).removeClass("fade");
-                }, 100);
-            }, 150);
-        }, 200);
+                    $(el[2]).removeClass("fade");
+                    setTimeout(function () {
+                        $(el[1]).removeClass("fade");
+                        setTimeout(function () {
+                            $(el[0]).removeClass("fade");
+                        }, 50);
+                    }, 100);
+                }, 150);
+            }, 200);
+        }, 250);
         setTimeout(function () {
             $(".responsiveMobileMenu").removeClass("display");
-
             setTimeout(function () {
                 $(".responsiveMobileMenu").removeClass("flex");
-
-            }, 420);
-        }, 540);
+            }, 500);
+        }, 500);
     },
 
     fadeInMenuElements: function () {
+        var el = $(".mobileMenu li");
         $(".responsiveMobileMenu").addClass("flex");
-
         setTimeout(function () {
             $(".responsiveMobileMenu").addClass("display");
-
             setTimeout(function () {
-            }, 420);
-        }, 20);
-
-        var el = $(".mobileMenu li");
-
-            setTimeout(function () {
+            }, 500);
+        }, 50);
+        setTimeout(function () {
             $(el[0]).addClass("fade");
             setTimeout(function () {
                 $(el[1]).addClass("fade");
                 setTimeout(function () {
                     $(el[2]).addClass("fade");
-                }, 100);
-            }, 150);
-        }, 200);
+                    setTimeout(function () {
+                        $(el[3]).addClass("fade");
+                        setTimeout(function () {
+                            $(el[4]).addClass("fade");
+                        }, 50);
+                    }, 100);
+                }, 150);
+            }, 200);
+        }, 250);
     },
 
-
     toggleResponsiveMobileMenu: function () {
-
         if ($("#home").hasClass('display')) {
-            //menu.toggleClass('open');
             setTimeout(function () {
-                //button.toggleClass('open');
-                setTimeout(function () {
-                    //fadeOutMenuElements
-                    App.fadeOutMenuElements();
-                }, 10);
-            }, 10);
-
-
+                App.fadeOutMenuElements();
+            }, 50);
         } else {
-            //menu.toggleClass('open');
             setTimeout(function () {
-                //button.toggleClass('open');
-                setTimeout(function () {
-                    //fadeInMenuElements
-                    App.fadeInMenuElements();
-                }, 10);
-            }, 10);
+                App.fadeInMenuElements();
+            }, 50);
         }
-
     },
 
     /**
      * Video background
      */
     scaleVideoContainer: function () {
-
         var height = App.ih + 5;
         var unitHeight = parseInt(height) + 'px';
         $('.homepage-hero-module').css('height', unitHeight);
     },
 
     initBannerVideoSize: function (element) {
-
         $(element).each(function () {
             $(this).data('height', $(this).height());
             $(this).data('width', $(this).width());
         });
-
         this.scaleBannerVideoSize(element);
     },
 
     scaleBannerVideoSize: function (element) {
-
         var windowWidth = App.iw,
             windowHeight = App.ih + 5,
             videoWidth,
@@ -334,31 +265,84 @@ var App = {
         } else {
             for (let i = 0; i <= offsets.length - 1; i++) {
                 if (offsets[i] >= currentScroll) {
-                    return offsets[i-1];
+                    return offsets[i - 1];
                 }
             }
         }
     },
 
-     /**
+    /**
      * On Action Initialization
      */
     init: function () {
-        // Hamburger button
+        /**
+         * Wow init
+         */
+        new WOW().init();
+
+        /**
+         * Video background
+         */
+        App.scaleVideoContainer();
+
+        App.initBannerVideoSize('.video-container .poster img');
+        App.initBannerVideoSize('.video-container .filter');
+        App.initBannerVideoSize('.video-container video');
+
+        $(window).on('resize', function () {
+            App.scaleVideoContainer();
+            App.scaleBannerVideoSize('.video-container .poster img');
+            App.scaleBannerVideoSize('.video-container .filter');
+            App.scaleBannerVideoSize('.video-container video');
+
+            // test
+            var height = Math.max($(".skills-content").height());
+            console.log(height);
+        });
+
+        /**
+         * Timeline
+         */
+        App.hideBlocks(App.timelineBlock, App.timelineOffset);
+
+        /**
+         * Hamburger button
+         */
         App.hamburger.on("click", function () {
             $(this).toggleClass('open');
             App.toggleResponsiveMobileMenu();
         });
 
-        // Contact form input focus
-        App.inputField.on('focus', function() {
+        /**
+         * Contact form input focus
+         */
+        App.inputField.on('focus', function () {
             $(this).addClass("active");
         });
 
-        App.inputField.on('focusout', function() {
+        App.inputField.on('focusout', function () {
             var inputVal = $(this).val();
             if (inputVal.length <= 0) {
                 $(this).removeClass("active");
+            }
+        });
+
+        /**
+         * Smooth scroll
+         */
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            $(".menu-btn-wrapper").removeClass('open');
+            App.toggleResponsiveMobileMenu();
+
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
             }
         });
     }
