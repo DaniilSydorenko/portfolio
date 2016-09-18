@@ -1,7 +1,14 @@
 <div class="img-fix flex-box">
-    <div class="text-center wow fadeInUp">
-        <h1>{{ projectTitle }}</h1>
-        <p>{{ projectDescription }}</p>
-        <p>{{ projectDescription }}</p>
+    <div class="text-center wow fadeInUp" data-wow-duration="0.5s">
+        <h1>{{ projectDescription.title }}</h1>
+        <p>{{ projectDescription.description }}</p>
+        <p>Role:</p>
+        <p>{{ projectDescription.role }}</p>
+        <p>Respons: </p>
+        <p>{{ projectDescription.responsibilities }}</p>
+        <p>Tech: </p>
+        <p>{{ projectDescription.techs }}</p>
+        <p>Conc: </p>
+        <p>{{ projectDescription.conclusion }}</p>
     </div>
 </div>

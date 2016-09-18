@@ -4,11 +4,10 @@ app.directive('projectDirective', function () {
         templateUrl: '/portfolio/app/shared/project/projectDatasideDirective.html',
         replace: true,
         link: function(element) {
-            //console.log(element);
+            console.log(element);
         },
         scope : {
-            projectTitle: '@',
-            projectDescription: '@'
+            projectDescription: '='
         }
     }
 });

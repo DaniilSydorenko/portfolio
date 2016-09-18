@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     clean = require('gulp-clean'),
     minify = require('gulp-minify-css'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    gutil = require('gulp-util');
 
 
 // Run all of our tasks
@@ -35,7 +36,7 @@ gulp.task('concatScripts', function() {
 
 gulp.task("minifyScripts", function(){
     return gulp.src('dist/js/build.js')
-        .pipe(uglify())
+        .pipe(uglify().on('error', gutil.log))
         .pipe(rename('build.min.js'))
         .pipe(gulp.dest("dist/js"));
 });

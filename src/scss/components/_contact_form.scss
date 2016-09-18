@@ -3,7 +3,13 @@
   .contact-data {
     padding: 0;
 
-    p {
+    a {
+      color: #222222;
+      text-decoration: none !important;
+      cursor: pointer;
+      display: block;
+      margin: 0 0 1rem 0;
+
       i {
         font-size: 1em;
         line-height: normal;

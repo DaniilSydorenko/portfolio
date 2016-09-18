@@ -29,11 +29,11 @@ $(window).on("scroll", function () {
         App.showBlocks(App.timelineBlock, App.timelineOffset);
     });
 
-    let projectSections = App.getProjectSections(),
+    var projectSections = App.getProjectSections(),
         firstOffset = projectSections[0].offset;
 
     var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
-    let stopValue = startValue + ($('.section-content').height() - 300);
+    var stopValue = startValue + ($('.section-content').height() - 300);
 
     if ($(window).scrollTop() < firstOffset) {
         $(".section-content").removeClass('active');
@@ -235,35 +235,34 @@ var App = {
         });
     },
 
-    getProjectSections: () => {
-        let projectSet = [];
-        for (let section of App.projectSections) {
+    getProjectSections: function() {
+        return App.projectSections.map(function(element) {
+            var section = App.projectSections[element];
             $(section).attr('data-offset', section.offsetTop);
-            projectSet.push({
+            return {
                 offset: section.offsetTop,
                 isActive: false
-            });
-        }
-        return projectSet;
+            };
+        });
     },
 
-    getProjectSectionOffsets: () => {
-        let offsets = [];
-        for (let ofs of App.getProjectSections()) {
+    getProjectSectionOffsets: function() {
+        var offsets = [];
+        for (var ofs of App.getProjectSections()) {
             offsets.push(ofs.offset);
         }
         return offsets;
     },
 
     getClosestValue: function (offsets, currentScroll) {
-        let minVal = Math.min.apply(null, offsets);
+        var minVal = Math.min.apply(null, offsets);
 
         if (currentScroll >= offsets[0] && currentScroll < offsets[1]) {
             return offsets[0];
         } else if (currentScroll >= offsets[offsets.length - 1]) {
             return offsets[offsets.length - 1];
         } else {
-            for (let i = 0; i <= offsets.length - 1; i++) {
+            for (var i = 0; i <= offsets.length - 1; i++) {
                 if (offsets[i] >= currentScroll) {
                     return offsets[i - 1];
                 }
