@@ -28,8 +28,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "levelee": {
@@ -42,8 +41,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "tapon_fb_app": {
@@ -56,8 +54,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "wikendo": {
@@ -70,8 +67,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "i_sport": {
@@ -84,8 +80,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "folklor": {
@@ -98,8 +93,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         }
     };

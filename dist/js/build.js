@@ -56352,6 +56352,9 @@ app.config(function ($routeProvider) {
             controller: 'MainController'
         });
 });
+app.controller('AboutController', function ($scope) {
+    $scope.message = "ABOUT PAGE";
+});
 app.controller('MainController', function ($scope, $timeout, $q, $http, $rootScope) {
     $scope.message = "MAIN PAGE";
     $scope.data = "Some data";
@@ -56382,8 +56385,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "levelee": {
@@ -56396,8 +56398,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "tapon_fb_app": {
@@ -56410,8 +56411,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "wikendo": {
@@ -56424,8 +56424,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "i_sport": {
@@ -56438,8 +56437,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         },
         "folklor": {
@@ -56452,8 +56450,7 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
                 " meet new people, to promote and advertise their own products." +
                 "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
                 "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery",
-                "conclusion": "I have to be toggled via JavaScript and implementation would"
+                "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
             }
         }
     };
@@ -56501,11 +56498,9 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
     };
 
     $scope.submitForm = function(isValid) {
-        // check to make sure the form is completely valid
         if (isValid) {
             console.log('our form is amazing');
         }
-
     };
 
     //var responseData;
@@ -56519,9 +56514,58 @@ app.controller('MainController', function ($scope, $timeout, $q, $http, $rootSco
     //    console.log("START");
     //});
 });
-app.controller('AboutController', function ($scope) {
-    $scope.message = "ABOUT PAGE";
+app.controller('WorksController', function ($scope, $routeParams) {
+    $scope.message = "WORKS PAGE";
+    $scope.workId = $routeParams.id;
 });
+app.directive('projectDirective', function () {
+
+    return {
+        restrict: 'E',
+        templateUrl: function (elem, attr) {
+            var baseUrl = '/portfolio/app/shared/project/';
+            var templates = {
+                data: 'projectDatasideDirective.html',
+                bg: 'projectBgsideDirective.html'
+            };
+
+            //var template = '';
+            //
+            //switch(attr.side){
+            //    case 'data':
+            //        template = templates.data;
+            //        console.log(attr.side);
+            //        break;
+            //    case 'bg':
+            //        template = templates.bg;
+            //        console.log(attr.side);
+            //        break;
+            //}
+
+            if (attr.side === "data") {
+console.log(attr.side);
+                //return '/portfolio/app/shared/project/projectDatasideDirective.html';
+            } else if (attr.side === "bg") {
+                console.log(attr.side);
+
+                //return '/portfolio/app/shared/project/projectBgsideDirective.html';
+            }
+
+            //return baseUrl + template;
+            return '/portfolio/app/shared/project/projectDatasideDirective.html';
+
+        },
+        replace: true,
+        link: function(element) {
+            //console.log(element);
+        },
+        scope : {
+            projectDescription: '=',
+            side: '@'
+        }
+    }
+});
+
 app.directive('skillDirective', function () {
     return {
         restrict: 'E',
@@ -56535,24 +56579,6 @@ app.directive('skillDirective', function () {
             skillIcon: '@',
             skillSubHeader: '@',
             skillText: '@'
-        }
-    }
-});
-
-app.controller('WorksController', function ($scope, $routeParams) {
-    $scope.message = "WORKS PAGE";
-    $scope.workId = $routeParams.id;
-});
-app.directive('projectDirective', function () {
-    return {
-        restrict: 'E',
-        templateUrl: '/portfolio/app/shared/project/projectDatasideDirective.html',
-        replace: true,
-        link: function(element) {
-            console.log(element);
-        },
-        scope : {
-            projectDescription: '='
         }
     }
 });
@@ -56592,7 +56618,7 @@ $(window).on("scroll", function () {
         firstOffset = projectSections[0].offset;
 
     var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
-    var stopValue = startValue + ($('.section-content').height() - 300);
+    var stopValue = startValue + ($('.section-content').height() - 450);
 
     if ($(window).scrollTop() < firstOffset) {
         $(".section-content").removeClass('active');

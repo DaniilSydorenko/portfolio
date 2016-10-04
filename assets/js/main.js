@@ -33,7 +33,7 @@ $(window).on("scroll", function () {
         firstOffset = projectSections[0].offset;
 
     var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
-    var stopValue = startValue + ($('.section-content').height() - 300);
+    var stopValue = startValue + ($('.section-content').height() - 450);
 
     if ($(window).scrollTop() < firstOffset) {
         $(".section-content").removeClass('active');
@@ -332,7 +332,6 @@ var App = {
         $('a[href*="#"]:not([href="#"])').click(function () {
             $(".menu-btn-wrapper").removeClass('open');
             App.toggleResponsiveMobileMenu();
-
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
