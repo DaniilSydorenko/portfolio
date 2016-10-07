@@ -1,6 +1,3 @@
-'use strict';
-
-/* Dependencies */
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -8,86 +5,129 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     watch = require('gulp-watch'),
     clean = require('gulp-clean'),
+    gutil = require('gulp-util'),
+    liveReload = require('gulp-livereload'),
     minify = require('gulp-minify-css'),
-    imagemin = require('gulp-imagemin'),
-    gutil = require('gulp-util');
+    merge = require('merge-stream'),
+    ncu = require('npm-check-updates'),
+    paths = {
+        dirs:       {
+            build: '.dist',
+            js:    'dist/js',
+            css:   'dist/css'
+        },
+        files:      {
+            js:  'dist/js/*.js',
+            css: 'dist/css/*.css'
+        },
+        components: {
+            sass: 'src/scss/main.scss',
+            js:   'assets/js/*.js'
+        },
+        vendors:    {
+            js:  [
+                "assets/libs/jquery-2.2.3.js",
+                "assets/libs/modernizr-custom.js",
+                "bower_components/jquery/dist/jquery.js",
+                "bower_components/angular/angular.js",
+                "bower_components/angular-route/angular-route.js",
+                "bower_components/wow/dist/wow.js",
+                "bower_components/vide/dist/jquery.vide.js",
+                "app/**/*.js",
+                "assets/js/main.js"
+            ],
+            css: [
+                "bower_components/flexboxgrid/dist/flexboxgrid.css",
+                "bower_components/wow/css/libs/animate.css"
+            ]
+        }
+    };
 
-
-// Run all of our tasks
-//gulp.task('default', ['cleanJs', 'concatScripts', 'minifyScripts', 'cleanCss', 'compileSass', 'makeCss', 'minifyImages', 'watch']); //prod ---> images
-gulp.task('default', ['cleanJs', 'concatScripts', 'minifyScripts', 'cleanCss', 'compileSass', 'makeCss', 'watch']);
-
-/* Scripts */
-gulp.task('concatScripts', function() {
-    return gulp.src([
-            "assets/libs/jquery-2.2.3.js",
-            "assets/libs/modernizr-custom.js",
-            "bower_components/jquery/dist/jquery.js",
-            "bower_components/angular/angular.js",
-            "bower_components/angular-route/angular-route.js",
-            "bower_components/wow/dist/wow.js",
-            "bower_components/vide/dist/jquery.vide.js",
-            "app/**/*.js",
-            "assets/js/main.js"
-        ])
-        .pipe(concat("build.js"))
-        .pipe(gulp.dest("dist/js"))
+gulp.task('update', function () {
+    ncu.run({
+        // Always specify the path to the package file
+        packageFile:  'package.json',
+        // Any command-line option can be specified here:
+        silent:       true,
+        jsonUpgraded: true
+    }).then(function (upgraded) {
+        console.log('dependencies to upgrade:', upgraded);
+        console.log('Use: ncu --upgradeAll & npm install');
+    });
 });
 
-gulp.task("minifyScripts", function(){
-    return gulp.src('dist/js/build.js')
-        .pipe(uglify().on('error', gutil.log))
-        .pipe(rename('build.min.js'))
-        .pipe(gulp.dest("dist/js"));
+gulp.task('clean', function (done) {
+    gulp.src(['dist'], {
+        read: false
+    })
+        .pipe(clean())
+        .on('end', function () {
+            gutil.log('All cleaned!');
+        });
+    done();
 });
 
-gulp.task('cleanJs', function () {
-    return gulp.src([
-            'dist/js/*.js'
-        ], {read: false})
+gulp.task('clean-js', function (done) {
+    gulp.src(paths.files.js, {
+        read: false
+    })
         .pipe(clean());
+    done();
 });
 
-/* Styles */
-gulp.task("compileSass", function(){
-    gulp.src('src/scss/main.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('dist/css'));
+gulp.task('clean-css', function (done) {
+    gulp.src(paths.files.css, {
+        read: false
+    })
+        .pipe(clean());
+    done();
 });
 
-gulp.task('makeCss', function() {
-    return gulp.src([
-            "dist/css/main.css",
-            "bower_components/flexboxgrid/css/flexboxgrid.css",
-            "bower_components/wow/css/libs/animate.css"
-        ])
-        .pipe(concat("build.min.css"))
+gulp.task('concat-minify-js', function (done) {
+    gulp.src(paths.vendors.js)
+        .pipe(concat('build'))
+        .pipe(uglify())
+        .pipe(rename({
+            extname: ".min.js"
+        }))
+        .pipe(gulp.dest(paths.dirs.js))
+        .pipe(liveReload({
+            auto: false
+        }))
+        .on('end', function () {
+            gutil.log('Scripts concatenated and merged!');
+        });
+    done();
+});
+
+gulp.task('concat-minify-css', function (done) {
+    var sassStream = gulp.src(paths.components.sass)
+        .pipe(sass({
+            errLogToConsole: true
+        }));
+
+    var cssStream = gulp.src(paths.vendors.css);
+    var mergedStream = merge(sassStream, cssStream)
+        .pipe(concat('build.min.css'))
         .pipe(minify({
             keepBreaks: true
         }))
-        .pipe(gulp.dest("dist/css"));
+        .pipe(gulp.dest(paths.dirs.css))
+        .on('end', function () {
+            gutil.log('Styles concatenated and merged!');
+        });
+
+    done();
+
+    return mergedStream;
 });
 
-gulp.task('cleanCss', function () {
-    return gulp.src([
-            'dist/css/*.css'
-        ], {read: false})
-        .pipe(clean());
+gulp.task('watch', function (done) {
+    gulp.watch('./src/scss/**/*.scss', gulp.series('concat-minify-css'));
+    gulp.watch('./assets/js/*.js', gulp.series('concat-minify-js'));
+    done();
 });
 
-/* Images */
-//gulp.task('minifyImages', () =>
-//    gulp.src('assets/img/**/*')
-//        .pipe(imagemin())
-//        .pipe(gulp.dest('dist/images'))
-//);
-
-// Check for modifications
-gulp.task('watch', function() {
-    // Styles
-    gulp.watch('./src/scss/**/*.scss', ['compileSass']);
-    gulp.watch('./dist/css/*.css', ['cleanCss', 'makeCss']);
-    // Scripts
-    gulp.watch('./assets/js/*.js', ['cleanJs', 'concatScripts']);
-    gulp.watch('./dist/js/build.js', ['minifyScripts']);
-});
+gulp.task('default', gulp.series('concat-minify-css',
+    gulp.parallel('concat-minify-js', 'watch')
+));
