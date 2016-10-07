@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="secondWebApp">
+<html lang="en" ng-app="portfolioApp">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
     <title>Daniil Sydorenko | Portfolio | Web Developer</title>
+
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
-
-    <link rel="stylesheet" href="bower_components/flexboxgrid/css/flexboxgrid.css">
-    <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
-    <link rel="stylesheet" href="assets/css/timeline.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="dist/css/main.css">
-
-    <script src="assets/libs/modernizr-custom.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4v_8kzUhXhYR6d7AvqedRKDfUYZkAovM&language=en" async
-            defer></script>
+    <link rel="stylesheet" href="dist/css/build.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4v_8kzUhXhYR6d7AvqedRKDfUYZkAovM&language=en"></script>
     <style>
         #map {
             height: 500px;
@@ -279,9 +278,16 @@
             <div class="row">
                 <!-- Image -->
                 <div class="col-md-6 bg-side">
-                    <project-directive
-                            project-description="projects.zszywka.data" side="bg">
-                    </project-directive>
+                    <div class="img-fix project-1">
+                        <div class="project-overlay"></div>
+                        <div class="portfolio-caption flex-box">
+                            <div class="portfolio-caption-inner">
+                                <h3 class="portfolio-title">Dreams visualization</h3>
+                                <i class="icon icon-attachment"></i>
+                                <h4 class="portfolio-cat">Photography</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Data -->
                 <div class="col-md-6 data-side">
@@ -574,7 +580,17 @@
 </footer>
 
 <!-- Scripts build -->
-<script src="dist/js/build.js"></script>
+<script src="dist/js/build.min.js"></script>
+<!--<script src="bower_components/angular/angular.js"></script>-->
+<!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+
+<!--<script src="app/app.module.js"></script>-->
+<!--<script src="app/app.routes.js"></script>-->
+
+<!--<script src="app/shared/project/projectDirective.js"></script>-->
+<!--<script src="app/shared/skill/skillDirective.js"></script>-->
+<!--<script src="app/components/mainPage/mainPage.ctrl.js"></script>-->
+
 <script>
     var map;
     map = new google.maps.Map(document.getElementById('map'), {

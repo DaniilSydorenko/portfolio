@@ -248,9 +248,11 @@ var App = {
 
     getProjectSectionOffsets: function() {
         var offsets = [];
-        for (var ofs of App.getProjectSections()) {
-            offsets.push(ofs.offset);
+        var sections = App.getProjectSections();
+        for (var i = 0; i < sections.length - 1; i++) {
+            offsets.push(sections[i].offset);
         }
+
         return offsets;
     },
 

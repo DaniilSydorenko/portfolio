@@ -1,1 +1,3 @@
-var app = angular.module('secondWebApp', ['ngRoute']);
+'use strict';
+
+var app = angular.module("portfolioApp", ["ngRoute"]);

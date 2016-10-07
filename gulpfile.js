@@ -11,34 +11,35 @@ var gulp = require('gulp'),
     merge = require('merge-stream'),
     ncu = require('npm-check-updates'),
     paths = {
-        dirs:       {
+        dirs: {
             build: '.dist',
-            js:    'dist/js',
-            css:   'dist/css'
+            js: 'dist/js',
+            css: 'dist/css'
         },
-        files:      {
-            js:  'dist/js/*.js',
+        files: {
+            js: 'dist/js/*.js',
             css: 'dist/css/*.css'
         },
         components: {
             sass: 'src/scss/main.scss',
-            js:   'assets/js/*.js'
+            js: 'assets/js/*.js'
         },
-        vendors:    {
-            js:  [
-                "assets/libs/jquery-2.2.3.js",
+        vendors: {
+            js: [
                 "assets/libs/modernizr-custom.js",
                 "bower_components/jquery/dist/jquery.js",
-                "bower_components/angular/angular.js",
-                "bower_components/angular-route/angular-route.js",
                 "bower_components/wow/dist/wow.js",
                 "bower_components/vide/dist/jquery.vide.js",
+                "bower_components/angular/angular.js",
+                "bower_components/angular-route/angular-route.js",
                 "app/**/*.js",
                 "assets/js/main.js"
             ],
             css: [
                 "bower_components/flexboxgrid/dist/flexboxgrid.css",
-                "bower_components/wow/css/libs/animate.css"
+                "bower_components/wow/css/libs/animate.css",
+                "assets/css/timeline.css",
+                "assets/css/style.css"
             ]
         }
     };
@@ -46,9 +47,9 @@ var gulp = require('gulp'),
 gulp.task('update', function () {
     ncu.run({
         // Always specify the path to the package file
-        packageFile:  'package.json',
+        packageFile: 'package.json',
         // Any command-line option can be specified here:
-        silent:       true,
+        silent: true,
         jsonUpgraded: true
     }).then(function (upgraded) {
         console.log('dependencies to upgrade:', upgraded);
@@ -58,8 +59,8 @@ gulp.task('update', function () {
 
 gulp.task('clean', function (done) {
     gulp.src(['dist'], {
-        read: false
-    })
+            read: false
+        })
         .pipe(clean())
         .on('end', function () {
             gutil.log('All cleaned!');
@@ -69,16 +70,16 @@ gulp.task('clean', function (done) {
 
 gulp.task('clean-js', function (done) {
     gulp.src(paths.files.js, {
-        read: false
-    })
+            read: false
+        })
         .pipe(clean());
     done();
 });
 
 gulp.task('clean-css', function (done) {
     gulp.src(paths.files.css, {
-        read: false
-    })
+            read: false
+        })
         .pipe(clean());
     done();
 });
@@ -124,7 +125,12 @@ gulp.task('concat-minify-css', function (done) {
 
 gulp.task('watch', function (done) {
     gulp.watch('./src/scss/**/*.scss', gulp.series('concat-minify-css'));
-    gulp.watch('./assets/js/*.js', gulp.series('concat-minify-js'));
+    gulp.watch('./assets/js/*.js', gulp.series('clean-js',
+        gulp.parallel('concat-minify-js')
+    ));
+    gulp.watch('./app/**/*.js', gulp.series('clean-js',
+        gulp.parallel('concat-minify-js')
+    ));
     done();
 });
 

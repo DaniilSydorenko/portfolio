@@ -74,15 +74,24 @@
         text-transform: uppercase;
       }
 
-      h2 {
-        font-size: 3vmax;
-      }
-
       p {
-        font-size: 1vmax;
+        font-size: 1.5rem;
 
         &:first-child {
-          font-size: 2.5vmax;
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 48em) {
+      .hero-text {
+
+        p {
+          font-size: .8rem;
+
+          &:first-child {
+            font-size: 1.5rem;
+          }
         }
       }
     }
