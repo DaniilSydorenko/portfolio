@@ -211,6 +211,11 @@
     .project-5 {
       @include img-url($img-url, "folklor_03.png");
     }
+
+    .project-6 {
+      @include img-url($img-url, "flex_mix_01.png");
+    }
+
   }
 
 }
