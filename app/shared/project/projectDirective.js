@@ -25,10 +25,10 @@
                 //}
 
                 if (attr.side === "data") {
-                    console.log(attr.side);
+                    //console.log(attr.side);
                     //return '/portfolio/app/shared/project/projectDatasideDirective.html';
                 } else if (attr.side === "bg") {
-                    console.log(attr.side);
+                    //console.log(attr.side);
                     //return '/portfolio/app/shared/project/projectBgsideDirective.html';
                 }
 

@@ -152,7 +152,7 @@
         right: -2px;
         bottom: -2px;
         position: absolute;
-        background-color: rgba(38,93,125,.4);
+        background-color: rgba(38,93,125,.3);
       }
 
     }
@@ -193,11 +193,11 @@
     }
 
     .project-1 {
-      @include img-url($img-url, "folklor_01.png");
+      @include img-url($img-url, "zszywka_01.png");
     }
 
     .project-2 {
-      @include img-url($img-url, "i_sport_01.png");
+      @include img-url($img-url, "i_sport_03.png");
     }
 
     .project-3 {
@@ -209,7 +209,7 @@
     }
 
     .project-5 {
-      @include img-url($img-url, "zszywka_01.png");
+      @include img-url($img-url, "folklor_03.png");
     }
   }
 

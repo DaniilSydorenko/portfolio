@@ -1,13 +1,21 @@
 (function() {
     'use strict';
 
-    app.controller('MainController', ['$scope', '$timeout', '$q', '$http', '$rootScope',
-        function ($scope, $timeout, $q, $http, $rootScope) {
+    app.controller('MainController', ['$scope', '$timeout', '$q', '$http', '$rootScope', 'dataAppFactory',
+        function ($scope, $timeout, $q, $http, $rootScope, dataAppFactory) {
 
-        $scope.message = "MAIN PAGE";
-        $scope.data = "Some data";
+        dataAppFactory.getData()
+            .then(function (response) {
+                $scope.projects = response.data.projects;
+                $scope.skills = response.data.skills;
+            }, function (error) {
+                console.log("Error: " + error.message);
+            });
+
+        // Year in the copyright
         $scope.copyYear = new Date().getFullYear();
 
+       // @TODO
         var defer = $q.defer();
 
         defer.promise
@@ -16,141 +24,18 @@
             });
 
         $timeout(function () {
-            defer.resolve("Some new data");
+            defer.resolve("new records");
         }, 3000);
 
-        /**
-         * Projects
-         */
-        $scope.projects = {
-            "zszywka": {
-                "path": "zszywka",
-                "url": "http://zszywka.pl/",
-                "data": {
-                    "title": "Zszywka",
-                    "role": "Frontend Developer",
-                    description: "Zszywka is a graphic social network. Here you can find an inspiring image on any topic," +
-                    " meet new people, to promote and advertise their own products." +
-                    "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
-                    "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                    "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
-                }
-            },
-            "levelee": {
-                "skrot": "levelee",
-                "url": "http://levelee.com/",
-                "data": {
-                    "title": "Levelee",
-                    "role": "Frontend Developer",
-                    description: "Zszywka is a graphic social network. Here you can find an inspiring image on any topic," +
-                    " meet new people, to promote and advertise their own products." +
-                    "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
-                    "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                    "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
-                }
-            },
-            "tapon_fb_app": {
-                "skrot": "tapon_fb_app",
-                "url": "https://www.facebook.com/TapMoreGetMore/app/371913996253131/",
-                "data": {
-                    "title": "Tapon - Facebook Application",
-                    "role": "Frontend Developer",
-                    description: "Zszywka is a graphic social network. Here you can find an inspiring image on any topic," +
-                    " meet new people, to promote and advertise their own products." +
-                    "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
-                    "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                    "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
-                }
-            },
-            "wikendo": {
-                "skrot": "wikendo",
-                "url": "http://wikendo.pl/",
-                "data": {
-                    "title": "Wikendo",
-                    "role": "Frontend Developer",
-                    description: "Zszywka is a graphic social network. Here you can find an inspiring image on any topic," +
-                    " meet new people, to promote and advertise their own products." +
-                    "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
-                    "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                    "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
-                }
-            },
-            "i_sport": {
-                "skrot": "i_sport",
-                "url": "https://i-sport.pl/",
-                "data": {
-                    "title": "I-sport",
-                    "role": "Frontend Developer",
-                    description: "Zszywka is a graphic social network. Here you can find an inspiring image on any topic," +
-                    " meet new people, to promote and advertise their own products." +
-                    "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
-                    "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                    "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
-                }
-            },
-            "folklor": {
-                "path": "folklor",
-                "url": "https://i-sport.pl/",
-                "data": {
-                    "title": "Zajazd Folklor",
-                    "role": "Frontend Developer",
-                    description: "Zszywka is a graphic social network. Here you can find an inspiring image on any topic," +
-                    " meet new people, to promote and advertise their own products." +
-                    "Zszywka allows you to store all images one place, create shared publics and share an inspiration with other users.",
-                    "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-                    "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
-                }
-            }
-        };
 
-        /**
-         * Skills
-         */
-        $scope.skills = {
-            "backend": {
-                "skillHeader": 'Backend',
-                "skillIcon": 'icon icon-tools-2',
-                "skillSubHeader": 'PHP7, MySQL, Node.js',
-                "skillText": 'OOP, ORM, Laravel, Symfony, Composer'
-            },
-            "frontend": {
-                "skillHeader": 'Frontend',
-                "skillIcon": 'icon icon-mobile',
-                "skillSubHeader": 'ES6, HTML5, CSS3',
-                "skillText": 'Javascript, JQuery, Angular, Bootstrap, Flex-box, Media Queries, SASS, LESS'
-            },
-            "aut_tools": {
-                "skillHeader": 'Automation tools',
-                "skillIcon": 'icon icon-gears',
-                "skillSubHeader": 'GULP, Bower, NPM',
-                "skillText": 'Automation tasks, CSS Preprocessors, Files minification, BrowserSync'
-            },
-            "usability": {
-                "skillHeader": 'Usability',
-                "skillIcon": 'icon icon-tools',
-                "skillSubHeader": 'Cross-Browser, Mobile',
-                "skillText": 'Responsive Web Design, User Experience, Mobile first approach'
-            },
-            "browser_tools": {
-                "skillHeader": 'Browser tools',
-                "skillIcon": 'icon icon-browser',
-                "skillSubHeader": 'Firefox, Chrome, Safari',
-                "skillText": 'Element inspecting, Network, Resources'
-            },
-            "version_control": {
-                "skillHeader": 'Version  Control',
-                "skillIcon": 'icon icon-linegraph',
-                "skillSubHeader": 'GIT, SVN',
-                "skillText": 'GitHub, features and branches, Tortoise SVN, Gerrit'
-            }
-        };
-
+        //@TODO norm validation
         $scope.submitForm = function (isValid) {
             if (isValid) {
                 console.log('our form is amazing');
             }
         };
 
+        // @TODO
         //var responseData;
         //$http.get('http://www.w3schools.com/angular/customers.php').then(function(response){
         //    responseData = response.data;

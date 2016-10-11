@@ -40,7 +40,7 @@ $(window).on("scroll", function () {
     }
 
     if ($(window).scrollTop() >= startValue) {
-        $('[data-offset=' + startValue + ']').find('.flex-box').css('align-items', 'flex-start');
+        $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-start');
 
         if (!$(".section-content").hasClass('active')) {
             $('[data-offset=' + startValue + ']').addClass('active');
@@ -55,7 +55,7 @@ $(window).on("scroll", function () {
     if ($(window).scrollTop() >= stopValue) {
         if ($('[data-offset=' + startValue + ']').hasClass('active')) {
             $('[data-offset=' + startValue + ']').removeClass('active');
-            $('[data-offset=' + startValue + ']').find('.flex-box').css('align-items', 'flex-end');
+            $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-end');
         }
     }
 
