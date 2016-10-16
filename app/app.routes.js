@@ -20,17 +20,13 @@
                 //},
                 controller: 'MainController'
             })
-
-            .when('/works/:id', {
+            .when('/works', {
                 templateUrl: templateUrl + '/worksPage/worksPage.html',
                 controller: 'WorksController'
             })
-            .when('/about', {
-                templateUrl: templateUrl + '/aboutPage/aboutPage.html',
-                controller: 'AboutController'
-            })
-            .when('/about/:param', {
-                redirectTo: '/'
+            .when('/works/:id', {
+                templateUrl: templateUrl + '/worksPage/worksPage.html',
+                controller: 'WorksController'
             })
             .otherwise({
                 templateUrl: templateUrl + '/mainPage/mainPage.html',

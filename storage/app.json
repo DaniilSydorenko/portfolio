@@ -72,37 +72,57 @@
       "skillHeader": "Backend",
       "skillIcon": "icon icon-tools-2",
       "skillSubHeader": "PHP7, MySQL, Node.js",
-      "skillText": "OOP, ORM, Laravel, Symfony, Composer"
+      "skillText": "OOP, ORM, Laravel, Symfony, Composer",
+      "duration": "0.3s",
+      "delay": "0.2s"
     },
     "frontend": {
       "skillHeader": "Frontend",
       "skillIcon": "icon icon-mobile",
       "skillSubHeader": "ES6, HTML5, CSS3",
-      "skillText": "Javascript, JQuery, Angular, Bootstrap, Flex-box, Media Queries, SASS, LESS"
+      "skillText": "Javascript, JQuery, Angular, Bootstrap, Flex-box, Media Queries, SASS, LESS",
+      "duration": "0.4s",
+      "delay": "0.3s"
     },
     "aut_tools": {
       "skillHeader": "Automation tools",
       "skillIcon": "icon icon-gears",
       "skillSubHeader": "GULP, Bower, NPM",
-      "skillText": "Automation tasks, CSS Preprocessors, Files minification, BrowserSync"
+      "skillText": "Automation tasks, CSS Preprocessors, Files minification, BrowserSync",
+      "duration": "0.5s",
+      "delay": "0.4s"
     },
     "usability": {
       "skillHeader": "Usability",
       "skillIcon": "icon icon-tools",
       "skillSubHeader": "Cross-Browser, Mobile",
-      "skillText": "Responsive Web Design, User Experience, Mobile first approach"
+      "skillText": "Responsive Web Design, User Experience, Mobile first approach",
+      "duration": "0.6s",
+      "delay": "0.5s"
     },
     "browser_tools": {
       "skillHeader": "Browser tools",
       "skillIcon": "icon icon-browser",
       "skillSubHeader": "Firefox, Chrome, Safari",
-      "skillText": "Element inspecting, Network, Resources"
+      "skillText": "Element inspecting, Network, Resources",
+      "duration": "0.7s",
+      "delay": "0.6s"
     },
     "version_control": {
       "skillHeader": "Version  Control",
       "skillIcon": "icon icon-linegraph",
       "skillSubHeader": "GIT, SVN",
-      "skillText": "GitHub, features and branches, Tortoise SVN, Gerrit"
+      "skillText": "GitHub, features and branches, Tortoise SVN, Gerrit",
+      "duration": "0.8s",
+      "delay": "0.7s"
+    }
+  },
+  "timeline": {
+    "primaris": {
+      "title": "Primaris",
+      "url": "",
+      "responsibilities": "Designing, developing front-end of web applications. Creating front-end for mobile devices(and mobile first approach, of course). Creating and developing components for huge CMS of insurance company. Improving web applications based on PHP",
+      "techs": ""
     }
   }
 }

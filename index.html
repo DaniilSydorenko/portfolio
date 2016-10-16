@@ -44,22 +44,22 @@
 <div id="home" class="responsiveMobileMenu">
     <ul class="mobileMenu flex-box">
         <li class="show">
-            <a class="scroll" href="#section-home" role="menuitem">
+            <a class="scroll" href="#section1" role="menuitem">
                 <h3>Home</h3>
             </a>
         </li>
         <li class="show">
-            <a class="scroll" href="#section5" role="menuitem">
-                <h3>About me</h3>
+            <a class="scroll" href="#cd-timeline" role="menuitem">
+                <h3>Proffesional life</h3>
             </a>
         </li>
         <li class="show">
-            <a class="scroll" href="#section5" role="menuitem">
+            <a class="scroll" href="#section3" role="menuitem">
                 <h3>Skills</h3>
             </a>
         </li>
         <li class="show">
-            <a class="scroll" href="#section5" role="menuitem">
+            <a class="scroll" href="#section4" role="menuitem">
                 <h3>Projects</h3>
             </a>
         </li>
@@ -72,7 +72,7 @@
 </div>
 
 <!-- Section Home -->
-<section id="section-home" class="homepage-hero-module">
+<section id="section1" class="homepage-hero-module">
     <div class="hero-text-container flex-box">
         <div class="hero-text">
             <p>Hi, I`m glad to see you!</p>
@@ -122,7 +122,7 @@
         </div>
 
         <div class="cd-timeline-content">
-            <h2>Unit27</h2>
+            <h2>Profit Network</h2>
             <p>Web development. Budowa i rozwój aplikacji internetowych przy użyciu firmowego frameworka opartego o PHP
                 5.6, Doctrine 2, MySQL. Również budowa i rozwój front-endu stron(Twig, HTML5, CSS3, Bootstrap 3).
                 Kompletne projektowanie i realizacja serwisu(back-end i front-end) dla ligi squashowej. Testy
@@ -187,88 +187,28 @@
     </div>
 </section>
 
-<section id="section4" class="skills-page">
-
-
+<section id="section3" class="skills-page">
     <div class="container tiles-container flex-box">
-
         <div class="section-header d-header">
             <h2>skills</h2>
         </div>
 
         <div class="row" style="flex-grow: 2">
-            <!-- Backend -->
             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 skills-wrap service wow fadeInUp animated tile"
-                 data-wow-duration="0.5s" data-wow-delay="0.4s">
+                 ng-repeat="skill in skills" data-wow-duration="{{ skill.duration }}"
+                 data-wow-delay="{{ skill.delay }}">
                 <skill-directive rwd-class="col-md-4 col-sm-6"
-                                 skill-header="{{ skills.backend.skillHeader }}"
-                                 skill-icon="{{ skills.backend.skillIcon }}"
-                                 skill-sub-header="{{ skills.backend.skillSubHeader }}"
-                                 skill-text="{{ skills.backend.skillText }}">
-                </skill-directive>
-            </div>
-
-            <!-- Frontend -->
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 skills-wrap service wow fadeInUp animated tile"
-                 data-wow-duration="0.6s" data-wow-delay="0.5s">
-                <skill-directive rwd-class="col-md-4 col-sm-6"
-                                 skill-header="{{ skills.frontend.skillHeader }}"
-                                 skill-icon="{{ skills.frontend.skillIcon }}"
-                                 skill-sub-header="{{ skills.frontend.skillSubHeader }}"
-                                 skill-text="{{ skills.frontend.skillText }}">
-                </skill-directive>
-            </div>
-
-            <!-- Automation tools -->
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 skills-wrap service wow fadeInUp animated tile"
-                 data-wow-duration="0.7s" data-wow-delay="0.6s">
-                <skill-directive rwd-class="col-md-4 col-sm-6"
-                                 skill-header="{{ skills.aut_tools.skillHeader }}"
-                                 skill-icon="{{ skills.aut_tools.skillIcon }}"
-                                 skill-sub-header="{{ skills.aut_tools.skillSubHeader }}"
-                                 skill-text="{{ skills.aut_tools.skillText }}">
-                </skill-directive>
-            </div>
-
-            <!-- Usability -->
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 skills-wrap service wow fadeInUp animated tile"
-                 data-wow-duration="0.8s" data-wow-delay="0.7s">
-                <skill-directive rwd-class="col-md-4 col-sm-6"
-                                 skill-header="{{ skills.usability.skillHeader }}"
-                                 skill-icon="{{ skills.usability.skillIcon }}"
-                                 skill-sub-header="{{ skills.usability.skillSubHeader }}"
-                                 skill-text="{{ skills.usability.skillText }}">
-                </skill-directive>
-            </div>
-
-            <!-- Browser tools -->
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 skills-wrap service wow fadeInUp animated tile"
-                 data-wow-duration="0.9s" data-wow-delay="0.8s">
-                <skill-directive rwd-class="col-md-4 col-sm-6"
-                                 skill-header="{{ skills.browser_tools.skillHeader }}"
-                                 skill-icon="{{ skills.browser_tools.skillIcon }}"
-                                 skill-sub-header="{{ skills.browser_tools.skillSubHeader }}"
-                                 skill-text="{{ skills.browser_tools.skillText }}">
-                </skill-directive>
-            </div>
-
-            <!-- Version control -->
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 skills-wrap service wow fadeInUp animated tile"
-                 data-wow-duration="0.9s" data-wow-delay="0.8s">
-                <skill-directive rwd-class="col-md-4 col-sm-6"
-                                 skill-header="{{ skills.version_control.skillHeader }}"
-                                 skill-icon="{{ skills.version_control.skillIcon }}"
-                                 skill-sub-header="{{ skills.version_control.skillSubHeader }}"
-                                 skill-text="{{ skills.version_control.skillText }}">
+                                 skill-header="{{ skill.skillHeader }}"
+                                 skill-icon="{{ skill.skillIcon }}"
+                                 skill-sub-header="{{ skill.skillSubHeader }}"
+                                 skill-text="{{ skill.skillText }}">
                 </skill-directive>
             </div>
         </div>
-
     </div>
-
 </section>
 
-<section id="section5" class="projects-section">
+<section id="section4" class="projects-section">
     <div class="section-header l-header">
         <h2>projects</h2>
     </div>
@@ -454,7 +394,7 @@
 
 </section>
 
-<footer class="footer">
+<footer id="section5" class="footer">
 
     <section class="contact-content light-content">
 
