@@ -235,8 +235,8 @@ var App = {
         });
     },
 
-    getProjectSections: function() {
-        return App.projectSections.map(function(element) {
+    getProjectSections: function () {
+        return App.projectSections.map(function (element) {
             var section = App.projectSections[element];
             $(section).attr('data-offset', section.offsetTop);
             return {
@@ -246,7 +246,7 @@ var App = {
         });
     },
 
-    getProjectSectionOffsets: function() {
+    getProjectSectionOffsets: function () {
         var offsets = [];
         var sections = App.getProjectSections();
         for (var i = 0; i < sections.length - 1; i++) {

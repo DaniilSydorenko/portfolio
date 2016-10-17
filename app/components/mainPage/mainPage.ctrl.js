@@ -8,6 +8,7 @@
             .then(function (response) {
                 $scope.projects = response.data.projects;
                 $scope.skills = response.data.skills;
+                $scope.timeline = response.data.timeline;
             }, function (error) {
                 console.log("Error: " + error.message);
             });
