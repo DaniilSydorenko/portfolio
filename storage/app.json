@@ -7,7 +7,7 @@
         "title": "Zszywka",
         "role": "Full-stack Developer",
         "description": "Zszywka is a graphic social network, where you can find an inspiring image on any topic, meet new people, promote own products. Zszywka allows to store all images one place, create shared publics and share an inspiration with other users.",
-        "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
+        "responsibilities": "Front-end and Back-end development",
         "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
       }
     },
@@ -18,7 +18,7 @@
         "title": "Flex-mix",
         "role": "Creator, Front-end Developer",
         "description": "Flex-mix has all needed functionality for building web application from scratch. It is my own solution for front-end development. It`s sass based boilerplate with grid system that based on flex technology. Sass structure is based on 7-1 architecture pattern(https://github.com/HugoGiraudel/sass-boilerplate). Responsive grid is based on Flexbox Grid(http://flexboxgrid.com/). Automation tools: Gulp. Other libraries: jQuery 2.2.3, Wow.js, modernizr.",
-        "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
+        "responsibilities": "Front-end development",
         "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
       }
     },
@@ -28,9 +28,9 @@
       "data": {
         "title": "Tapon - Facebook Application",
         "role": "Front-end Developer",
-        "description": "Zszywka is a graphic social network. Here you can find an inspiring image on any topic",
-        "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-        "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
+        "description": "",
+        "responsibilities": "Front-end development",
+        "techs": "HTML5, CSS3, JavaScript, jQuery, Facebook Development Tools"
       }
     },
     "wikendo": {
@@ -38,10 +38,10 @@
       "url": "http://wikendo.pl/",
       "data": {
         "title": "Wikendo",
-        "role": "Frontend Developer",
-        "description": "Zszywka is a graphic social network. Here you can find an inspiring image on any topic",
-        "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-        "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
+        "role": "Front-end Developer",
+        "description": "",
+        "responsibilities": "Front-end development",
+        "techs": "HTML5, CSS3, jQuery, bigVideo.js"
       }
     },
     "i_sport": {
@@ -49,21 +49,21 @@
       "url": "https://i-sport.pl/",
       "data": {
         "title": "I-sport",
-        "role": "Frontend Developer",
-        "description": "Zszywka is a graphic social network. Here you can find an inspiring image on any topic",
-        "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-        "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
+        "role": "Front-end Developer",
+        "description": "",
+        "responsibilities": "",
+        "techs": "ASP.NET Razor, Bootstrap, JavaScript, jQuery"
       }
     },
     "folklor": {
       "path": "folklor",
-      "url": "https://i-sport.pl/",
+      "url": "http://www.zajazdfolklor.pl/",
       "data": {
         "title": "Zajazd Folklor",
-        "role": "Frontend Developer",
-        "description": "Zszywka is a graphic social network. Here you can find an inspiring image on any topic",
-        "responsibilities": "Since the class name would have to be toggled via JavaScript and implementation",
-        "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
+        "role": "Front-end Developer",
+        "description": "Website for hotel Zajazd Folklor. Information and photos about all the services provided by the hotel, apartment reservation",
+        "responsibilities": "Front-end development",
+        "techs": "AngularJS 1.2, jQuery, HTML5, CSS3"
       }
     }
   },
@@ -76,8 +76,8 @@
       "duration": "0.3s",
       "delay": "0.2s"
     },
-    "frontend": {
-      "skillHeader": "Frontend",
+    "Front-end": {
+      "skillHeader": "Front-end",
       "skillIcon": "icon icon-mobile",
       "skillSubHeader": "ES6, HTML5, CSS3",
       "skillText": "Javascript, JQuery, Angular, Bootstrap, Flex-box, Media Queries, SASS, LESS",

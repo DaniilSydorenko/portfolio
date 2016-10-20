@@ -102,14 +102,14 @@
     </div>
 
     <!--<div class="cd-timeline-block" ng-repeat="block in timeline">-->
-        <!--<timeline-directive img-class="{{ block.imgClass }}"-->
-                            <!--img-src="{{ block.imgSrc }}"-->
-                            <!--img-alt="{{ block.imgAlt }}"-->
-                            <!--title="{{ block.title }}"-->
-                            <!--url="{{ block.url }}"-->
-                            <!--position="{{ block.position }}"-->
-                            <!--responsibilities="{{ block.responsibilities }}">-->
-        <!--</timeline-directive>-->
+    <!--<timeline-directive img-class="{{ block.imgClass }}"-->
+    <!--img-src="{{ block.imgSrc }}"-->
+    <!--img-alt="{{ block.imgAlt }}"-->
+    <!--title="{{ block.title }}"-->
+    <!--url="{{ block.url }}"-->
+    <!--position="{{ block.position }}"-->
+    <!--responsibilities="{{ block.responsibilities }}">-->
+    <!--</timeline-directive>-->
     <!--</div>-->
 
     <div class="cd-timeline-block">
@@ -186,6 +186,7 @@
     </div>
 </section>
 
+<!-- SKILLS -->
 <section id="section3" class="skills-page">
     <div class="container tiles-container flex-box">
         <div class="section-header d-header">
@@ -207,9 +208,10 @@
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="section4" class="projects-section">
     <div class="section-header l-header">
-        <h2>projects</h2>
+        <h2>Projects</h2>
     </div>
 
     <div class="section-content rside dark-content">
@@ -221,9 +223,10 @@
                         <div class="project-overlay"></div>
                         <div class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <i class="icon icon-attachment"></i>
-                                <h4 class="portfolio-cat">Photography</h4>
+                                <h3 class="portfolio-title" ng-bind="projects.zszywka.data.title"></h3>
+                                <a href="{{ projects.zszywka.url }}" title="{{ projects.zszywka.data.title }}" target="_blank"><i
+                                        class="icon icon-attachment"></i></a>
+                                <h4 class="portfolio-cat">Click on the link to visit this site</h4>
                             </div>
                         </div>
                     </div>
@@ -253,9 +256,10 @@
                         <div class="project-overlay"></div>
                         <div class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <i class="icon icon-attachment"></i>
-                                <h4 class="portfolio-cat">Photography</h4>
+                                <h3 class="portfolio-title" ng-bind="projects.zszywka.data.title"></h3>
+                                <a href="{{ projects.zszywka.url }}" title="{{ projects.zszywka.data.title }}" target="_blank"><i
+                                        class="icon icon-attachment"></i></a>
+                                <h4 class="portfolio-cat">Click on the link to visit this site</h4>
                             </div>
                         </div>
                     </div>
@@ -273,9 +277,10 @@
                         <div class="project-overlay"></div>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Zszywka</h3>
-                                <i class="icon icon-attachment"></i>
-                                <h4 class="portfolio-cat">Go to website</h4>
+                                <h3 class="portfolio-title" ng-bind="projects.zszywka.data.title"></h3>
+                                <a href="{{ projects.zszywka.url }}" title="{{ projects.zszywka.data.title }}" target="_blank"><i
+                                        class="icon icon-attachment"></i></a>
+                                <h4 class="portfolio-cat">Click on the link to visit this site</h4>
                             </div>
                         </div>
                     </div>
@@ -305,8 +310,10 @@
                         <div class="project-overlay"></div>
                         <div class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <h4 class="portfolio-cat">Photography</h4>
+                                <h3 class="portfolio-title" ng-bind="projects.zszywka.data.title"></h3>
+                                <a href="{{ projects.zszywka.url }}" title="{{ projects.zszywka.data.title }}" target="_blank"><i
+                                        class="icon icon-attachment"></i></a>
+                                <h4 class="portfolio-cat">Click on the link to visit this site</h4>
                             </div>
                         </div>
                     </div>
@@ -324,8 +331,10 @@
                         <div class="project-overlay"></div>
                         <div class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <h4 class="portfolio-cat">Photography</h4>
+                                <h3 class="portfolio-title" ng-bind="projects.zszywka.data.title"></h3>
+                                <a href="{{ projects.zszywka.url }}" title="{{ projects.zszywka.data.title }}" target="_blank"><i
+                                        class="icon icon-attachment"></i></a>
+                                <h4 class="portfolio-cat">Click on the link to visit this site</h4>
                             </div>
                         </div>
                     </div>
@@ -355,8 +364,10 @@
                         <div class="project-overlay"></div>
                         <div class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <h4 class="portfolio-cat">Photography</h4>
+                                <h3 class="portfolio-title" ng-bind="projects.zszywka.data.title"></h3>
+                                <a href="{{ projects.zszywka.url }}" title="{{ projects.zszywka.data.title }}" target="_blank"><i
+                                        class="icon icon-attachment"></i></a>
+                                <h4 class="portfolio-cat">Click on the link to visit this site</h4>
                             </div>
                         </div>
                     </div>
@@ -374,9 +385,10 @@
                         <div class="project-overlay"></div>
                         <div class="portfolio-caption flex-box">
                             <div class="portfolio-caption-inner">
-                                <h3 class="portfolio-title">Dreams visualization</h3>
-                                <i class="icon icon-attachment"></i>
-                                <h4 class="portfolio-cat">Photography</h4>
+                                <h3 class="portfolio-title" ng-bind="projects.zszywka.data.title"></h3>
+                                <a href="{{ projects.zszywka.url }}" title="{{ projects.zszywka.data.title }}" target="_blank"><i
+                                        class="icon icon-attachment"></i></a>
+                                <h4 class="portfolio-cat">Click on the link to visit this site</h4>
                             </div>
                         </div>
                     </div>
