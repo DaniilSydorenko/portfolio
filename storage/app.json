@@ -12,7 +12,7 @@
       }
     },
     "flex_mix": {
-      "skrot": "flex_mix",
+      "path": "flex_mix",
       "url": "http://daniilsydorenko.github.io/flex-mix/",
       "data": {
         "title": "Flex-mix",
@@ -23,7 +23,7 @@
       }
     },
     "tapon_fb_app": {
-      "skrot": "tapon_fb_app",
+      "path": "tapon_fb_app",
       "url": "https://www.facebook.com/TapMoreGetMore/app/371913996253131/",
       "data": {
         "title": "Tapon - Facebook Application",
@@ -34,7 +34,7 @@
       }
     },
     "wikendo": {
-      "skrot": "wikendo",
+      "path": "wikendo",
       "url": "http://wikendo.pl/",
       "data": {
         "title": "Wikendo",
@@ -45,7 +45,7 @@
       }
     },
     "i_sport": {
-      "skrot": "i_sport",
+      "path": "i_sport",
       "url": "https://i-sport.pl/",
       "data": {
         "title": "I-sport",
