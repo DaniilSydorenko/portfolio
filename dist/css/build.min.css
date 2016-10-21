@@ -1015,6 +1015,8 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .projects-section .section-content .project-wikendo{background:url(../../assets/img/projects_img/wikendo_01.png)}
 .projects-section .section-content .project-folklor{background:url(../../assets/img/projects_img/folklor_03.png)}
 .projects-section .section-content .project-flex_mix{background:url(../../assets/img/projects_img/flex_mix_01.png)}
+@media screen and (max-width:767px){.projects-section .section-content{height:100%}
+}
 .skills-page{background:#EFF1F4;overflow:hidden;padding-bottom:30px}
 .btn,.skills-page .section-header{background:0 0}
 .skills-page .tiles-container{align-content:flex-start}

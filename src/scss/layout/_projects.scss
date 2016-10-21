@@ -217,3 +217,11 @@
     }
   }
 }
+
+@media screen and (max-width: 767px){
+  .projects-section {
+    .section-content {
+      height: 100%;
+    }
+  }
+}
