@@ -4,6 +4,8 @@
     app.controller('MainController', ['$scope', '$timeout', '$q', '$http', '$rootScope', 'dataAppFactory',
         function ($scope, $timeout, $q, $http, $rootScope, dataAppFactory) {
 
+        console.log();
+
         dataAppFactory.getData()
             .then(function (response) {
                 $scope.projects = response.data.projects;

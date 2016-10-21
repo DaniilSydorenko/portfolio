@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   z-index: 101;
   overflow: hidden;
@@ -71,7 +71,7 @@
     height: 44px;
     position: relative;
     cursor: pointer;
-    margin: 0 20px;
+    margin: 0;
 
     &:hover {
       .menu-btn-line {

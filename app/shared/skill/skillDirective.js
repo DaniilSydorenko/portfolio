@@ -5,7 +5,7 @@
 
         return {
             restrict: 'E',
-            templateUrl: '/portfolio/app/shared/skill/skillDirective.html',
+            templateUrl: './app/shared/skill/skillDirective.html',
             replace: true,
             scope: {
                 inputLabel: '@',

@@ -131,6 +131,14 @@
     background: #000;
 
     .poster {
+      display: none;
+
+      @media screen and (max-width: 767px) {
+        .poster {
+          display: block !important;
+        }
+      }
+
       img {
         width: 100%;
         bottom: 0;

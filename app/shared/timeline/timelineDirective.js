@@ -5,7 +5,7 @@
 
         return {
             restrict: 'E',
-            templateUrl: '/portfolio/app/shared/timeline/timelineDirective.html',
+            templateUrl: './app/shared/timeline/timelineDirective.html',
             replace: true,
             scope: {
                 imgClass: '@',

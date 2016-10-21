@@ -33,7 +33,7 @@
                 }
 
                 //return baseUrl + template;
-                return '/portfolio/app/shared/project/projectDatasideDirective.html';
+                return './app/shared/project/projectDatasideDirective.html';
 
             },
             replace: true,
