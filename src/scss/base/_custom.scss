@@ -133,12 +133,6 @@
     .poster {
       display: none;
 
-      @media screen and (max-width: 767px) {
-        .poster {
-          display: block !important;
-        }
-      }
-
       img {
         width: 100%;
         bottom: 0;
@@ -160,6 +154,19 @@
 
       &.fillWidth {
         width: 100%;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .video-container {
+      .poster {
+        display: block !important;
+      }
+
+      video {
+        display: none !important;
       }
     }
   }

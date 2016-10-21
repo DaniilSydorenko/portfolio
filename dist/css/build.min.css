@@ -873,6 +873,7 @@ legend,td,th{padding:0}
 .icon-dribbble:before{content:"\e063"}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
@@ -907,12 +908,13 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
 legend{border:0}
 table{border-collapse:collapse;border-spacing:0}
-body,html{height:100%;box-sizing:border-box;font-family:Lato,Helvetica,Arial sans-serif!important;font-weight:100!important;background:#383F42}
+body,html{height:100%;box-sizing:border-box;font-family:Lato,Helvetica,Arial sans-serif!important;font-weight:100!important;background:#383F42;font-size:16px}
+.homepage-hero-module .hero-text-container .hero-text *,.section-header h2,h1,h2,h3,h4,h5,h6{font-weight:300;text-transform:uppercase}
+@media screen and (max-width:48em){body,html{font-size:80%!important}
+}
 *,::after,::before{box-sizing:inherit}
 a:active,a:focus,a:hover{color:#222}
-h1,h2,h3,h4,h5,h6{font-weight:300;text-transform:uppercase;color:#f9f9f9}
-body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif}
-.homepage-hero-module .hero-text-container .hero-text *,.section-header h2{font-weight:300;text-transform:uppercase}
+h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .clearfix::after{clear:both;content:'';display:table}
 .container{max-width:1180px;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px;width:100%}
 .hide-text{overflow:hidden;padding:0;text-indent:101%;white-space:nowrap}
@@ -938,12 +940,13 @@ body{margin:0;color:#222;font:400 125%/1.4 "Open Sans","Helvetica Neue Light","H
 .homepage-hero-module .touch .video-container .poster{display:block!important}
 .homepage-hero-module .video-container{position:absolute;bottom:0;left:0;height:100%;width:100%;overflow:hidden;background:#000}
 .homepage-hero-module .video-container .poster{display:none}
-@media screen and (max-width:767px){.homepage-hero-module .video-container .poster .poster{display:block!important}
-}
 .homepage-hero-module .video-container .poster img{width:100%;bottom:0;position:absolute}
 .homepage-hero-module .video-container .filter{z-index:100;position:absolute;background:rgba(0,0,0,.4);width:100%}
 .homepage-hero-module .video-container video{position:absolute;z-index:0;bottom:0}
 .homepage-hero-module .video-container video.fillWidth{width:100%}
+@media screen and (max-width:767px){.homepage-hero-module .video-container .poster{display:block!important}
+.homepage-hero-module .video-container video{display:none!important}
+}
 #cd-timeline{background:#383F42;padding-top:0}
 .error input.ng-touched.ng-invalid,.error textarea.ng-touched.ng-invalid{border-color:#a94442!important}
 .error .error-message{margin:5px 0 0;font-size:.9rem;color:#a94442}

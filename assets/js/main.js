@@ -29,35 +29,40 @@ $(window).on("scroll", function () {
         App.showBlocks(App.timelineBlock, App.timelineOffset);
     });
 
-    var projectSections = App.getProjectSections(),
-        firstOffset = projectSections[0].offset;
 
-    var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
-    var stopValue = startValue + ($('.section-content').height() - 450);
+    if (window.matchMedia("(min-width: 768px)").matches) {
 
-    if ($(window).scrollTop() < firstOffset) {
-        $(".section-content").removeClass('active');
-    }
+        var projectSections = App.getProjectSections(),
+            firstOffset = projectSections[0].offset;
 
-    if ($(window).scrollTop() >= startValue) {
-        $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-start');
+        var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
+        var stopValue = startValue + ($('.section-content').height() - 450);
 
-        if (!$(".section-content").hasClass('active')) {
-            $('[data-offset=' + startValue + ']').addClass('active');
-        } else {
-            if (!$('[data-offset=' + startValue + ']').hasClass('active')) {
-                $(".section-content").removeClass('active');
+        if ($(window).scrollTop() < firstOffset) {
+            $(".section-content").removeClass('active');
+        }
+
+        if ($(window).scrollTop() >= startValue) {
+            $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-start');
+
+            if (!$(".section-content").hasClass('active')) {
                 $('[data-offset=' + startValue + ']').addClass('active');
+            } else {
+                if (!$('[data-offset=' + startValue + ']').hasClass('active')) {
+                    $(".section-content").removeClass('active');
+                    $('[data-offset=' + startValue + ']').addClass('active');
+                }
+            }
+        }
+
+        if ($(window).scrollTop() >= stopValue) {
+            if ($('[data-offset=' + startValue + ']').hasClass('active')) {
+                $('[data-offset=' + startValue + ']').removeClass('active');
+                $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-end');
             }
         }
     }
 
-    if ($(window).scrollTop() >= stopValue) {
-        if ($('[data-offset=' + startValue + ']').hasClass('active')) {
-            $('[data-offset=' + startValue + ']').removeClass('active');
-            $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-end');
-        }
-    }
 
 });
 

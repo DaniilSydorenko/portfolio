@@ -11,7 +11,15 @@ html, body {
   font-family: 'Lato', Helvetica, Arial sans-serif !important;
   font-weight: 100 !important;
   background: #383F42;
+  font-size: 16px;
 }
+
+@media screen and (max-width: 48em) {
+  html, body {
+    font-size: 80% !important;
+  }
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
