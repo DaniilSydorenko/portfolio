@@ -103,9 +103,9 @@
 
         h3 {
           color: #fff !important;
-          font-size: 1.5em;
+          font-size: 2.2rem;
           transition: all, 0.5s;
-          margin: 20px;
+          margin: 40px;
           transform: translate3d(0, -200%, 0);
         }
 
@@ -121,9 +121,10 @@
 
         h4 {
           color: #fff !important;
+          font-size: 1.4rem;
           transition: all, 0.5s;
           transform: translate3d(0, 200%, 0);
-          margin: 20px;
+          margin: 40px;
         }
 
         &:hover {
@@ -152,7 +153,7 @@
         right: -2px;
         bottom: -2px;
         position: absolute;
-        background-color: rgba(38, 93, 125, .3);
+        background-color: rgba(38, 93, 125, .5);
       }
 
     }
