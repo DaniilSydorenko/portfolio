@@ -8,17 +8,20 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     liveReload = require('gulp-livereload'),
     minify = require('gulp-minify-css'),
+    imagemin = require('gulp-imagemin'),
     merge = require('merge-stream'),
     ncu = require('npm-check-updates'),
     paths = {
         dirs: {
             build: '.dist',
             js: 'dist/js',
-            css: 'dist/css'
+            css: 'dist/css',
+            images: 'dist/img/projects_img'
         },
         files: {
             js: 'dist/js/*.js',
-            css: 'dist/css/*.css'
+            css: 'dist/css/*.css',
+            images: 'assets/img/projects_img/*'
         },
         components: {
             sass: 'src/scss/main.scss',
@@ -123,6 +126,13 @@ gulp.task('concat-minify-css', function (done) {
     return mergedStream;
 });
 
+gulp.task('compress', function (done) {
+    gulp.src(paths.files.images)
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.dirs.images));
+    done();
+});
+
 gulp.task('watch', function (done) {
     gulp.watch('./src/scss/**/*.scss', gulp.series('concat-minify-css'));
     gulp.watch('./assets/js/*.js', gulp.series('clean-js',
@@ -131,6 +141,9 @@ gulp.task('watch', function (done) {
     gulp.watch('./app/**/*.js', gulp.series('clean-js',
         gulp.parallel('concat-minify-js')
     ));
+    gulp.watch('./assets/img/**/*',
+        gulp.series('compress')
+    );
     done();
 });
 

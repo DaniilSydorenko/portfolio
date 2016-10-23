@@ -75,12 +75,12 @@
         position: relative;
         display: block;
         opacity: 1;
-        transform: scale3d(1.02, 1.02, 1);
-        transition: opacity .5s, transform .5s;
+        /* transform: scale3d(1.02,1.02,1); */
+        transition: opacity .5s,transform .5s;
         backface-visibility: hidden;
-        background-size: cover !important;
-        background-position-x: 50% !important;
-        background-position-y: top !important;
+        background-size: 100%;
+        /* background-position-x: 50%!important; */
+        /* background-position-y: top!important; */
 
         .portfolio-caption {
           @include flex-box(center, center, center, column, wrap);
@@ -194,27 +194,33 @@
     }
 
     .project-zszywka {
-      @include img-url($img-url, "zszywka_01.png");
+      @include img-url($img-url, "zszywka_1.jpg");
     }
 
     .project-i_sport {
-      @include img-url($img-url, "i_sport_03.png");
+      @include img-url($img-url, "i_sport_2.jpg");
+      background-size: cover !important;
+      background-position-x: 50%;
     }
 
     .project-tapon_fb_app {
-      @include img-url($img-url, "tapon_fb_04.png");
+      @include img-url($img-url, "tapon_fb_app_1.jpg");
+      background-size: cover !important;
+      background-position-x: 50%;
     }
 
     .project-wikendo {
-      @include img-url($img-url, "wikendo_01.png");
+      @include img-url($img-url, "wikendo_1.jpg");
+      background-size: cover !important;
+      background-position-x: 50%;
     }
 
     .project-folklor {
-      @include img-url($img-url, "folklor_03.png");
+      @include img-url($img-url, "folklor_1.jpg");
     }
 
     .project-flex_mix {
-      @include img-url($img-url, "flex_mix_01.png");
+      @include img-url($img-url, "flex_mix_1.jpg");
     }
   }
 }

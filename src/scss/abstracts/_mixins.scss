@@ -43,7 +43,7 @@
 }
 
 @mixin img-url($img-url, $img-title) {
-  background: url(unquote($img-url + $img-title));
+  background: url(unquote($img-url + $img-title)) no-repeat;
 }
 
 
