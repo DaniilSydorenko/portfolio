@@ -718,7 +718,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 .cd-timeline-content{position:relative;margin-left:60px;background:0 0;border-radius:.25em;padding:1em;color:#f1f1f1;border:1px solid #f1f1f1}
 .cd-timeline-content:after{display:table}
-.cd-timeline-content h2{color:#303e49}
 .cd-timeline-content .cd-date,.cd-timeline-content .cd-read-more,.cd-timeline-content p{font-size:13px;font-size:.8125rem}
 .cd-timeline-content .cd-date,.cd-timeline-content .cd-read-more{display:inline-block}
 .cd-timeline-content p{margin:1em 0;line-height:1.6}
@@ -910,7 +909,7 @@ legend{border:0}
 table{border-collapse:collapse;border-spacing:0}
 body,html{height:100%;box-sizing:border-box;font-family:Lato,Helvetica,Arial sans-serif!important;font-weight:100!important;background:#383F42;font-size:16px}
 .homepage-hero-module .hero-text-container .hero-text *,.section-header h2,h1,h2,h3,h4,h5,h6{font-weight:300;text-transform:uppercase}
-@media screen and (max-width:48em){body,html{font-size:80%!important}
+@media screen and (max-width:48em){body,html{font-size:90%!important}
 }
 *,::after,::before{box-sizing:inherit}
 a:active,a:focus,a:hover{color:#222}
@@ -1009,12 +1008,12 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .projects-section .section-content .data-side .project-description{height:100vh;background:0 0!important;visibility:visible;animation-name:fadeInUp;margin:0 auto;border-radius:0;text-align:left;justify-content:flex-start;align-items:flex-start;padding:0 50px}
 .projects-section .section-content .data-side .project-description .text-center p{font-size:1.1rem;margin:0 0 1rem}
 .projects-section .section-content .data-side .project-description .text-center p.tc-title{border-bottom:thin solid grey;display:inline}
-.projects-section .section-content .project-zszywka{background:url(../../assets/img/projects_img/zszywka_01.png)}
-.projects-section .section-content .project-i_sport{background:url(../../assets/img/projects_img/i_sport_03.png)}
-.projects-section .section-content .project-tapon_fb_app{background:url(../../assets/img/projects_img/tapon_fb_04.png)}
-.projects-section .section-content .project-wikendo{background:url(../../assets/img/projects_img/wikendo_01.png)}
-.projects-section .section-content .project-folklor{background:url(../../assets/img/projects_img/folklor_03.png)}
-.projects-section .section-content .project-flex_mix{background:url(../../assets/img/projects_img/flex_mix_01.png)}
+.projects-section .section-content .project-zszywka{background:url(../img/projects_img/zszywka_01.png)}
+.projects-section .section-content .project-i_sport{background:url(../img/projects_img/i_sport_03.png)}
+.projects-section .section-content .project-tapon_fb_app{background:url(../img/projects_img/tapon_fb_04.png)}
+.projects-section .section-content .project-wikendo{background:url(../img/projects_img/wikendo_01.png)}
+.projects-section .section-content .project-folklor{background:url(../img/projects_img/folklor_03.png)}
+.projects-section .section-content .project-flex_mix{background:url(../img/projects_img/flex_mix_01.png)}
 @media screen and (max-width:767px){.projects-section .section-content{height:100%}
 }
 .skills-page{background:#EFF1F4;overflow:hidden;padding-bottom:30px}
