@@ -74,13 +74,13 @@
         text-transform: uppercase;
       }
 
-      p {
-        font-size: 1.7rem;
+      h1 {
+        font-size: 3rem;
+        margin: 1rem 0 5rem 0;
+      }
 
-        &:first-child {
-          font-size: 3rem;
-          margin: 1rem 0 5rem 0;
-        }
+      h4 {
+        font-size: 1.7rem;
       }
     }
 
