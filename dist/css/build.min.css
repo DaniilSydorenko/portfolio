@@ -681,7 +681,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .rollOut{-webkit-animation-name:rollOut;animation-name:rollOut}
 .cd-container{width:90%;max-width:1170px;margin:0 auto}
 .cd-container::after{content:'';display:table;clear:both}
-#cd-timeline{position:relative;padding:3em 0;margin-bottom:2em}
+#cd-timeline{position:relative;padding:0 0 3em;margin-bottom:2em}
 #cd-timeline::before{content:'';position:absolute;top:0;left:18px;height:100%;width:4px;background:#d7e4ed}
 .cd-timeline-block:after,.cd-timeline-content:after{content:"";clear:both}
 @media only screen and (min-width:1170px){#cd-timeline{margin-bottom:3em}
@@ -716,7 +716,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 60%{opacity:1;-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-ms-transform:scale(1.2);-o-transform:scale(1.2);transform:scale(1.2)}
 100%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1)}
 }
-.cd-timeline-content{position:relative;margin-left:60px;background:0 0;border-radius:.25em;padding:1em;color:#f1f1f1;border:1px solid #f1f1f1}
+.cd-timeline-content{position:relative;margin-left:60px;background:0 0;padding:1em;color:#f1f1f1;border:1px solid #f1f1f1}
 .cd-timeline-content:after{display:table}
 .cd-timeline-content .cd-date,.cd-timeline-content .cd-read-more,.cd-timeline-content p{font-size:13px;font-size:.8125rem}
 .cd-timeline-content .cd-date,.cd-timeline-content .cd-read-more{display:inline-block}
@@ -1000,7 +1000,7 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 #nav-icon2 span,.projects-section .section-content .bg-side .img-fix .portfolio-figure:hover .portfolio-caption,.projects-section .section-content .bg-side .img-fix .portfolio-figure:hover .portfolio-cat,.projects-section .section-content .bg-side .img-fix .portfolio-figure:hover .portfolio-title,.projects-section .section-content .bg-side .img-fix:hover .portfolio-caption{opacity:1}
 .projects-section .section-content .bg-side .img-fix h3{color:#fff!important;font-size:2.2rem;transition:all,.5s;margin:40px;transform:translate3d(0,-200%,0)}
 .projects-section .section-content .bg-side .img-fix i{color:#fff;font-size:30px;border:1px solid #f9f9f9;border-radius:50%;padding:12px;font-weight:500;cursor:pointer}
-.projects-section .section-content .bg-side .img-fix h4{color:#fff!important;font-size:1.4rem;transition:all,.5s;transform:translate3d(0,200%,0);margin:40px}
+.projects-section .section-content .bg-side .img-fix h4{color:#fff!important;font-size:1.1rem;transition:all,.5s;transform:translate3d(0,200%,0);margin:40px}
 .projects-section .section-content .bg-side .img-fix:hover{transform:scale3d(1.1,1.1,1)}
 .projects-section .section-content .bg-side .img-fix:hover h3,.projects-section .section-content .bg-side .img-fix:hover h4{opacity:1;transform:translate3d(0,0,0)}
 .projects-section .section-content .bg-side .project-overlay{top:-2px;left:-2px;right:-2px;bottom:-2px;position:absolute;background-color:rgba(38,93,125,.5)}
@@ -1023,7 +1023,7 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .skills-page .tile{padding:0 25px;margin:15px 0;border-radius:0!important;color:#333;text-align:center}
 .skills-page .tile h2,.skills-page .tile h4,.skills-page .tile p{color:#333}
 .skills-page .skills-wrap{visibility:visible;animation-duration:1s;animation-delay:.5s}
-.skills-page .skills-wrap .skills-content{border:1px solid #f9f9f9;box-shadow:rgba(0,0,0,.13) 0 5px 10px}
+.skills-page .skills-wrap .skills-content{border:1px solid #f9f9f9;box-shadow:rgba(0,0,0,.13) 0 5px 10px;padding:5px}
 .skills-page .skills-wrap .skills-content>i{font-size:50px}
 .btn{height:4em;margin:0 auto;display:block;border:1px solid #9c9c9c;border-radius:2px;font-size:.6rem;font-weight:600;color:#9a9a9a;text-transform:uppercase;letter-spacing:3px;padding:0 15px;cursor:pointer;outline:0;transition:background .2s ease,color .2s ease}
 .btn:hover{background:#a5a5a5;color:#f9f9f9}
