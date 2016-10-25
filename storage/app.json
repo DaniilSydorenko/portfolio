@@ -1,14 +1,15 @@
 {
   "projects": {
-    "zszywka": {
-      "path": "zszywka",
-      "url": "http://zszywka.pl/",
+    "one_web": {
+      "path": "one_web",
+      "url": "https://www.allianz.pl/dla-ciebie/",
       "data": {
-        "title": "Zszywka",
-        "role": "Full-stack Developer",
-        "description": "Zszywka is a graphic social network, where you can find an inspiring image on any topic, meet new people, promote own products. Zszywka allows to store all images one place, create shared publics and share an inspiration with other users.",
-        "responsibilities": "Front-end and Back-end development",
-        "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
+        "title": "Components for commercial CMS",
+        "role": "Front-end Developer",
+        "finish_date": "10.2016",
+        "description": "Internal commercial CMS for web-pages building. Because all internal product web sites of big European insurance company should have the same style and structure.",
+        "responsibilities": "Front-end development",
+        "techs": "JavaScript, AngularJS, jQuery, JSON, Freemarker template, LESS, Flex"
       }
     },
     "flex_mix": {
@@ -17,9 +18,22 @@
       "data": {
         "title": "Flex-mix",
         "role": "Creator, Front-end Developer",
+        "finish_date": "09.2016",
         "description": "Flex-mix has all needed functionality for building web application from scratch. It is my own solution for front-end development. It`s sass based boilerplate with grid system that based on flex technology. Sass structure is based on 7-1 architecture pattern(https://github.com/HugoGiraudel/sass-boilerplate). Responsive grid is based on Flexbox Grid(http://flexboxgrid.com/). Automation tools: Gulp. Other libraries: jQuery 2.2.3, Wow.js, modernizr.",
         "responsibilities": "Front-end development",
-        "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
+        "techs": "JavaScript, HTML5, SASS, Flex, Gulp, NPM, Bower"
+      }
+    },
+    "i_sport": {
+      "path": "i_sport",
+      "url": "https://i-sport.pl/",
+      "data": {
+        "title": "I-sport",
+        "role": "Front-end Developer",
+        "finish_date": "11.2015",
+        "description": "Platform for training",
+        "responsibilities": "Front-end development",
+        "techs": "ASP.NET Razor, Bootstrap, JavaScript, jQuery"
       }
     },
     "tapon_fb_app": {
@@ -28,7 +42,8 @@
       "data": {
         "title": "Tapon - Facebook Application",
         "role": "Front-end Developer",
-        "description": "",
+        "finish_date": "05.2015",
+        "description": "Tapon.pl Facebook application",
         "responsibilities": "Front-end development",
         "techs": "HTML5, CSS3, JavaScript, jQuery, Facebook Development Tools"
       }
@@ -39,20 +54,10 @@
       "data": {
         "title": "Wikendo",
         "role": "Front-end Developer",
-        "description": "",
+        "finish_date": "11.2014",
+        "description": "Web site for company Wikendo",
         "responsibilities": "Front-end development",
         "techs": "HTML5, CSS3, jQuery, bigVideo.js"
-      }
-    },
-    "i_sport": {
-      "path": "i_sport",
-      "url": "https://i-sport.pl/",
-      "data": {
-        "title": "I-sport",
-        "role": "Front-end Developer",
-        "description": "",
-        "responsibilities": "Front-end development",
-        "techs": "ASP.NET Razor, Bootstrap, JavaScript, jQuery"
       }
     },
     "folklor": {
@@ -61,9 +66,22 @@
       "data": {
         "title": "Zajazd Folklor",
         "role": "Front-end Developer",
-        "description": "Website for hotel Zajazd Folklor. Information and photos about all the services provided by the hotel, apartment reservation",
+        "finish_date": "10.2014",
+        "description": "Website for hotel Zajazd Folklor. Information and photos about all the services provided by the hotel and apartment reservation",
         "responsibilities": "Front-end development",
-        "techs": "AngularJS 1.2, jQuery, HTML5, CSS3"
+        "techs": "AngularJS, jQuery, HTML5, CSS3"
+      }
+    },
+    "zszywka": {
+      "path": "zszywka",
+      "url": "http://zszywka.pl/",
+      "data": {
+        "title": "Zszywka",
+        "role": "Full-stack Developer",
+        "finish_date": "07.2014",
+        "description": "Zszywka is a graphic social network, where you can find an inspiring image on any topic, meet new people, promote own products. Zszywka allows to store all images one place, create shared publics and share an inspiration with other users.",
+        "responsibilities": "Front-end and Back-end development",
+        "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
       }
     }
   },
@@ -125,8 +143,7 @@
       "title": "Primaris",
       "url": "http://primaris.eu/",
       "position": "Front-end JavaScript Developer",
-      "responsibilities": "Designing, developing front-end of web applications. Creating front-end for mobile devices(and mobile first approach, of course). Creating and developing components for huge CMS of insurance company. Improving web applications based on PHP",
-      "techs": ""
+      "responsibilities": "Designing, developing front-end of web applications. Creating front-end for mobile devices(and mobile first approach, of course). Creating and developing components for huge CMS of insurance company. Improving web applications based on PHP"
     },
     "profit_network": {
       "imgClass": "cd-movie",
@@ -135,8 +152,7 @@
       "title": "Profit Network",
       "url": "http://www.profitnetwork.pl/",
       "position": "PHP Web Developer",
-      "responsibilities": "Development of administration panel for web application Tapon.pl based on commercial PHP Framework. Designing and development of database, server and client side for commercial squash league. Development of single page web applications based on commercial PHP Framework on server side and Bootstrap 3 on client side. Development of front-end for Tapon.pl facebook application.",
-      "techs": ""
+      "responsibilities": "Development of administration panel for web application Tapon.pl based on commercial PHP Framework. Designing and development of database, server and client side for commercial squash league. Development of single page web applications based on commercial PHP Framework on server side and Bootstrap 3 on client side. Development of front-end for Tapon.pl facebook application."
     },
     "szafa_pl": {
       "imgClass": "cd-location",
@@ -145,8 +161,7 @@
       "title": "Szafa.pl",
       "url": "http://grupaszafa.pl/",
       "position": "PHP Web Developer",
-      "responsibilities": "Development of administration panel tools for viewing statistics reports, complaints from users. Creation of functionality \"promo pin\", which allows users to keep their content in the top of content category.Creation of public(shared group). This is a group, that has few owners and many members. There users can send invitation to each other and share their content. Implementation of new graphical components in Zszywka.pl design (buttons, labels, fonts, logos, etc.).",
-      "techs": ""
+      "responsibilities": "Development of administration panel tools for viewing statistics reports, complaints from users. Creation of functionality \"promo pin\", which allows users to keep their content in the top of content category.Creation of public(shared group). This is a group, that has few owners and many members. There users can send invitation to each other and share their content. Implementation of new graphical components in Zszywka.pl design (buttons, labels, fonts, logos, etc.)."
     },
     "ideo": {
       "imgClass": "cd-picture",
@@ -155,8 +170,7 @@
       "title": "Ideo",
       "url": "http://www.ideo.pl/",
       "position": "Intern / PHP Web Developer",
-      "responsibilities": "My first job in field of Web Development. Making a front-end templates for internal commercial CMS system. Converting PSD templates to the HTML and CSS.",
-      "techs": ""
+      "responsibilities": "My first job in field of Web Development. Making a front-end templates for internal commercial CMS system. Converting PSD templates to the HTML and CSS."
     },
     "wsiz": {
       "imgClass": "cd-movie",

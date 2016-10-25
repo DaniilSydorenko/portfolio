@@ -981,7 +981,7 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .responsiveMobileMenu{width:100%;height:100%;position:fixed;z-index:100;top:0;left:0;background:rgba(51,51,51,.95);opacity:0;display:none;justify-content:center;align-items:center;transition:opacity .4s ease}
 .responsiveMobileMenu.flex{display:flex;transition:all .4s ease}
 .responsiveMobileMenu.display{transition:all .4s ease;opacity:1}
-.responsiveMobileMenu ul{flex-direction:column;justify-content:space-around;padding:0}
+.responsiveMobileMenu ul{flex-direction:column;justify-content:space-around;padding:50px 0}
 .responsiveMobileMenu ul li{opacity:0;list-style-type:none;color:#3b5a82;font-weight:100;font-size:1.5em;font-family:Helvetica,Arial,sans-serif;text-transform:uppercase;transition:transform .3s ease,opacity .3s ease,-webkit-transform .3s ease;transform:scale(.5)}
 .responsiveMobileMenu ul li.fade{transform:scale(1);opacity:1}
 .responsiveMobileMenu ul li a h3{font-size:1.6rem;margin:0}
@@ -1014,6 +1014,7 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .projects-section .section-content .project-wikendo{background:url(../img/projects_img/wikendo_1.jpg) no-repeat;background-size:cover!important;background-position-x:50%}
 .projects-section .section-content .project-folklor{background:url(../img/projects_img/folklor_1.jpg) no-repeat}
 .projects-section .section-content .project-flex_mix{background:url(../img/projects_img/flex_mix_1.jpg) no-repeat}
+.projects-section .section-content .project-one_web{background:url(../img/projects_img/one_web_1.jpg) no-repeat}
 @media screen and (max-width:767px){.projects-section .section-content{height:100%}
 }
 .skills-page{background:#EFF1F4;overflow:hidden;padding-bottom:30px}

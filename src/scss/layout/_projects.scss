@@ -217,6 +217,10 @@
     .project-flex_mix {
       @include img-url($img-url, "flex_mix_1.jpg");
     }
+
+    .project-one_web {
+      @include img-url($img-url, "one_web_1.jpg");
+    }
   }
 }
 
