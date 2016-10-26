@@ -4,7 +4,12 @@
 
     .container-fluid {
       padding-left: 0;
-      padding-right: .5rem;
+      padding-right: 0;
+
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
 
     &.rside {
@@ -220,7 +225,7 @@
   }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 48em){
   .projects-section {
     .section-content {
       height: 100%;

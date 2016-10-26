@@ -30,7 +30,7 @@ $(window).on("scroll", function () {
     });
 
 
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    if (window.matchMedia("(min-width: 48em)").matches) {
 
         var projectSections = App.getProjectSections(),
             firstOffset = projectSections[0].offset;
@@ -303,7 +303,6 @@ var App = {
 
             // test
             var height = Math.max($(".skills-content").height());
-            console.log(height);
         });
 
         /**

@@ -986,7 +986,8 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .responsiveMobileMenu ul li.fade{transform:scale(1);opacity:1}
 .responsiveMobileMenu ul li a h3{font-size:1.6rem;margin:0}
 .projects-section .section-content{height:100vh}
-.projects-section .section-content .container-fluid{padding-left:0;padding-right:.5rem}
+.projects-section .section-content .container-fluid{padding-left:0;padding-right:0}
+.projects-section .section-content .container-fluid .row{margin-left:0;margin-right:0}
 .projects-section .section-content.rside.active .data-side{position:fixed;top:0;right:0}
 .projects-section .section-content.lside.active .data-side{position:fixed;top:0}
 .projects-section .section-content.lside.active .bg-side{margin-left:50%}
@@ -1015,7 +1016,7 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .projects-section .section-content .project-folklor{background:url(../img/projects_img/folklor_1.jpg) no-repeat}
 .projects-section .section-content .project-flex_mix{background:url(../img/projects_img/flex_mix_1.jpg) no-repeat}
 .projects-section .section-content .project-one_web{background:url(../img/projects_img/one_web_1.jpg) no-repeat}
-@media screen and (max-width:767px){.projects-section .section-content{height:100%}
+@media screen and (max-width:48em){.projects-section .section-content{height:100%}
 }
 .skills-page{background:#EFF1F4;overflow:hidden;padding-bottom:30px}
 .btn,.skills-page .section-header{background:0 0}
