@@ -137,7 +137,7 @@
   },
   "timeline": {
     "primaris": {
-      "imgClass": "cd-picture",
+      "imgClass": "cd-location",
       "imgSrc": "assets/img/timeline/cd-icon-picture.svg",
       "imgAlt": "Picture",
       "title": "Primaris",
@@ -146,7 +146,7 @@
       "responsibilities": "Designing, developing front-end of web applications. Creating front-end for mobile devices(and mobile first approach, of course). Creating and developing components for huge CMS of insurance company. Improving web applications based on PHP"
     },
     "profit_network": {
-      "imgClass": "cd-movie",
+      "imgClass": "cd-location",
       "imgSrc": "assets/img/timeline/cd-icon-movie.svg",
       "imgAlt": "Movie",
       "title": "Profit Network",
@@ -164,7 +164,7 @@
       "responsibilities": "Development of administration panel tools for viewing statistics reports, complaints from users. Creation of functionality \"promo pin\", which allows users to keep their content in the top of content category.Creation of public(shared group). This is a group, that has few owners and many members. There users can send invitation to each other and share their content. Implementation of new graphical components in Zszywka.pl design (buttons, labels, fonts, logos, etc.)."
     },
     "ideo": {
-      "imgClass": "cd-picture",
+      "imgClass": "cd-location",
       "imgSrc": "assets/img/timeline/cd-icon-picture.svg",
       "imgAlt": "Picture",
       "title": "Ideo",
@@ -173,7 +173,7 @@
       "responsibilities": "My first job in field of Web Development. Making a front-end templates for internal commercial CMS system. Converting PSD templates to the HTML and CSS."
     },
     "wsiz": {
-      "imgClass": "cd-movie",
+      "imgClass": "cd-location",
       "imgSrc": "assets/img/timeline/cd-icon-movie.svg",
       "imgAlt": "Movie",
       "title": "University of Information Technology and Management",
