@@ -222,6 +222,34 @@
     .project-one_web {
       @include img-url($img-url, "one_web_1.jpg");
     }
+
+    // Mobile
+    @media screen and (max-width: 48em){
+      .project-zszywka {
+        @include img-url($img-url, "zszywka_1.jpg");
+        background-size: cover!important;
+        background-position-x: 50%;
+      }
+
+      .project-folklor {
+        @include img-url($img-url, "folklor_1.jpg");
+        background-size: cover!important;
+        background-position-x: 50%;
+      }
+
+      .project-flex_mix {
+        @include img-url($img-url, "flex_mix_1.jpg");
+        background-size: cover!important;
+        background-position-x: 50%;
+      }
+
+      .project-one_web {
+        @include img-url($img-url, "one_web_1.jpg");
+        background-size: cover!important;
+        background-position-x: 50%;
+      }
+    }
+
   }
 }
 

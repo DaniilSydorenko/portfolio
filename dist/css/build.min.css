@@ -1016,7 +1016,11 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .projects-section .section-content .project-folklor{background:url(../img/projects_img/folklor_1.jpg) no-repeat}
 .projects-section .section-content .project-flex_mix{background:url(../img/projects_img/flex_mix_1.jpg) no-repeat}
 .projects-section .section-content .project-one_web{background:url(../img/projects_img/one_web_1.jpg) no-repeat}
-@media screen and (max-width:48em){.projects-section .section-content{height:100%}
+@media screen and (max-width:48em){.projects-section .section-content .project-zszywka{background:url(../img/projects_img/zszywka_1.jpg) no-repeat;background-size:cover!important;background-position-x:50%}
+.projects-section .section-content .project-folklor{background:url(../img/projects_img/folklor_1.jpg) no-repeat;background-size:cover!important;background-position-x:50%}
+.projects-section .section-content .project-flex_mix{background:url(../img/projects_img/flex_mix_1.jpg) no-repeat;background-size:cover!important;background-position-x:50%}
+.projects-section .section-content .project-one_web{background:url(../img/projects_img/one_web_1.jpg) no-repeat;background-size:cover!important;background-position-x:50%}
+.projects-section .section-content{height:100%}
 }
 .skills-page{background:#EFF1F4;overflow:hidden;padding-bottom:30px}
 .btn,.skills-page .section-header{background:0 0}

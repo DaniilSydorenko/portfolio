@@ -36,7 +36,8 @@ $(window).on("scroll", function () {
             firstOffset = projectSections[0].offset;
 
         var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
-        var stopValue = startValue + ($('.section-content').height() - 450);
+        var textContentHeight = $('[data-offset=' + startValue + ']').find('.text-center').height();
+        var stopValue = startValue + ($('.section-content').height() - textContentHeight);
 
         if ($(window).scrollTop() < firstOffset) {
             $(".section-content").removeClass('active');
