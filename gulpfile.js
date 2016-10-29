@@ -41,6 +41,7 @@ var gulp = require('gulp'),
             css: [
                 "bower_components/flexboxgrid/dist/flexboxgrid.css",
                 "bower_components/wow/css/libs/animate.css",
+                "bower_components/font-awesome/css/font-awesome.css",
                 "assets/css/style.css"
             ]
         }

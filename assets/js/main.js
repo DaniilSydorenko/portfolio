@@ -33,37 +33,37 @@ $(window).on("scroll", function () {
     if (window.matchMedia("(min-width: 48em)").matches) {
 
         var projectSections = App.getProjectSections(),
-            firstOffset = projectSections[0].offset;
-
-        var startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll());
-        var textContentHeight = $('[data-offset=' + startValue + ']').find('.text-center').height();
-        var stopValue = startValue + ($('.section-content').height() - textContentHeight);
+            firstOffset = projectSections[0].offset,
+            lastOffset = projectSections[projectSections.length - 1].offset,
+            startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll()),
+            currentContentSection = $('[data-offset=' + startValue + ']'),
+            textContentHeight = currentContentSection.find('.text-center').height(),
+            stopValue = startValue + (App.projectSections.height() - textContentHeight);
 
         if ($(window).scrollTop() < firstOffset) {
             $(".section-content").removeClass('active');
         }
 
         if ($(window).scrollTop() >= startValue) {
-            $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-start');
+            currentContentSection.find('.project-description').css('align-items', 'flex-start');
 
-            if (!$(".section-content").hasClass('active')) {
-                $('[data-offset=' + startValue + ']').addClass('active');
+            if (!App.projectSections.hasClass('active')) {
+                currentContentSection.addClass('active');
             } else {
-                if (!$('[data-offset=' + startValue + ']').hasClass('active')) {
+                if (!currentContentSection.hasClass('active')) {
                     $(".section-content").removeClass('active');
-                    $('[data-offset=' + startValue + ']').addClass('active');
+                    currentContentSection.addClass('active');
                 }
             }
         }
 
         if ($(window).scrollTop() >= stopValue) {
-            if ($('[data-offset=' + startValue + ']').hasClass('active')) {
-                $('[data-offset=' + startValue + ']').removeClass('active');
-                $('[data-offset=' + startValue + ']').find('.project-description').css('align-items', 'flex-end');
+            if (currentContentSection.hasClass('active')) {
+                currentContentSection.removeClass('active');
+                currentContentSection.find('.project-description').css('align-items', 'flex-end');
             }
         }
     }
-
 
 });
 
@@ -113,11 +113,26 @@ var App = {
     getWindowHeight: function () {
         return App.oh;
     },
+
     getViewportHeight: function () {
         return App.ih;
     },
+
     getCurrentScroll: function () {
         return window.pageYOffset || document.documentElement.scrollTop;
+    },
+
+    smoothScroll: function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
     },
 
     fadeOutMenuElements: function () {
@@ -241,14 +256,18 @@ var App = {
         });
     },
 
+    /**
+     * Get all section-content, set offset from top
+     * and return collection of offsets
+     * @returns {*|Array}
+     */
+
     getProjectSections: function () {
         return App.projectSections.map(function (element) {
             var section = App.projectSections[element];
             $(section).attr('data-offset', section.offsetTop);
-            return {
-                offset: section.offsetTop,
-                isActive: false
-            };
+
+            return { offset: section.offsetTop };
         });
     },
 
@@ -263,8 +282,6 @@ var App = {
     },
 
     getClosestValue: function (offsets, currentScroll) {
-        var minVal = Math.min.apply(null, offsets);
-
         if (currentScroll >= offsets[0] && currentScroll < offsets[1]) {
             return offsets[0];
         } else if (currentScroll >= offsets[offsets.length - 1]) {
@@ -336,9 +353,12 @@ var App = {
         /**
          * Smooth scroll
          */
-        $('a[href*="#"]:not([href="#"])').click(function () {
-            $(".menu-btn-wrapper").removeClass('open');
-            App.toggleResponsiveMobileMenu();
+        $('.mobileMenu a, .hero-text a').on('click', function () { // Old: a[href*="#"]:not([href="#"])
+            var linkParent = $(this).parent();
+            if (linkParent[0].className.indexOf("show") >= 0) {
+                $(".menu-btn-wrapper").removeClass('open');
+                App.toggleResponsiveMobileMenu();
+            }
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');

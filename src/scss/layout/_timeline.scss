@@ -99,41 +99,11 @@ Main components
     margin-top: -12px;
   }
 
-  &.cd-picture {
-    background: #31373A;
-    color: #fcfcfc;
-  }
-
-  &.cd-movie {
-    background: #c03b44;
-  }
-
+  &.cd-picture,
+  &.cd-movie,
   &.cd-location {
-    background: #618eea;
-
-    &:nth-child(1) {
-      background: #618eea;
-    }
-
-    &:nth-child(2) {
-      background: #638ee8;
-    }
-
-    &:nth-child(3) {
-      background: #6b92e4;
-    }
-
-    &:nth-child(4) {
-      background: #7496dc;
-    }
-
-    &:nth-child(5) {
-      background: #7a97d2;
-    }
-
-    &:nth-child(6) {
-      background: #758fc5;
-    }
+    background: #383F42;
+    color: #fcfcfc;
   }
 }
 
