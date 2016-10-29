@@ -1739,7 +1739,7 @@ h1,h2,h3,h4,h5,h6{color:#f9f9f9}
 .projects-section .section-content .bg-side .project-overlay{top:-2px;left:-2px;right:-2px;bottom:-2px;position:absolute;background-color:rgba(38,93,125,.5)}
 .projects-section .section-content .data-side{padding:0!important;width:100%}
 .projects-section .section-content .data-side .project-description{height:100vh;background:0 0!important;visibility:visible;animation-name:fadeInUp;margin:0 auto;border-radius:0;text-align:left;justify-content:flex-start;align-items:flex-start;padding:0 50px}
-.projects-section .section-content .data-side .project-description .text-center{overflow:hidden}
+.projects-section .section-content .data-side .project-description .text-center{overflow:hidden;word-wrap:break-word}
 .projects-section .section-content .data-side .project-description .text-center p{font-size:1.1rem;margin:0 0 1rem}
 .projects-section .section-content .data-side .project-description .text-center p.tc-title{border-bottom:thin solid grey;display:inline}
 .projects-section .section-content .project-zszywka{background:url(../../assets/img/projects_img/zszywka_1.jpg) no-repeat}
