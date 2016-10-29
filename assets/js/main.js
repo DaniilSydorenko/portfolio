@@ -34,7 +34,6 @@ $(window).on("scroll", function () {
 
         var projectSections = App.getProjectSections(),
             firstOffset = projectSections[0].offset,
-            lastOffset = projectSections[projectSections.length - 1].offset,
             startValue = App.getClosestValue(App.getProjectSectionOffsets(), App.getCurrentScroll()),
             currentContentSection = $('[data-offset=' + startValue + ']'),
             textContentHeight = currentContentSection.find('.text-center').height(),
@@ -120,19 +119,6 @@ var App = {
 
     getCurrentScroll: function () {
         return window.pageYOffset || document.documentElement.scrollTop;
-    },
-
-    smoothScroll: function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
     },
 
     fadeOutMenuElements: function () {
@@ -371,5 +357,4 @@ var App = {
             }
         });
     }
-
 };
