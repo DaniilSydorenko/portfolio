@@ -99,6 +99,3 @@ fabric.properties
 ### Assets ###
 
 /assets/img/projects_img
-
-### Compiled files ###
-/dist

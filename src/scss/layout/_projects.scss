@@ -224,7 +224,7 @@
     }
 
     // Mobile
-    @media screen and (max-width: 48em){
+    @media screen and (max-width: 767px){
       .project-zszywka {
         @include img-url($img-url, "zszywka_1.jpg");
         background-size: cover!important;
@@ -249,14 +249,17 @@
         background-position-x: 50%;
       }
     }
-
   }
 }
 
-@media screen and (max-width: 48em){
+@media screen and (max-width: 767px){
   .projects-section {
     .section-content {
       height: 100%;
+      &.mobile-reverse .row {
+        display: flex;
+        flex-direction: column-reverse;
+      }
     }
   }
 }

@@ -30,7 +30,7 @@ $(window).on("scroll", function () {
     });
 
 
-    if (window.matchMedia("(min-width: 48em)").matches) {
+    if (window.matchMedia("(min-width: 767px)").matches) {
 
         var projectSections = App.getProjectSections(),
             firstOffset = projectSections[0].offset,
@@ -274,7 +274,7 @@ var App = {
     getProjectSectionOffsets: function () {
         var offsets = [];
         var sections = App.getProjectSections();
-        for (var i = 0; i < sections.length - 1; i++) {
+        for (var i = 0; i <= sections.length - 1; i++) {
             offsets.push(sections[i].offset);
         }
 
