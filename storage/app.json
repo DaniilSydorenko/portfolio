@@ -7,8 +7,8 @@
         "title": "Components for commercial CMS",
         "role": "Front-end Developer",
         "finish_date": "10.2016",
-        "description": "Internal commercial CMS for web-pages building. Because all internal product web sites of big European insurance company should have the same style and structure.",
-        "responsibilities": "Front-end development",
+        "description": "This is Internal commercial CMS for web-pages building. All internal product and web-sites of big European insurance company should have the same style and structure. Therefore all web-sites were built on components of this CMS.",
+        "responsibilities": "Front-end development for huge commercial CMS",
         "techs": "JavaScript, AngularJS, jQuery, JSON, Freemarker template, LESS, Flex"
       }
     },
@@ -20,7 +20,7 @@
         "role": "Creator, Front-end Developer",
         "finish_date": "09.2016",
         "description": "Flex-mix has all needed functionality for building web application from scratch. It is my own solution for front-end development. It`s sass based boilerplate with grid system that based on flex technology. Sass structure is based on 7-1 architecture pattern(https://github.com/HugoGiraudel/sass-boilerplate). Responsive grid is based on Flexbox Grid(http://flexboxgrid.com/). Automation tools: Gulp. Other libraries: jQuery 2.2.3, Wow.js, modernizr.",
-        "responsibilities": "Front-end development",
+        "responsibilities": "Whole project creation. GitHub repository, documents, whole development",
         "techs": "JavaScript, HTML5, SASS, Flex, Gulp, NPM, Bower"
       }
     },
@@ -32,7 +32,7 @@
         "role": "Front-end Developer",
         "finish_date": "11.2015",
         "description": "Platform for training",
-        "responsibilities": "Front-end development",
+        "responsibilities": "Converting PSD to HTML&CSS, responsive web design",
         "techs": "ASP.NET Razor, Bootstrap, JavaScript, jQuery"
       }
     },
@@ -56,7 +56,7 @@
         "role": "Front-end Developer",
         "finish_date": "11.2014",
         "description": "Web site for company Wikendo",
-        "responsibilities": "Front-end development",
+        "responsibilities": "Creating full responsive page with auto-playing video background, responsive SVG commercial logo and image sprite for partners logos on the page",
         "techs": "HTML5, CSS3, jQuery, bigVideo.js"
       }
     },
@@ -68,7 +68,7 @@
         "role": "Front-end Developer",
         "finish_date": "10.2014",
         "description": "Website for hotel Zajazd Folklor. Information and photos about all the services provided by the hotel and apartment reservation",
-        "responsibilities": "Front-end development",
+        "responsibilities": "Creating new sections for the web-site based on Angular(with new controllers, routing, etc.). Implementing of new graphical elements",
         "techs": "AngularJS, jQuery, HTML5, CSS3"
       }
     },
@@ -80,7 +80,7 @@
         "role": "Full-stack Developer",
         "finish_date": "07.2014",
         "description": "Zszywka is a graphic social network, where you can find an inspiring image on any topic, meet new people, promote own products. Zszywka allows to store all images one place, create shared publics and share an inspiration with other users.",
-        "responsibilities": "Front-end and Back-end development",
+        "responsibilities": "Development of administration panel tools for viewing statistics reports, complaints from users and content editing for the graphical social network Zszywka.pl. Creation of functionality \"promo post\", which allows users to keep their posted content in the top of related category. Creation of public (shared group). This is a group that allows creators to add administrators and send invitation for many other members. Also users can send invitation to each other and share their content. Implementation of new graphical components in Zszywka.pl design (buttons, labels, fonts, logos, etc.).",
         "techs": "PHP5, MySQL, Smarty, HTML5, CSS3, JavaScript, jQuery"
       }
     }
