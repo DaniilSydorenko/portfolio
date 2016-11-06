@@ -293,21 +293,38 @@ var App = {
          */
         new WOW().init();
 
+        $('#myBlock').vide({
+            mp4: 'assets/video/MP4/Aloha-Mundo.mp4',
+            webm: 'assets/video/WEBM/Aloha-Mundo.webm',
+            poster: 'assets/img/snapshot/Aloha-Mundo.jpg'
+        }, {
+            volume: 1,
+            playbackRate: 1,
+            muted: true,
+            loop: true,
+            autoplay: true,
+            position: '0% 50%', // Similar to the CSS `background-position` property.
+            posterType: 'detect', // Poster image type. "detect" — auto-detection; "none" — no poster; "jpg", "png", "gif",... - extensions.
+            resizing: true, // Auto-resizing, read: https://github.com/VodkaBears/Vide#resizing
+            bgColor: 'transparent', // Allow custom background-color for Vide div,
+            className: '' // Add custom CSS class to Vide div
+        });
+
         /**
          * Video background
          */
-        App.scaleVideoContainer();
-
-        App.initBannerVideoSize('.video-container .poster img');
-        App.initBannerVideoSize('.video-container .filter');
-        App.initBannerVideoSize('.video-container video');
-
-        $(window).on('resize', function () {
-            App.scaleVideoContainer();
-            App.scaleBannerVideoSize('.video-container .poster img');
-            App.scaleBannerVideoSize('.video-container .filter');
-            App.scaleBannerVideoSize('.video-container video');
-        });
+        //App.scaleVideoContainer();
+        //
+        //App.initBannerVideoSize('.video-container .poster img');
+        //App.initBannerVideoSize('.video-container .filter');
+        //App.initBannerVideoSize('.video-container video');
+        //
+        //$(window).on('resize', function () {
+        //    App.scaleVideoContainer();
+        //    App.scaleBannerVideoSize('.video-container .poster img');
+        //    App.scaleBannerVideoSize('.video-container .filter');
+        //    App.scaleBannerVideoSize('.video-container video');
+        //});
 
         /**
          * Timeline
@@ -343,6 +360,7 @@ var App = {
                 var curImgFix = $(this).find('.img-fix');
                 if (curImgFix.hasClass("active")) {
                     curImgFix.removeClass('active');
+                    console.log("Removed");
                 } else {
                     $('.img-fix').removeClass('active');
                     curImgFix.addClass('active');
