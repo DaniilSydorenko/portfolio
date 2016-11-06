@@ -76,7 +76,7 @@
         display: block;
         opacity: 1;
         /* transform: scale3d(1.02,1.02,1); */
-        transition: opacity .5s,transform .5s;
+        transition: opacity .5s, transform .5s;
         backface-visibility: hidden;
         background-size: 100%;
         /* background-position-x: 50%!important; */
@@ -144,6 +144,24 @@
             opacity: 1;
           }
 
+        }
+
+        &.active {
+          transform: scale3d(1.1, 1.1, 1);
+
+          h3 {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
+
+          h4 {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
+
+          .portfolio-caption {
+            opacity: 1;
+          }
         }
       }
 
@@ -226,35 +244,35 @@
     }
 
     // Mobile
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       .project-zszywka {
         @include img-url($img-url, "zszywka_1.jpg");
-        background-size: cover!important;
+        background-size: cover !important;
         background-position-x: 50%;
       }
 
       .project-folklor {
         @include img-url($img-url, "folklor_1.jpg");
-        background-size: cover!important;
+        background-size: cover !important;
         background-position-x: 50%;
       }
 
       .project-flex_mix {
         @include img-url($img-url, "flex_mix_1.jpg");
-        background-size: cover!important;
+        background-size: cover !important;
         background-position-x: 50%;
       }
 
       .project-one_web {
         @include img-url($img-url, "one_web_1.jpg");
-        background-size: cover!important;
+        background-size: cover !important;
         background-position-x: 50%;
       }
     }
   }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .projects-section {
     .section-content {
       height: 100%;
