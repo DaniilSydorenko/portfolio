@@ -31,7 +31,7 @@
         "title": "I-sport",
         "role": "Front-end Developer",
         "finish_date": "11.2015",
-        "description": "Platform for training",
+        "description": "Workouts programs designed by the coaches in Poland. Each workout contains videos about and comments. User can get a coach just for himself, which will support the implementation of his training or create an individual diet tailored to his activity. Also user can keep track of training and execute training plan in the framework of the 5 sport disciplines.",
         "responsibilities": "Converting PSD to HTML&CSS, responsive web design",
         "techs": "ASP.NET Razor, Bootstrap, JavaScript, jQuery"
       }
