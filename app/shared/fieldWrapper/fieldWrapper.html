@@ -1,0 +1,6 @@
+<div class="col-md-12 input-wrapper"
+     ng-class="{'error' : userForm.name.$invalid && userForm.name.$touched}">
+    <div ng-transclude></div>
+    <p class="error-message" ng-show="userForm.name.$invalid && userForm.name.$touched">Name is
+        incorrect</p>
+</div>
