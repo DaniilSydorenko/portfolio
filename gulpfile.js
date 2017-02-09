@@ -11,41 +11,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     merge = require('merge-stream'),
     ncu = require('npm-check-updates'),
-    paths = {
-        dirs: {
-            build: '.dist',
-            js: 'dist/js',
-            css: 'dist/css',
-            images: 'dist/img/projects_img'
-        },
-        files: {
-            js: 'dist/js/*.js',
-            css: 'dist/css/*.css',
-            images: 'assets/img/projects_img/*'
-        },
-        components: {
-            sass: 'src/scss/main.scss',
-            js: 'assets/js/*.js'
-        },
-        vendors: {
-            js: [
-                "assets/libs/modernizr-custom.js",
-                "bower_components/jquery/dist/jquery.js",
-                "bower_components/wow/dist/wow.js",
-                "bower_components/vide/dist/jquery.vide.js",
-                "bower_components/angular/angular.js",
-                "bower_components/angular-route/angular-route.js",
-                "app/**/*.js",
-                "assets/js/main.js"
-            ],
-            css: [
-                "bower_components/flexboxgrid/dist/flexboxgrid.css",
-                "bower_components/wow/css/libs/animate.css",
-                "bower_components/font-awesome/css/font-awesome.css",
-                "assets/css/style.css"
-            ]
-        }
-    };
+    config = require('./gulp/config');
 
 gulp.task('update', function () {
     ncu.run({
@@ -72,7 +38,7 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('clean-js', function (done) {
-    gulp.src(paths.files.js, {
+    gulp.src(config.files.js, {
             read: false
         })
         .pipe(clean());
@@ -80,7 +46,7 @@ gulp.task('clean-js', function (done) {
 });
 
 gulp.task('clean-css', function (done) {
-    gulp.src(paths.files.css, {
+    gulp.src(config.files.css, {
             read: false
         })
         .pipe(clean());
@@ -88,13 +54,13 @@ gulp.task('clean-css', function (done) {
 });
 
 gulp.task('concat-minify-js', function (done) {
-    gulp.src(paths.vendors.js)
+    gulp.src(config.vendors.js)
         .pipe(concat('build'))
         .pipe(uglify())
         .pipe(rename({
             extname: ".min.js"
         }))
-        .pipe(gulp.dest(paths.dirs.js))
+        .pipe(gulp.dest(config.dirs.js))
         .pipe(liveReload({
             auto: false
         }))
@@ -105,18 +71,18 @@ gulp.task('concat-minify-js', function (done) {
 });
 
 gulp.task('concat-minify-css', function (done) {
-    var sassStream = gulp.src(paths.components.sass)
+    var sassStream = gulp.src(config.components.sass)
         .pipe(sass({
             errLogToConsole: true
         }));
 
-    var cssStream = gulp.src(paths.vendors.css);
+    var cssStream = gulp.src(config.vendors.css);
     var mergedStream = merge(sassStream, cssStream)
         .pipe(concat('build.min.css'))
         .pipe(minify({
             keepBreaks: true
         }))
-        .pipe(gulp.dest(paths.dirs.css))
+        .pipe(gulp.dest(config.dirs.css))
         .on('end', function () {
             gutil.log('Styles concatenated and merged!');
         });
@@ -127,9 +93,9 @@ gulp.task('concat-minify-css', function (done) {
 });
 
 gulp.task('compress', function (done) {
-    gulp.src(paths.files.images)
+    gulp.src(config.files.images)
         .pipe(imagemin())
-        .pipe(gulp.dest(paths.dirs.images));
+        .pipe(gulp.dest(config.dirs.images));
     done();
 });
 
