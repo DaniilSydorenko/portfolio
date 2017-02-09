@@ -20,14 +20,14 @@
                 //},
                 controller: 'MainController'
             })
-            .when('/works', {
-                templateUrl: templateUrl + '/worksPage/worksPage.html',
-                controller: 'WorksController'
-            })
-            .when('/works/:id', {
-                templateUrl: templateUrl + '/worksPage/worksPage.html',
-                controller: 'WorksController'
-            })
+            //.when('/works', {
+            //    templateUrl: templateUrl + '/worksPage/worksPage.html',
+            //    controller: 'WorksController'
+            //})
+            //.when('/works/:id', {
+            //    templateUrl: templateUrl + '/worksPage/worksPage.html',
+            //    controller: 'WorksController'
+            //})
             .otherwise({
                 templateUrl: templateUrl + '/mainPage/mainPage.html',
                 controller: 'MainController'

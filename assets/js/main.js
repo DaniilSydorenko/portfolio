@@ -136,11 +136,11 @@ var App = {
                         $(el[1]).removeClass("fade");
                         setTimeout(function () {
                             $(el[0]).removeClass("fade");
-                        }, 50);
-                    }, 100);
-                }, 150);
-            }, 200);
-        }, 250);
+                        }, 20);
+                    }, 50);
+                }, 80);
+            }, 110);
+        }, 130);
         setTimeout(function () {
             $(".responsiveMobileMenu").removeClass("display");
             setTimeout(function () {
@@ -167,11 +167,11 @@ var App = {
                         $(el[3]).addClass("fade");
                         setTimeout(function () {
                             $(el[4]).addClass("fade");
-                        }, 50);
-                    }, 100);
-                }, 150);
-            }, 200);
-        }, 250);
+                        }, 340);
+                    }, 290);
+                }, 240);
+            }, 180);
+        }, 120);
     },
 
     toggleResponsiveMobileMenu: function () {
@@ -293,6 +293,9 @@ var App = {
          */
         new WOW().init();
 
+        /**
+         * Video background
+         */
         $('#myBlock').vide({
             mp4: 'assets/video/MP4/Aloha-Mundo.mp4',
             webm: 'assets/video/WEBM/Aloha-Mundo.webm',
@@ -311,22 +314,6 @@ var App = {
         });
 
         /**
-         * Video background
-         */
-        //App.scaleVideoContainer();
-        //
-        //App.initBannerVideoSize('.video-container .poster img');
-        //App.initBannerVideoSize('.video-container .filter');
-        //App.initBannerVideoSize('.video-container video');
-        //
-        //$(window).on('resize', function () {
-        //    App.scaleVideoContainer();
-        //    App.scaleBannerVideoSize('.video-container .poster img');
-        //    App.scaleBannerVideoSize('.video-container .filter');
-        //    App.scaleBannerVideoSize('.video-container video');
-        //});
-
-        /**
          * Timeline
          */
         App.hideBlocks(App.timelineBlock, App.timelineOffset);
@@ -337,20 +324,6 @@ var App = {
         App.hamburger.on("click", function () {
             $(this).toggleClass('open');
             App.toggleResponsiveMobileMenu();
-        });
-
-        /**
-         * Contact form input focus
-         */
-        App.inputField.on('focus', function () {
-            $(this).addClass("active");
-        });
-
-        App.inputField.on('focusout', function () {
-            var inputVal = $(this).val();
-            if (inputVal.length <= 0) {
-                $(this).removeClass("active");
-            }
         });
 
         //App.mobileWidth.addEventListener('resize', sizeChange);
