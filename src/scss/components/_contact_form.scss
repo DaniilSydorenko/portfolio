@@ -29,6 +29,7 @@
       height: 2.5em;
       width: 100%;
       margin: 0;
+      padding: 5px 0;
       border-top: 0;
       border-right: 0;
       border-left: 0;
@@ -49,6 +50,9 @@
 
     textarea.input-field {
       height: 100%;
+      + label {
+        top: .3rem;
+      }
     }
 
     label {
@@ -60,6 +64,12 @@
       cursor: text;
       transition: .2s ease-out;
     }
+  }
+
+  .btn.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    user-select: none;
   }
 }
 

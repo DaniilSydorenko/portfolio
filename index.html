@@ -116,6 +116,9 @@
              data-vide-options="posterType: jpg, loop: false, muted: false, position: 0% 0%">
         </div>
     </div>
+
+    <!-- For Web Scrapper -->
+    <img src="dist/img/projects_img/portfolio_screen-min.jpg" class="visually-hidden" alt="Portfolio screenshot"/>
 </section>
 <!-- End Section Home -->
 
@@ -343,7 +346,7 @@
         <div class="container">
             <div class="row">
 
-                <form name="userForm"
+                <form name="userForm" ng-submit="submitForm(userForm)"
                       class="contact-form col-lg-6 col-md-6 col-sm-12 col-xs-12" novalidate>
 
                     <div class="contact-data col-md-12">
@@ -353,47 +356,36 @@
                     </div>
 
                     <!-- Name -->
-                    <div class="col-md-12 input-wrapper"
-                         ng-class="{'error' : userForm.name.$invalid && userForm.name.$touched}">
+                    <form-field>
                         <input type="text" name="name" id="name" class="input-field"
-                               ng-model="contactForm.name"
-                               ng-maxlength="20"
-                               ng-required="true">
+                               ng-model="vm.contactForm.name"
+                               ng-maxlength="40"
+                               required>
                         <label for="name">Name<span>*</span></label>
-                        <p class="error-message" ng-show="userForm.name.$invalid && userForm.name.$touched">Name is
-                            incorrect</p>
-                    </div>
+                    </form-field>
 
                     <!-- Email -->
-                    <div class="col-md-12 input-wrapper"
-                         ng-class="{'error' : userForm.email.$invalid && userForm.email.$touched}">
+                    <form-field>
                         <input type="email" name="email" id="email" class="input-field"
-                               ng-model="contactForm.email"
-                               ng-required="true">
+                               ng-model="vm.contactForm.email"
+                               ng-maxlength="40"
+                               required>
                         <label for="email">Email<span>*</span></label>
-                        <p class="error-message" ng-show="userForm.email.$invalid && userForm.email.$touched">Email is
-                            incorrect</p>
-                    </div>
+                    </form-field>
 
                     <!-- Message -->
-                    <div class="col-md-12 input-wrapper"
-                         ng-class="{'error' : userForm.message.$invalid && userForm.message.$touched}">
+                    <form-field>
                         <textarea rows="7" name="message" id="message" class="input-field"
-                                  ng-model="contactForm.message"
+                                  ng-model="vm.contactForm.message"
                                   ng-required="true"></textarea>
                         <label for="message">Message<span>*</span></label>
-                        <p class="error-message" ng-show="userForm.message.$invalid && userForm.message.$touched">
-                            Message is incorrect</p>
-                    </div>
+                    </form-field>
 
                     <!-- Submit -->
-                    <div class="col-md-12"
-                         ng-class="{'error' : userForm.$submitted && userForm.$invalid}">
-                        <p class="error-message submit-message" ng-show="userForm.$submitted && userForm.$invalid">Some
-                            fields are invalid</p>
-                        <button type="submit" class="btn"
-                                ng-class="{'disabled' : userForm.$invalid && userForm.$touched}"
-                                ng-disabled="userForm.$invalid && userForm.$touched">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn">
+                            <!--ng-class="{'disabled' : formInvalid}"-->
+                            <!--ng-disabled="formInvalid">-->
                             <i class="fa fa-paper-plane-o"></i>Send
                         </button>
                     </div>
@@ -470,4 +462,5 @@
     });
 </script>
 </body>
+
 </html>
